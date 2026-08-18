@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell *)",
+      "Bash(.\\\\backend\\\\.venv\\\\Scripts\\\\python.exe -m ruff check backend/app/)",
+      "Bash(git checkout *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "bash",
+            "command": "bash \"$(git rev-parse --show-toplevel)/.claude/hook_lint.sh\"",
+            "timeout": 180,
+            "statusMessage": "Running lint checks..."
+          }
+        ]
+      }
+    ]
+  }
+}

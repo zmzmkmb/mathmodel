@@ -1,0 +1,3039 @@
+{
+  "docx_2018A": [
+    "2018年高教社杯全国大学生数学建模竞赛题目",
+    "（请先阅读“全国大学生数学建模竞赛论文格式规范”）",
+    "A题   高温作业专用服装设计",
+    "在高温环境下工作时，人们需要穿着专用服装以避免灼伤。专用服装通常由三层织物材料构成，记为I、II、III层，其中I层与外界环境接触，III层与皮肤之间还存在空隙，将此空隙记为IV层。",
+    "为设计专用服装，将体内温度控制在37ºC的假人放置在实验室的高温环境中，测量假人皮肤外侧的温度。为了降低研发成本、缩短研发周期，请你们利用数学模型来确定假人皮肤外侧的温度变化情况，并解决以下问题：",
+    "专用服装材料的某些参数值由附件1给出，对环境温度为75ºC、II层厚度为6 mm、IV层厚度为5 mm、工作时间为90分钟的情形开展实验，测量得到假人皮肤外侧的温度（见附件2）。建立数学模型，计算温度分布，并生成温度分布的Excel文件（文件名为problem1.xlsx）。",
+    "(2) 当环境温度为65ºC、IV层的厚度为5.5 mm时，确定II层的最优厚度，确保工作60分钟时，假人皮肤外侧温度不超过47ºC，且超过44ºC的时间不超过5分钟。",
+    "(3) 当环境温度为80时，确定II层和IV层的最优厚度，确保工作30分钟时，假人皮肤外侧温度不超过47ºC，且超过44ºC的时间不超过5分钟。",
+    "附件1. 专用服装材料的参数值",
+    "附件2. 假人皮肤外侧的测量温度"
+  ],
+  "docx_2019A": [
+    "2019高教社杯全国大学生数学建模竞赛题目",
+    "（请先阅读“全国大学生数学建模竞赛论文格式规范”）",
+    "A题   高压油管的压力控制",
+    "燃油进入和喷出高压油管是许多燃油发动机工作的基础，图1给出了某高压燃油系统的工作原理，燃油经过高压油泵从A处进入高压油管，再由喷口B喷出。燃油进入和喷出的间歇性工作过程会导致高压油管内压力的变化，使得所喷出的燃油量出现偏差，从而影响发动机的工作效率。",
+    "图1 高压油管示意图",
+    "问题1. 某型号高压油管的内腔长度为500mm，内直径为10mm，供油入口A处小孔的直径为1.4mm，通过单向阀开关控制供油时间的长短，单向阀每打开一次后就要关闭10ms。喷油器每秒工作10次，每次工作时喷油时间为2.4ms，喷油器工作时从喷油嘴B处向外喷油的速率如图2所示。高压油泵在入口A处提供的压力恒为160 MPa，高压油管内的初始压力为100 MPa。如果要将高压油管内的压力尽可能稳定在100 MPa左右，如何设置单向阀每次开启的时长？如果要将高压油管内的压力从100 MPa增加到150 MPa，且分别经过约2 s、5 s和10 s的调整过程后稳定在150 MPa，单向阀开启的时长应如何调整？",
+    "图2 喷油速率示意图",
+    "问题2. 在实际工作过程中，高压油管A处的燃油来自高压油泵的柱塞腔出口，喷油由喷油嘴的针阀控制。高压油泵柱塞的压油过程如图3所示，凸轮驱动柱塞上下运动，凸轮边缘曲线与角度的关系见附件1。柱塞向上运动时压缩柱塞腔内的燃油，当柱塞腔内的压力大于高压油管内的压力时，柱塞腔与高压油管连接的单向阀开启，燃油进入高压油管内。柱塞腔内直径为5mm，柱塞运动到上止点位置时，柱塞腔残余容积为20mm3。柱塞运动到下止点时，低压燃油会充满柱塞腔（包括残余容积），低压燃油的压力为0.5 MPa。喷油器喷嘴结构如图4所示，针阀直径为2.5mm、密封座是半角为9°的圆锥，最下端喷孔的直径为1.4mm。针阀升程为0时，针阀关闭；针阀升程大于0时，针阀开启，燃油向喷孔流动，通过喷孔喷出。在一个喷油周期内针阀升程与时间的关系由附件2给出。在问题1中给出的喷油器工作次数、高压油管尺寸和初始压力下，确定凸轮的角速度，使得高压油管内的压力尽量稳定在100 MPa左右。",
+    "图3 高压油管实际工作过程示意图",
+    "图4 喷油器喷嘴放大后的示意图",
+    "问题3. 在问题2的基础上，再增加一个喷油嘴，每个喷嘴喷油规律相同，喷油和供油策略应如何调整？为了更有效地控制高压油管的压力，现计划在D处安装一个单向减压阀（图5）。单向减压阀出口为直径为1.4mm的圆，打开后高压油管内的燃油可以在压力下回流到外部低压油路中，从而使得高压油管内燃油的压力减小。请给出高压油泵和减压阀的控制方案。",
+    "图5 具有减压阀和两个喷油嘴时高压油管示意图",
+    "注1. 燃油的压力变化量与密度变化量成正比，比例系数为，其中为燃油的密度，当压力为100 MPa时，燃油的密度为0.850 mg/mm3。为弹性模量，其与压力的关系见附件3。",
+    "注2. 进出高压油管的流量为，其中为单位时间流过小孔的燃油量（mm3/ms），为流量系数，为小孔的面积（mm2），为小孔两边的压力差（MPa），为高压侧燃油的密度（mg/mm3）。",
+    "附件1：凸轮边缘曲线",
+    "附件2：针阀运动曲线",
+    "附件3：弹性模量与压力的关系"
+  ],
+  "docx_2019B": [
+    "2019高教社杯全国大学生数学建模竞赛题目",
+    "（请先阅读“全国大学生数学建模竞赛论文格式规范”）",
+    "B题   “同心协力”策略研究",
+    "“同心协力”（又称“同心鼓”）是一项团队协作能力拓展项目。该项目的道具是一面牛皮双面鼓，鼓身中间固定多根绳子，绳子在鼓身上的固定点沿圆周呈均匀分布，每根绳子长度相同。团队成员每人牵拉一根绳子，使鼓面保持水平。项目开始时，球从鼓面中心上方竖直落下，队员同心协力将球颠起，使其有节奏地在鼓面上跳动。颠球过程中，队员只能抓握绳子的末端，不能接触鼓或绳子的其他位置。",
+    "图片来源：https://yjs.syu.edu.cn/_mediafile/yjs/2017/10/26/32yuesec78.png",
+    "项目所用排球的质量为270 g。鼓面直径为40 cm，鼓身高度为22 cm，鼓的质量为3.6 kg。队员人数不少于8人，队员之间的最小距离不得小于60 cm。项目开始时，球从鼓面中心上方40 cm处竖直落下，球被颠起的高度应离开鼓面40 cm以上，如果低于40cm，则项目停止。项目的目标是使得连续颠球的次数尽可能多。",
+    "试建立数学模型解决以下问题：",
+    "1. 在理想状态下，每个人都可以精确控制用力方向、时机和力度，试讨论这种情形下团队的最佳协作策略，并给出该策略下的颠球高度。",
+    "2. 在现实情形中，队员发力时机和力度不可能做到精确控制，存在一定误差，于是鼓面可能出现倾斜。试建立模型描述队员的发力时机和力度与某一特定时刻的鼓面倾斜角度的关系。设队员人数为8，绳长为1.7m，鼓面初始时刻是水平静止的，初始位置较绳子水平时下降11 cm，表1中给出了队员们的不同发力时机和力度，求0.1 s时鼓面的倾斜角度。",
+    "表1   发力时机（单位：s）和用力大小（单位：N）取值",
+    "3. 在现实情形中，根据问题2的模型，你们在问题1中给出的策略是否需要调整？如果需要，如何调整？",
+    "4. 当鼓面发生倾斜时，球跳动方向不再竖直，于是需要队员调整拉绳策略。假设人数为10，绳长为2m，球的反弹高度为60cm，相对于竖直方向产生1度的倾斜角度，且倾斜方向在水平面的投影指向某两位队员之间，与这两位队员的夹角之比为1:2。为了将球调整为竖直状态弹跳，请给出在可精确控制条件下所有队员的发力时机及力度，并分析在现实情形中这种调整策略的实施效果。"
+  ],
+  "docx_2020A": [
+    "2020年高教社杯全国大学生数学建模竞赛题目",
+    "（请先阅读“全国大学生数学建模竞赛论文格式规范”）",
+    "A题   炉温曲线",
+    "在集成电路板等电子产品生产中，需要将安装有各种电子元件的印刷电路板放置在回焊炉中，通过加热，将电子元件自动焊接到电路板上。在这个生产过程中，让回焊炉的各部分保持工艺要求的温度，对产品质量至关重要。目前，这方面的许多工作是通过实验测试来进行控制和调整的。本题旨在通过机理模型来进行分析研究。",
+    "回焊炉内部设置若干个小温区，它们从功能上可分成4个大温区：预热区、恒温区、回流区、冷却区（如图1所示）。电路板两侧搭在传送带上匀速进入炉内进行加热焊接。",
+    "图1  回焊炉截面示意图",
+    "某回焊炉内有11个小温区及炉前区域和炉后区域（如图1），每个小温区长度为30.5 cm，相邻小温区之间有5 cm的间隙，炉前区域和炉后区域长度均为25 cm。",
+    "回焊炉启动后，炉内空气温度会在短时间内达到稳定，此后，回焊炉方可进行焊接工作。炉前区域、炉后区域以及小温区之间的间隙不做特殊的温度控制，其温度与相邻温区的温度有关，各温区边界附近的温度也可能受到相邻温区温度的影响。另外，生产车间的温度保持在25ºC。",
+    "在设定各温区的温度和传送带的过炉速度后，可以通过温度传感器测试某些位置上焊接区域中心的温度，称之为炉温曲线（即焊接区域中心温度曲线）。附件是某次实验中炉温曲线的数据，各温区设定的温度分别为175ºC（小温区1~5）、195ºC（小温区6）、235ºC（小温区7）、255ºC（小温区8~9）及25ºC（小温区10~11）；传送带的过炉速度为70 cm/min；焊接区域的厚度为0.15 mm。温度传感器在焊接区域中心的温度达到30ºC时开始工作，电路板进入回焊炉开始计时。",
+    "实际生产时可以通过调节各温区的设定温度和传送带的过炉速度来控制产品质量。在上述实验设定温度的基础上，各小温区设定温度可以进行ºC范围内的调整。调整时要求小温区1~5中的温度保持一致，小温区8~9中的温度保持一致，小温区10~11中的温度保持25ºC。传送带的过炉速度调节范围为65~100 cm/min。",
+    "在回焊炉电路板焊接生产中，炉温曲线应满足一定的要求，称为制程界限（见表1）。",
+    "表1   制程界限",
+    "请你们团队回答下列问题：",
+    "问题1  请对焊接区域的温度变化规律建立数学模型。假设传送带过炉速度为78 cm/min，各温区温度的设定值分别为173ºC（小温区1~5）、198ºC（小温区6）、230ºC（小温区7）和257ºC（小温区8~9），请给出焊接区域中心的温度变化情况，列出小温区3、6、7中点及小温区8结束处焊接区域中心的温度，画出相应的炉温曲线，并将每隔0.5 s焊接区域中心的温度存放在提供的result.csv中。",
+    "问题2  假设各温区温度的设定值分别为182ºC（小温区1~5）、203ºC（小温区6）、237ºC（小温区7）、254ºC（小温区8~9），请确定允许的最大传送带过炉速度。",
+    "问题3  在焊接过程中，焊接区域中心的温度超过217ºC的时间不宜过长，峰值温度也不宜过高。理想的炉温曲线应使超过217ºC到峰值温度所覆盖的面积（图2中阴影部分）最小。请确定在此要求下的最优炉温曲线，以及各温区的设定温度和传送带的过炉速度，并给出相应的面积。",
+    "图2  炉温曲线示意图",
+    "问题4  在焊接过程中，除满足制程界限外，还希望以峰值温度为中心线的两侧超过217ºC的炉温曲线应尽量对称（参见图2）。请结合问题3，进一步给出最优炉温曲线，以及各温区设定的温度及传送带过炉速度，并给出相应的指标值。"
+  ],
+  "docx_题目A": [
+    "铁锅的受力翻转",
+    "一个质量为5千克的均质半球形薄铁锅，铁锅直径为0.6米。在锅边沿等距的安装3个吊环(A,B,C)，吊环直径可忽略不计。在吊环上安装相同的轻质等长硬弹簧，3根弹簧的末端相连并挂在一个固定的支点上。弹簧不受力时，长度均为0.8米，弹簧的倔强系数为500牛/米。假设弹簧只能伸缩，不能弯曲。试回答如下问题：",
+    "如果在A处施加一个向下50牛的拉力，求铁锅平衡时，锅平面与水平面的夹角。",
+    "如果去掉在A处施加的拉力，以0.1秒为间隔，给出10秒内锅平面与水平面的夹角的变化。",
+    "如果在A至B的锅沿三分之一处的D点施加一个向下50牛的拉力，待铁锅平衡后，去掉拉力。以0.1秒为间隔，给出10秒内锅平面与水平面的夹角的变化。"
+  ],
+  "m_a2010_1.m": "clc,clear;  %����λ��ģ��\nglobal a b L;\na=1.78/2; b=1.2/2; L=2.45; alpha1=0;alpha2=4.1/180*pi;\n\nfilename=\"����A����1��ʵ��ɼ����ݱ�.xls\";\nA=xlsread(filename,1,'C:C')+262;  % ʵ������ ��λ�� ��δ��\nB=xlsread(filename,1,'D:D');      % ����߶� ��λ mm\nA1=xlsread(filename,3,'C:C')+215;  % ʵ������ ��λ�� ������λ��4.1��\nB1=xlsread(filename,3,'D:D');\n\nv0=zeros(size(B));\nfor i=1:length(B)\n    v0(i)=f3(B(i)/1000,alpha1); %������������\nend    \nv1=zeros(size(B1));\nfor i=1:length(B1)\n    v1(i)=f3(B1(i)/1000,alpha2); %������������\nend\n\ntmp1=zeros(1200,1); tmp2=tmp1;\nfor i=1:1200\n    tmp1(i)=f3(i/1000,alpha1);\n    tmp2(i)=f3(i/1000,alpha2);\nend\n\nfigure\nax1=subplot(2,1,1); ax2=subplot(2,1,2); \nplot(ax1,1:1200,tmp1,1:1200,real(tmp2));\ntitle(ax1,'��λ��(����������λ��4.1��ʱ����������');\nplot(ax2,B,A, B1,A1);\ntitle(ax2,'��λ�䣨����������λ��4.1��ʱ��ʵ������');\nc0=v0-A;c1=v1-A1;\nfigure\nax1=subplot(2,2,1);\nplot(ax1,B,v0,B,A,'--');   %���Կ�������������ʵ��������ƫ��\ntitle(ax1,'��������(������ʵ����������λ��')\nax2=subplot(2,2,3);\nplot(ax2,B,c0);     %����������ʵ��������ƫ��\ntitle(ax2,'����������ʵ�������Ĳ�ֵ����λ��');\n\nax3=subplot(2,2,2);\nplot(ax3,B1,v1,B1,A1,'--');   %���Կ�������������ʵ��������ƫ��\ntitle(ax3,'��������(��)��ʵ������������λ��4.1��')\nax4=subplot(2,2,4);\nplot(ax4,B1,c1);     %����������ʵ��������ƫ��\ntitle(ax4,'����������ʵ�������Ĳ�ֵ������λ��4.1��');\n\n\nc2=zeros(size(B1));\nfor i=1:length(B1)\n    c2(i,1)=f4(B1(i));\nend\ntmp=c1-c2;\nc=sum(tmp)/length(tmp);\n\n%�ɳ�������֤���\nA3=xlsread(filename,2,'C:C'); % �ۼӳ����� ��λ�� ��δ��\nB3=xlsread(filename,2,'D:D');      % ����߶� ��λ mm\n\nt1=f3(B3(1)/1000,alpha1)-f4(B3(1))+A3(1);\n\nv3=zeros(size(B3));\nfor i=1:length(B3)\n    v3(i)=t1-f3(B3(i)/1000,alpha1)+f4(B3(i));\nend\n\n\nA4=xlsread(filename,4,'C:C');  % �ۼӳ����� ��λ�� ����λ��4.1��\nB4=xlsread(filename,4,'D:D');      % ����߶� ��λ mm\n\n%������������֤��ʹ��λ����\nt2=f3(B4(1)/1000,alpha2)-f5(B4(1))+A4(1);\n\nv4=zeros(size(B4));\nfor i=1:length(B4)\n    v4(i)=t2-f3(B4(i)/1000,alpha2)+f5(B4(i));\nend\n\ntmp1=f3(B4(1)/1000,alpha2)-f5(B4(1));\n\nv5=zeros(length(B4)-1,1);\nfor i=1:length(B4)-1\n    tmp2=f3(B4(i+1)/1000,alpha2)-f5(B4(i+1));\n    v5(i)=tmp1-tmp2;\n    tmp1=tmp2;\nend\n\n%������������֤��ʹ���ޱ�λ��\nt3=f3(B4(1)/1000,alpha2)-f4(B4(1))-c+A4(1);\n\nv6=zeros(size(B4));\nfor i=1:length(B4)\n    v6(i)=t3-f3(B4(i)/1000,alpha2)+f4(B4(i))+c;\nend\n\ntmp1=f3(B4(1)/1000,alpha2)-f4(B4(1));\nv7=zeros(length(B4)-1,1);\nfor i=1:length(B4)-1\n    tmp2=f3(B4(i+1)/1000,alpha2)-f4(B4(i+1));\n    v7(i)=tmp1-tmp2;\n    tmp1=tmp2;\nend\n\ntmp1=v3-A3;tmp2=v4-A4; tmp3=v6-A4;%�����ۼӳ�������ʵ���ۼӳ������Ĳ�ֵ\n\nfigure\nax1=subplot(5,1,1);ax2=subplot(5,1,2);ax3=subplot(5,1,3);ax4=subplot(5,1,4);ax5=subplot(5,1,5);\nplot(ax1,B3,tmp1);   \ntitle(ax1,'�����ۼӳ�������ʵ���ۼӳ�������ֵ����λ��');\n\nplot(ax2,B4,tmp2);\ntitle(ax2,'�����ۼӳ�������ʵ���ۼӳ�������ֵ(ʹ�ñ�λ������)������н�4.1��');\n\nplot(ax3,B4,tmp3);\ntitle(ax3,'�����ۼӳ�������ʵ���ۼӳ�������ֵ��ʹ���ޱ�λ�����㣩������н�4.1��');\n\nplot(ax4,1:length(B4)-1,v5);\ntitle(ax4,'��λ�������������ÿ�γ�������50��������н�4.1��');\n\nplot(ax5,1:length(B4)-1,v7);\ntitle(ax5,'����λ�������������ÿ�γ�������50��������н�4.1��');\n\n%�����궨4.1�������\nyouliang=zeros(121,1);\nfor i=0:120\n    youliang(i+1)=f3(i/100,alpha2)-f4(10*i)-c;\nend\n\nfigure\nplot(0:10:1200,youliang,B1,A1);\ntitle('�궨��������ʵ��������4.1�㣩');\n\nfunction s=f(h) %��h����Բ�������\nglobal a b;\n  s=a*b.*acos((b-h)/b)-(b-h).*a.*sqrt(1-(h-b).^2/b^2);\nend\n\n\nfunction l=f1(h,alpha) %��������Ϊhʱ����ֱ��h���������߶Ⱥ��� x(h)\n   global L;\n   h1=2.05*tan(alpha);\n   if alpha==0\n       l=L;\n   elseif h<=h1\n       l=0.4+cot(alpha)*h;\n   else \n       l=L;\n   end\nend\n\n\nfunction height=f2(x,h,alpha) %��������λhʱ����x������Բ����߶�   h(l)\n    global b;\n    if alpha==0\n        height=h*ones(size(x));\n    else\n        h2=2*b-0.4*tan(alpha);\n        tmp=0.4-(2*b-h)*cot(alpha);\n        if h<=h2\n            height=h+(0.4-x)*tan(alpha);\n        else\n            height=2*(x<=tmp).*b+(x>tmp).*(h+(0.4-x).*tan(alpha));\n        end\n    end\nend\n\nfunction v=f3(h,alpha)  %������hʱ����������\n    v=integral(@(x) f(f2(x,h,alpha)),0,f1(h,alpha))*1000;\nend\n\n\n%��cftool��Ϲ��ߵ��ݻ�\nfunction p=f4(h)  %����ƫ��� h ��λ(mm), ��λ��\n    p=-8.403e-08*h.^3+0.0001506*h.^2+0.05822*h-1.711;\nend\n\nfunction p=f5(h)  %����ƫ��� ��λ��alpha=4.1\n   p=2.881e-07*h.^2-0.001026*h.^2+1.023*h-222.1;\nend",
+  "m_a2010_2.m": "clc,clear;  %����λ��ģ��\nglobal R r L ;\nr=1.5; R=13/8; L=8;\nfilename=\"����A����2��ʵ�ʲɼ����ݱ�.xls\";\nA=xlsread(filename,1,'E:E'); % ��λ�߶�mm\nB=xlsread(filename,1,'F:F'); % ��ʾ��λ����L\nn=size(A); m=302; C=zeros(n);\nfor i=1:n\n   C(i)=volume1(A(i)/1000,0,0)+volume2(A(i)/1000,0,0)+volume3(A(i)/1000,0,0); %��������\nend\nD=B-C; [a,I]=sort(A);\nd=D(I);\n\nfigure\nax1=subplot(5,1,1);ax2=subplot(5,1,2);ax3=subplot(5,1,3); ax4=subplot(5,1,4); ax5=subplot(5,1,5);\nplot(ax1, A,B,A,C,'--');\ntitle(ax1,'�ޱ�λ�����µ�ʵ������ֵ�����ۼ���ֵ');\n\nplot(ax2,A,D);\ntitle(ax2,'�ޱ�λ�����µ�ʵ������ֵ�����ۼ���ֵ֮��');\n\nplot(ax3,A(1:m),D(1:m));\ntitle(ax3,'�ޱ�λ�����µ�ʵ�����������ۼ���ֵ�Ĳ�ֵ��1-302��');\n\nplot(ax4,A(m+1:n),D(m+1:n));\ntitle(ax4,'�ޱ�λ�����µ�ʵ�����������ۼ���ֵ�Ĳ�ֵ��303-603��');\n\nplot(ax5,a,d);\ntitle(ax5,'�ޱ�λ����������ĵ�ʵ�����������ۼ���ֵ�Ĳ�ֵ');\n\n\n%��λ�궨����alpha=2.1��,beta=4.4�㣩\ni=10:10:2*r*100; c=zeros(size(i));\nfor j=1:length(i)\n    c(j)=volume(10*i(j),2.1*pi/180,4.4*pi/180);\n    c1(j)=volume(10*i(j),0,0);\nend\n    \nfigure\nax1=subplot(1,1,1);\nplot(ax1,a,B(I),'*',i*10,c1,'b--o',i*10,c,i*10,c-c1,'--');\ntitle(ax1,'ԭ��λ����(*)����������(-o-)��ʵ������(��)����ֵ�Ա�ͼ���������2.1��,�������4.4��');\n    \n\nE=xlsread(filename,1,'D:D'); % ÿ�γ���������\n\n%��ʵ��������alpha,beta ȡ��һ�γ��������� ���� alpha=2.1, beta=4.4, M=247.988\nk=1:302;  \nalpha_0=2.1;beta_0=4.4;M=0; \ntmp=volume(A(k(1)),alpha_0*pi/180,beta_0*pi/180);\nfor s=1:length(k)-1\n    tmp1=volume(A(k(s+1)),alpha_0*pi/180,beta_0*pi/180);\n    M=M+(tmp-tmp1-E(k(s+1)))^2;\n    tmp=tmp1;\nend\n\nfor i=1:101\n    for j=1:101\n        M1=0; tmp=volume(A(k(1)),(i-1)*pi/1800,(j-1)*pi/1800);\n        for s=1:length(k)-1\n            tmp1=volume(A(k(s+1)),(i-1)*pi/1800,(j-1)*pi/1800);\n            M1=M1+(tmp-tmp1-E(k(s+1)))^2;\n            tmp=tmp1;\n            if M1>=M\n                break;\n            end\n        end\n        if M1<M\n            alpha_0=(i-1)/10;beta_0=(j-1)/10;M=M1;\n        end\n    end\nend\n\n%�ɵڶ�������304--603���� ���������֤ ���Ϊ293.2904\nk=304:603;  \nalpha_0=2.1;beta_0=4.4;M=0; \ntmp=volume(A(k(1)),alpha_0*pi/180,beta_0*pi/180);\nfor s=1:size(k)-1\n    tmp1=volume(A(k(s+1)),alpha_0*pi/180,beta_0*pi/180);\n    M=M+(tmp-tmp1-E(k(s+1)))^2;\n    tmp=tmp1;\nend\n    \n           \n        \n% ���岿��\n\nfunction s=section_area(r1,h) \n  s=(h-r1).*sqrt(r1.^2-(r1-h).^2)+r1.^2.*acos(1-h./r1);\nend\n\nfunction l=length1(h,alpha,beta) %���߶�Ϊhʱ����ֱ��h��������泤�Ⱥ��� x(h)\n   global L r;\n   h1=6*tan(alpha)*sec(beta)-r*(sec(beta)-1);\n   if alpha==0\n       l=L;\n   elseif h<h1\n       l=(h-r)*cos(beta)*cot(alpha)+r*cot(alpha)+2;\n   else\n       l=L;\n   end\nend\n\n\nfunction height=height1(x,h,alpha,beta) %��������λhʱ����x������Բ����߶�  h(l)\n    global r;\n    if alpha==0\n        height=((h-r)*cos(beta)+r)*ones(size(x));\n    else\n        tmp=2-(r-(h-r)*cos(beta))*cot(alpha);\n        h2=r*(sec(beta)+1)-2*tan(alpha)*sec(beta);\n        if h<=h2\n            height=(h-r)*cos(beta)+r+(2-x)*tan(alpha);\n        else\n            height=(x<=tmp).*2*r+(x>tmp).*((h-r)*cos(beta)+r+(2-x).*tan(alpha));\n        end\n    end\nend\n\nfunction v=volume1(h,alpha,beta)  %������hʱ����������    ���岿�����\n    global r;\n    v=integral(@(x) section_area(r,height1(x,h,alpha,beta)),0,length1(h,alpha,beta))*1000;\nend\n\n\n%����ڲ���\nfunction l=length2(h,alpha,beta)       %x1(h)\n    global R r;\n    tmp=(h-r)*cos(beta)+2*tan(alpha);\n    l=(R-1+tmp*tan(alpha)-sqrt((1-R)^2-2*(1-R)*tmp*tan(alpha)-sec(alpha)^2*(1-2*R)-tmp^2))/sec(alpha)^2;\nend\n\nfunction height=height2(x,h,alpha,beta)  %h(x)\n    global R r;\n    h3=r-3*tan(alpha)*sec(beta);\n    tmp=length2(h,alpha,beta);\n    if h<h3\n        height=(h-r)*cos(beta)-(x-2)*tan(alpha)+sqrt((2*R-x-1).*(x+1));\n    else\n        height=(x>=tmp).*(sqrt((2*R-x-1).*(x+1))+(h-r)*cos(beta)-(x-2)*tan(alpha))+(x<tmp).*(2*sqrt((2*R-x-1).*(x+1)));\n    end\nend\n\nfunction v=volume2(h,alpha,beta)  %����ڲ������\n    global R r;\n    h3=r-3*tan(alpha)*sec(beta);\n    h2=r*(sec(beta)+1)-2*tan(alpha)*sec(beta);\n    if 2*tan(alpha)>=r*(1-cos(beta))&& h>=h2\n        v=pi*integral(@(x) (2*R-x-1).*(x+1),-1,0)*1000;\n    elseif h<h3\n        v=integral(@(x) section_area(sqrt((2*R-x-1).*(x+1)),height2(x,h,alpha,beta)),length2(h,alpha,beta),0)*1000;\n    else\n        v=integral(@(x) section_area(sqrt((2*R-x-1).*(x+1)),height2(x,h,alpha,beta)),-1,0)*1000;\n    end\nend\n\n\n%����ڲ��ֵ����\nfunction l=length3(h,alpha,beta)\n    global R r L;\n    h1=6*tan(alpha)*sec(beta)-r*(sec(beta)-1);\n    if h1>=0 && h<=h1\n        l=L;\n    else\n        tmp=(h-r)*cos(beta)+2*tan(alpha);\n        l=(9-R+tmp*tan(alpha)+sqrt((9-R)^2+2*(9-R)*tmp*tan(alpha)-9*sec(alpha)^2*(9-2*R)-tmp^2))/sec(alpha)^2;\n    end\nend\n\nfunction height=height3(x,h,alpha,beta)   %x1(h)\n    global L R r;\n    h4=r+7*tan(alpha)*sec(beta);\n    tmp=length3(h,alpha,beta);\n    if h<=h4&&tmp>L\n        height=(h-r)*cos(beta)-(x-2)*tan(alpha)+sqrt((2*R+x-9).*(9-x));\n    elseif h<=h4&& tmp==L\n        height=0;\n    else\n        height=(sqrt((2*R+x-9).*(9-x))+(h-r)*cos(beta)-(x-2)*tan(alpha)).*(x<=tmp)+(x>tmp).*(2*sqrt((2*R+x-9).*(9-x)));\n    end\nend\n\nfunction v=volume3(h,alpha,beta)\n    global R r;\n    h1=6*tan(alpha)*sec(beta)-r*(sec(beta)-1);\n    h4=r+7*tan(alpha)*sec(beta);\n    if 6*tan(alpha)>=r*(1-cos(beta)) && h<=h1\n        v=0;\n    elseif h<=h4\n        v=integral(@(x) section_area(sqrt((2*R+x-9).*(9-x)),height3(x,h,alpha,beta)),8,length3(h,alpha,beta))*1000;\n    else\n        v=integral(@(x) section_area(sqrt((2*R+x-9).*(9-x)),height3(x,h,alpha,beta)),8,9)*1000;\n    end\nend\n\nfunction v=volume(h,alpha,beta) \n   v=volume1(h/1000,alpha,beta)+volume2(h/1000,alpha,beta)+volume3(h/1000,alpha,beta);\nend\n\n",
+  "m_a2018_1.m": "clc;\nfilename=\"CUMCM-2018-Problem-A-Chinese-Appendix.xlsx\";\nE=xlsread(filename,2);\nE=E(:,2);\n\n% �������Ż� ��h1=8.37, h0=122.3928;  min=0.3496\nh0=h(8.36); h1=8.36;\nu=heatequation(122.41,h1);\ntmp=u-E;\nmin=sum(tmp.*tmp); \n\n\nfor i=8.3:0.01:8.7\n  u=heatequation(h(i),i);\n  tmp=u-E;\n  min1=sum(tmp.*tmp);\n  if min1<min\n      min=min1; h1=h(i); h0=i;\n  end\nend\n\n\n\n\n% �ڶ����Ż� ��h1=8.4\nh0=h(8); h1=8;\nu=heatequation(h0,h1);\ntmp=u-E;\nmin=sum(tmp.*tmp); \n\n\nfor i=7.5:0.1:8.5\n  u=heatequation(h(i),i);\n  tmp=u-E;\n  min1=sum(tmp.*tmp);\n  if min1<min\n      min=min1; h1=h(i); h0=i;\n  end\nend\n\n\n\n\n%��һ���Ż��� ��h1=8;\nh0=h(3); h1=3;\nu=heatequation(h0,h1);\ntmp=u-E;\nmin=sum(tmp.*tmp); \n\n\nfor i=3:10\n  u=heatequation(h(i),i);\n  tmp=u-E;\n  min1=sum(tmp.*tmp);\n  if min1<min\n      min=min1; h1=h(i); h0=i;\n  end\nend\n        \n\n\n\nfunction h1=h(t)\n    k=[0.082 0.37 0.045 0.028];l=[6e-4 6e-3 3.6e-3 5e-3]; u0=75;u1=37; u=48.08;\n    t1=sum(l./k);\n    h1=t*(u-u1)/(u0-u+t*(u1-u)*t1);\nend\n\n\n\n\nfunction  u=heatequation(h0,h1)\n    k=[0.082 0.37 0.045 0.028];c=[1377 2100 1726 1005];density=[300 862 74.2 1.18];\n    l=[6e-4 6e-3 3.6e-3 5e-3]; T=90*60; u0=75;u1=37;   \n    x=1e-5; \n    r=k./(c.*density.*x*x);\n    n=int16(l/x);m=sum(n)+1;\n    u=zeros(m,T+1);\n    u(:,1)=37;\n    \n    A=diag([k(1)+h0*x,2*ones(1,n(1)-1)*(1+r(1)),k(1)+k(2),2*ones(1,n(2)-1)*(1+r(2)),k(2)+k(3),2*ones(1,n(3)-1)*(1+r(3)),k(3)+k(4),2*ones(1,n(4)-1)*(1+r(4)),k(4)+h1*x]);\n    A=A+diag([-k(1),-r(1)*ones(1,n(1)-1),-k(2),-r(2)*ones(1,n(2)-1),-k(3),-r(3)*ones(1,n(3)-1),-k(4),-r(4)*ones(1,n(4)-1)],1);\n    A=A+diag([-r(1)*ones(1,n(1)-1),-k(1),-r(2)*ones(1,n(2)-1),-k(2),-r(3)*ones(1,n(3)-1),-k(3),-r(4)*ones(1,n(4)-1),-k(4)],-1);\n\n    B=diag([0,2*ones(1,n(1)-1)*(1-r(1)),0,2*ones(1,n(2)-1)*(1-r(2)),0,2*ones(1,n(3)-1)*(1-r(3)),0,2*ones(1,n(4)-1)*(1-r(4)),0]);\n    B=B+diag([0,r(1)*ones(1,n(1)-1),0,r(2)*ones(1,n(2)-1),0,r(3)*ones(1,n(3)-1),0,r(4)*ones(1,n(4)-1)],1);\n    B=B+diag([r(1)*ones(1,n(1)-1),0,r(2)*ones(1,n(2)-1),0,r(3)*ones(1,n(3)-1),0,r(4)*ones(1,n(4)-1),0],-1);\n    C=A\\B;\n    c=zeros(m,1); c(1)=h0*u0*x; c(m)=h1*u1*x; c=A\\c;\n    for j=1:T\n        u(:,j+1)=C*u(:,j)+c;\n    end\n    u=u(m,:)';\nend",
+  "m_a2018_2.m": "clc; clear;\n\n%�����ʽ��, ȡL2=19.2750;  �ɱ�������С\nl1=19.25; l2=19.3;\nwhile 1\n    t=(l1+l2)/2;\n    u=heatequation(80,1800,t,6.4);\n    if u(1801)<=47 && u(1501)<=44\n        l2=t;\n    else \n        l1=t;\n    end\n    if l2-l1<0.001\n        break;\n    end\nend\n\n\n\n\n%�ڶ��ʽ��\nl1=0.6; l2=25;\nwhile 1\n    t=(l1+l2)/2;\n    u=heatequation(65,3600,t,5.5);\n    if u(3601)<=47 && u(55*60+1)<=44\n        l2=t;\n    else \n        l1=t;\n    end\n    if l2-l1<0.01\n        break;\n    end\nend\n% �ɵ����l2=17.5954\nfunction  u=heatequation(u0,T,l2,l4)\n    k=[0.082 0.37 0.045 0.028];c=[1377 2100 1726 1005];density=[300 862 74.2 1.18];\n    l=[6e-4 l2*1e-3 3.6e-3 l4*1e-3]; u1=37;   h0=122.3928; h1=8.37;\n    x=1e-5; \n    r=k./(c.*density.*x*x);\n    n=int16(l/x);m=sum(n)+1;\n    u=zeros(m,T+1);\n    u(:,1)=37;\n    \n    A=diag([k(1)+h0*x,2*ones(1,n(1)-1)*(1+r(1)),k(1)+k(2),2*ones(1,n(2)-1)*(1+r(2)),k(2)+k(3),2*ones(1,n(3)-1)*(1+r(3)),k(3)+k(4),2*ones(1,n(4)-1)*(1+r(4)),k(4)+h1*x]);\n    A=A+diag([-k(1),-r(1)*ones(1,n(1)-1),-k(2),-r(2)*ones(1,n(2)-1),-k(3),-r(3)*ones(1,n(3)-1),-k(4),-r(4)*ones(1,n(4)-1)],1);\n    A=A+diag([-r(1)*ones(1,n(1)-1),-k(1),-r(2)*ones(1,n(2)-1),-k(2),-r(3)*ones(1,n(3)-1),-k(3),-r(4)*ones(1,n(4)-1),-k(4)],-1);\n\n    B=diag([0,2*ones(1,n(1)-1)*(1-r(1)),0,2*ones(1,n(2)-1)*(1-r(2)),0,2*ones(1,n(3)-1)*(1-r(3)),0,2*ones(1,n(4)-1)*(1-r(4)),0]);\n    B=B+diag([0,r(1)*ones(1,n(1)-1),0,r(2)*ones(1,n(2)-1),0,r(3)*ones(1,n(3)-1),0,r(4)*ones(1,n(4)-1)],1);\n    B=B+diag([r(1)*ones(1,n(1)-1),0,r(2)*ones(1,n(2)-1),0,r(3)*ones(1,n(3)-1),0,r(4)*ones(1,n(4)-1),0],-1);\n    C=A\\B;\n    c=zeros(m,1); c(1)=h0*u0*x; c(m)=h1*u1*x; \n    c=A\\c;\n    for j=1:T\n        u(:,j+1)=C*u(:,j)+c;\n    end\n    u=u(m,:)';\nend",
+  "m_a2019_1_1.m": "clear; clc;   %����1.1\nglobal p0 C A V\np0=160; C=0.85; A=pi*1.4^2/4; V=pi*25*500;\n\n[p1,t]=f(40,0.2878,130);\n\n[p,~]=f(40,0.2878,100);\nfigure\nax1=subplot(2,1,1);\nplot(ax1,t*0.001,p1);\ntitle(ax1,'��T=0.2878,��ʼѹǿ130ʱ��ѹǿ��ʱ��(s)�Ĺ�ϵ');\nax2=subplot(2,1,2);\nplot(ax2,t*0.001,p);\ntitle(ax2,'��T=0.2878����ʼѹǿ100ʱ��ѹǿ��ʱ��(s)�Ĺ�ϵ');\n\n\nfigure\nax1=subplot(2,1,1);\nplot(ax1,t*0.001,p);\ntitle(ax1,'��T=0.2878ʱ��ѹǿ��ʱ��(s)�Ĺ�ϵ');\nax2=subplot(2,1,2);\nplot(ax2,t(39000000:40000000)*0.001,p(39000000:40000000));\ntitle(ax2,'��T=0.2878ʱ��ѹǿ��ʱ���(39-40s)�Ĺ�ϵ');\n\n\n \n%[p,t]=f(20,0.29);   %p��19.5-10s�ھ�ֵΪ100..8851\n%[p,t]=f(20,0.27);  %p��19.5-10s�ھ�ֵΪ92.8252\n\n\na1=0.27; a2=0.29;\nwhile 1\n    tmp=(a1+a2)/2;\n    [p,~]=f(20,tmp,100);\n    s=mean(p(19500000:20000000));\n    if s>100\n        a2=tmp;\n    else\n        a1=tmp;\n    end\n    if(a2-a1)<=0.001\n        break;\n    end\nend\nT=(a1+a2)/2;     % T=0.2878;  %ʱ��ȡ20s;  ʱ��Խ����Խ��ȷ������ʱ��\n\n\n\n\nfunction rho=dens(p)         %�ܶ�ѹǿ�Ĺ�ϵ\n    n=length(p);rho=zeros(n,1);\n    for i=1:n      \n        s=integral(@(x) 1./sc(x),100,p(i));\n        rho(i)=0.850*exp(s);\n    end\nend\n\nfunction e=sc(x)    %����ģ��\n    p1=3.986e-12;p2=-1.196e-09;p3=2.909e-07;p4=1.024e-05;p5=0.0116;p6=4.857;p7=1538;\n    e=p1*x.^6 + p2*x.^5 + p3*x.^4 + p4*x.^3 + p5*x.^2 +p6.*x + p7;\nend\n\nfunction y=q(t)      %B����������\n    s=mod(t,100);\n    y=100.*s.*(s>=0).*(s<=0.2)+20.*(0.2<s).*(s<=2.2)+(240-100.*s).*(2.2<s).*(s<=2.4)+0.*(2.4<s).*(s<=100);\nend\n\nfunction y=eta(t,a,T)  %A������������ T����ʱ���� a ���ο���ʱ��\n    s=mod(t-a,T+10);\n    y=(0<=s).*(s<=T);\nend\n\n\n\n\nfunction [p,t]=f(time,T,p1)  %time ��ʱ���� T ����ʱ��\n    global p0 A C V\n    h=0.001; n=floor(time*1000/h)+1; a=0;\n    t=(0:n-1)*h;       %ʱ����\n    p=zeros(n,1);      %��Ӧ��ѹǿ\n    midu=zeros(n,1);   %��Ӧ���ܶ�\n    rho0=dens(p0); p(1)=p1;  midu(1)=dens(p1);\n    tmp1=h*C*A*eta(t,a,T)*sqrt(2*rho0)/V;\n    tmp2=h*q(t)/V;\n    for i=1:n-1\n        tmp=tmp1(i)*sqrt(p0-p(i))-midu(i)*tmp2(i);\n        midu(i+1)=midu(i)+tmp;\n        p(i+1)=p(i)+tmp*sc(p(i))/midu(i);\n    end\nend\n\n\n",
+  "m_a2019_1_2a.m": "clear; clc;   %����1.2   2s������\nglobal p0 C A V\np0=160; C=0.85; A=pi*1.4^2/4; V=pi*25*500;\n\n[p,t]=f1(1.3343,4,0.7524,100);\ns=mean(p(1500000:2000000));\nfigure\nax=subplot(1,1,1);\nplot(ax,t*0.001,p);\ntitle(ax,'ǰ1sT=1.3343,���T=0.7524ʱ��ѹǿ��ʱ��(s)�Ĺ�ϵ');\n\n\na1=1.3; a2=1.5;                   \nwhile 1\n    tmp=(a1+a2)/2;\n    [p,~]=f1(tmp,1,0.7524,100);\n    s=mean(p(1500000:2000000));\n    if s<150\n        a1=tmp;\n    else\n        a2=tmp;\n    end\n    if(a2-a1)<=0.0001\n        break;\n    end\nend\nT=(a1+a2)/2;     % T=1.3343  \n\n\n\n\n[p,t]=f1(1.50,1,0.7524,100);\n[p1,~]=f1(1.30,1,0.7524,100);\nfigure\nax=subplot(2,1,1);\nplot(ax,t*0.001,p);\ntitle(ax,'��ǰ1s T=1.50,���T=0.7524ʱ��ѹǿ��ʱ��Ĺ�ϵ');\nax1=subplot(2,1,2);\nplot(ax1,t,p1);\ntitle(ax1,'��ǰ1s T=1.30,���T=0.7524ʱ��ѹǿ��ʱ��Ĺ�ϵ')\n\n\n\n\nfunction rho=dens(p)         %�ܶ�ѹǿ�Ĺ�ϵ\n    n=length(p);rho=zeros(n,1);\n    for i=1:n      \n        s=integral(@(x) 1./sc(x),100,p(i));\n        rho(i)=0.850*exp(s);\n    end\nend\n\nfunction e=sc(x)    %����ģ��\n    p1=3.986e-12;p2=-1.196e-09;p3=2.909e-07;p4=1.024e-05;p5=0.0116;p6=4.857;p7=1538;\n    e=p1*x.^6 + p2*x.^5 + p3*x.^4 + p4*x.^3 + p5*x.^2 +p6.*x + p7;\nend\n\nfunction y=q(t)      %B����������\n    s=mod(t,100);\n    y=100.*s.*(s>=0).*(s<=0.2)+20.*(0.2<s).*(s<=2.2)+(240-100.*s).*(2.2<s).*(s<=2.4)+0.*(2.4<s).*(s<=100);\nend\n\nfunction y=eta(t,a,T)  %A������������ T����ʱ���� a ���ο���ʱ��\n    s=mod(t-a,T+10);\n    y=(0<=s).*(s<=T);\nend\n\nfunction [p,t]=f(time,T,p1)  %time ��ʱ���� T ����ʱ��  p1 ��ʼѹǿ\n    global p0 A C V\n    h=0.001; n=floor(time*1000/h)+1; a=0;\n    t=(0:n-1)*h;       %ʱ����\n    p=zeros(n,1);      %��Ӧ��ѹǿ\n    midu=zeros(n,1);   %��Ӧ���ܶ�\n    rho0=dens(p0); p(1)=p1;  midu(1)=dens(p1);\n    tmp1=h*C*A*eta(t,a,T)*sqrt(2*rho0)/V;\n    tmp2=h*q(t)/V;\n    for i=1:n-1\n        tmp=tmp1(i)*sqrt(p0-p(i))-midu(i)*tmp2(i);\n        midu(i+1)=midu(i)+tmp;\n        p(i+1)=p(i)+tmp*sc(p(i))/midu(i);\n    end\nend\n\nfunction [p,t]=f1(t1,t2,t3,p1)  %t1 ǰ�ο���ʱ�䣬 t2 ��ϵ㣬 t3 ��˿���ʱ���� p1��ʼѹǿ�� ��ģ��ʱ��10s\n    global p0 A C V\n    h=0.001; n=floor(10*1000/h)+1; a=0;   d=floor(t2*1000/h)+1;\n    t=(0:n-1)*h;       %ʱ����\n    p=zeros(n,1);      %��Ӧ��ѹǿ\n    midu=zeros(n,1);   %��Ӧ���ܶ�\n    rho0=dens(p0); p(1)=p1;  midu(1)=dens(p1);\n    tmp1=h*C*A*[eta(t(1:d),a,t1),eta(t(d+1:n),a,t3)]*sqrt(2*rho0)/V;\n    tmp2=h*q(t)/V;\n    for i=1:n-1\n        tmp=tmp1(i)*sqrt(p0-p(i))-midu(i)*tmp2(i);\n        midu(i+1)=midu(i)+tmp;\n        p(i+1)=p(i)+tmp*sc(p(i))/midu(i);\n    end\nend\n\n",
+  "m_a2019_1_2b.m": "clear; clc;   %����1.2\nglobal p0 C A V\np0=160; C=0.85; A=pi*1.4^2/4; V=pi*25*500;\n\n[p,t]=f1(0.7643,4,0.7524,100);\ns=mean(p(4500000:5000000));\nfigure\nax=subplot(1,1,1);\nplot(ax,t*0.001,p);\ntitle(ax,'ǰ4s T=0.7643,���T=0.7524ʱ��ѹǿ��ʱ��(s)�Ĺ�ϵ');\n\n\n\n\na1=0.76; a2=0.8;                   \nwhile 1\n    tmp=(a1+a2)/2;\n    [p,~]=f1(tmp,4,0.7524,100);\n    s=mean(p(4500000:5000000));\n    if s<150\n        a1=tmp;\n    else\n        a2=tmp;\n    end\n    if(a2-a1)<=0.0001\n        break;\n    end\nend\nT=(a1+a2)/2;     % T=0.7643\n\n\n\n\nfunction rho=dens(p)         %�ܶ�ѹǿ�Ĺ�ϵ\n    n=length(p);rho=zeros(n,1);\n    for i=1:n      \n        s=integral(@(x) 1./sc(x),100,p(i));\n        rho(i)=0.850*exp(s);\n    end\nend\n\nfunction e=sc(x)    %����ģ��\n    p1=3.986e-12;p2=-1.196e-09;p3=2.909e-07;p4=1.024e-05;p5=0.0116;p6=4.857;p7=1538;\n    e=p1*x.^6 + p2*x.^5 + p3*x.^4 + p4*x.^3 + p5*x.^2 +p6.*x + p7;\nend\n\nfunction y=q(t)      %B����������\n    s=mod(t,100);\n    y=100.*s.*(s>=0).*(s<=0.2)+20.*(0.2<s).*(s<=2.2)+(240-100.*s).*(2.2<s).*(s<=2.4)+0.*(2.4<s).*(s<=100);\nend\n\nfunction y=eta(t,a,T)  %A������������ T����ʱ���� a ���ο���ʱ��\n    s=mod(t-a,T+10);\n    y=(0<=s).*(s<=T);\nend\n\nfunction [p,t]=f(time,T,p1)  %time ��ʱ���� T ����ʱ��\n    global p0 A C V\n    h=0.001; n=floor(time*1000/h)+1; a=0;\n    t=(0:n-1)*h;       %ʱ����\n    p=zeros(n,1);      %��Ӧ��ѹǿ\n    midu=zeros(n,1);   %��Ӧ���ܶ�\n    rho0=dens(p0); p(1)=p1;  midu(1)=dens(p1);\n    tmp1=h*C*A*eta(t,a,T)*sqrt(2*rho0)/V;\n    tmp2=h*q(t)/V;\n    for i=1:n-1\n        tmp=tmp1(i)*sqrt(p0-p(i))-midu(i)*tmp2(i);\n        midu(i+1)=midu(i)+tmp;\n        p(i+1)=p(i)+tmp*sc(p(i))/midu(i);\n    end\nend\n\nfunction [p,t]=f1(t1,t2,t3,p1)  %t1 ǰ�ο���ʱ�䣬 t2 ��ϵ㣬 t3 ��˿���ʱ���� p1��ʼѹǿ�� ��ģ��ʱ��10s\n    global p0 A C V\n    h=0.001; n=floor(10*1000/h)+1; a=0;   d=floor(t2*1000/h)+1;\n    t=(0:n-1)*h;       %ʱ����\n    p=zeros(n,1);      %��Ӧ��ѹǿ\n    midu=zeros(n,1);   %��Ӧ���ܶ�\n    rho0=dens(p0); p(1)=p1;  midu(1)=dens(p1);\n    tmp1=h*C*A*[eta(t(1:d),a,t1),eta(t(d+1:n),a,t3)]*sqrt(2*rho0)/V;\n    tmp2=h*q(t)/V;\n    for i=1:n-1\n        tmp=tmp1(i)*sqrt(p0-p(i))-midu(i)*tmp2(i);\n        midu(i+1)=midu(i)+tmp;\n        p(i+1)=p(i)+tmp*sc(p(i))/midu(i);\n    end\nend\n\n",
+  "m_a2019_2.m": "clear; clc;\n\na1=10;a2=40;\nwhile 1\n    tmp=(a1+a2)/2;\n    [p,~]=f(10,tmp);\n    s=mean(p(900000:1000000));\n    if s<100\n        a1=tmp;\n    else\n        a2=tmp;\n    end\n    if a2-a1<=0.001\n        break;\n    end\nend\n\nw=(a1+a2)/2;\n[p,t]=f(10,w);\nfigure\nax1=subplot(1,1,1);\nplot(ax1,t*0.001,p);\ntitle(ax1,['��10s�ڽ��ٶ�Ϊ',num2str(w),'rad/sʱ ѹǿ��ʱ��Ĺ�ϵ']);\n\n\nfunction  y=Section_Area(h)     %B�� ���Ϳ����\n    t=tan(pi/20);s=sin(pi/20);\n    A1=pi*0.7^2; A2=pi*s*(2.5+t*h).*h;\n    y=(A2>A1).*A1+(A2<=A1).*A2;\nend\n\nfunction h=height(t)     % B�� ���̺���\n    a1=2.017;b1=0.4552;c1=0.1662; b2=1.994;\n    s=mod(t,100);\n    h=a1*(s<=0.45).*exp(-((s-b1)/c1).^2)+2*(s>0.45).*(s<=2)+a1*(s>2).*(s<=2.45).*exp(-((s-b2)/c1).^2);\n\nend\n\nfunction r=rad(w,t)  % ͹�ּ��������� w���ٶ�\n    c=4.826; b=2.413;\n    r=c-b*cos(w*t);\nend\n\nfunction e=sc(x)    %����ģ��\n    p1=3.986e-12;p2=-1.196e-09;p3=2.909e-07;p4=1.024e-05;p5=0.0116;p6=4.857;p7=1538;\n    e=p1*x.^6 + p2*x.^5 + p3*x.^4 + p4*x.^3 + p5*x.^2 +p6.*x + p7;\nend\n\nfunction V=Volume(w,t)  %����ǻ�����  w rad/s   t:ms\n    S=pi*6.25*2.413;\n    V=20+S*(1+cos(w*t*0.001));\nend\n\nfunction rho=dens(p)         %�ܶ�ѹǿ�Ĺ�ϵ\n    n=length(p);rho=zeros(n,1);\n    for i=1:n      \n        s=integral(@(x) 1./sc(x),100,p(i));\n        rho(i)=0.850*exp(s);\n    end\nend\nfunction [p,t]=f(time,w)  %��ⷽ���� time ģ��ʱ����w ���ٶ�  rad/s\n    h=0.01;  %ʱ����\n    n=floor(time*1000/h)+1;\n    k=floor(time*w/(2*pi))+1;\n    j=floor((0:k-1)*1000*2*pi/w/h)+1;\n    t=(0:n-1)*h;P=zeros(1,n);p=P;rho=P;Rho=P;m=P;\n    P(1)=0.5;p(1)=100;rho(1)=0.85; Rho(1)=dens(0.5);\n    CA=sqrt(2)*0.85*pi*1.4^2/4; V0=pi*25*500;\n    V=Volume(w,t); m(1)=Rho(1)*V(1);\n    Vt=-0.001*pi*6.25*2.413*w*sin(w*t*0.001)./V;  %dV/dt/V;\n    B=sqrt(2)*0.85*Section_Area(height(t))/V0;\n    for i=1:n-1\n        if ismember(i,j)\n            m(i)=m(1);\n            P(i)=P(1);\n            Rho(i)=Rho(1);\n        end\n        if P(i)>p(i)\n            mt=-CA*sqrt((P(i)-p(i))*Rho(i))*h;\n            m(i+1)=m(i)+mt;\n            tmp1=-mt/V0-B(i)*sqrt(p(i)*rho(i))*h;\n        else\n            mt=0;\n            m(i+1)=m(i);\n            tmp1=-B(i)*sqrt(p(i)*rho(i))*h;\n        end\n        tmp=mt/V(i)-Rho(i)*Vt(i)*h;\n        Rho(i+1)=Rho(i)+tmp;\n        P(i+1)=P(i)+sc(P(i))*tmp/Rho(i);\n        rho(i+1)=rho(i)+tmp1;\n        p(i+1)=p(i)+sc(p(i))*tmp1/rho(i);\n        if p(i+1)<0\n            p(i+1)=0;\n        end\n    end\nend",
+  "m_a2019_3_1.m": "clear; clc;  %������ ��һС��\n\n\na1=50;a2=60;\nwhile 1\n    tmp=(a1+a2)/2;\n    [p,~]=f1(10,tmp,50);\n    s=mean(p(900000:1000000));\n    if s<100\n        a1=tmp;\n    else\n        a2=tmp;\n    end\n    if a2-a1<=0.001\n        break;\n    end\nend\n\nw=(a1+a2)/2;                              % ��� a=0ʱ������ w=54.9985rad/s\n[p,t]=f1(10,w,0);                         % ��� a=50ʱ������ w=54.9612rad/s\nfigure\nax1=subplot(1,1,1);\nplot(ax1,t*0.001,p);\ntitle(ax1,['��10s�ڽ��ٶ�Ϊ',num2str(w),'rad/sʱ ѹǿ��ʱ��Ĺ�ϵ']);\n\n\nfunction  y=Section_Area(h)     %B�� ���Ϳ����\n    t=tan(pi/20);s=sin(pi/20);\n    A1=pi*0.7^2; A2=pi*s*(2.5+t*h).*h;\n    y=(A2>A1).*A1+(A2<=A1).*A2;\nend\n\nfunction h=height(t)     % B�� ���̺���\n    a1=2.017;b1=0.4552;c1=0.1662; b2=1.994;\n    s=mod(t,100);\n    h=a1*(s<=0.45).*exp(-((s-b1)/c1).^2)+2*(s>0.45).*(s<=2)+a1*(s>2).*(s<=2.45).*exp(-((s-b2)/c1).^2);\n\nend\n\nfunction r=rad(w,t)  % ͹�ּ��������� w���ٶ�\n    c=4.826; b=2.413;\n    r=c-b*cos(w*t);\nend\n\nfunction e=sc(x)    %����ģ��\n    p1=3.986e-12;p2=-1.196e-09;p3=2.909e-07;p4=1.024e-05;p5=0.0116;p6=4.857;p7=1538;\n    e=p1*x.^6 + p2*x.^5 + p3*x.^4 + p4*x.^3 + p5*x.^2 +p6.*x + p7;\nend\n\nfunction V=Volume(w,t)  %����ǻ�����  w rad/s   t:ms\n    S=pi*6.25*2.413;\n    V=20+S*(1+cos(w*t*0.001));\nend\n\nfunction rho=dens(p)         %�ܶ�ѹǿ�Ĺ�ϵ\n    n=length(p);rho=zeros(n,1);\n    for i=1:n      \n        s=integral(@(x) 1./sc(x),100,p(i));\n        rho(i)=0.850*exp(s);\n    end\nend\nfunction [p,t]=f1(time,w,a)  %��ⷽ���� time ģ��ʱ����w ���ٶ�  rad/s, a �������ʱ�� 0<a<100 ms\n    h=0.01;  %ʱ����\n    n=floor(time*1000/h)+1;\n    k=floor(time*w/(2*pi))+1;\n    j=floor((0:k-1)*1000*2*pi/w/h)+1;\n    t=(0:n-1)*h;P=zeros(1,n);p=P;rho=P;Rho=P;m=P;\n    P(1)=0.5;p(1)=100;rho(1)=0.85; Rho(1)=dens(0.5);\n    CA=sqrt(2)*0.85*pi*1.4^2/4; V0=pi*25*500;\n    V=Volume(w,t); m(1)=Rho(1)*V(1);\n    Vt=-0.001*pi*6.25*2.413*w*sin(w*t*0.001)./V;  %dV/dt/V;\n    B=sqrt(2)*0.85/V0*(Section_Area(height(t))+Section_Area(height(t+a)));\n    for i=1:n-1\n        if ismember(i,j)\n            m(i)=m(1);\n            P(i)=P(1);\n            Rho(i)=Rho(1);\n        end\n        if P(i)>p(i)\n            mt=-CA*sqrt((P(i)-p(i))*Rho(i))*h;\n            m(i+1)=m(i)+mt;\n            tmp1=-mt/V0-B(i)*sqrt(p(i)*rho(i))*h;\n        else\n            mt=0;\n            m(i+1)=m(i);\n            tmp1=-B(i)*sqrt(p(i)*rho(i))*h;\n        end\n        tmp=mt/V(i)-Rho(i)*Vt(i)*h;\n        Rho(i+1)=Rho(i)+tmp;\n        P(i+1)=P(i)+sc(P(i))*tmp/Rho(i);\n        rho(i+1)=rho(i)+tmp1;\n        p(i+1)=p(i)+sc(p(i))*tmp1/rho(i);\n        if p(i+1)<0\n            p(i+1)=0;\n        end\n    end\nend\n\nfunction [p,t]=f(time,w)  %��ⷽ���� time ģ��ʱ����w ���ٶ�  rad/s\n    h=0.01;  %ʱ����\n    n=floor(time*1000/h)+1;\n    k=floor(time*w/(2*pi))+1;\n    j=floor((0:k-1)*1000*2*pi/w/h)+1;\n    t=(0:n-1)*h;P=zeros(1,n);p=P;rho=P;Rho=P;m=P;\n    P(1)=0.5;p(1)=100;rho(1)=0.85; Rho(1)=dens(0.5);\n    CA=sqrt(2)*0.85*pi*1.4^2/4; V0=pi*25*500;\n    V=Volume(w,t); m(1)=Rho(1)*V(1);\n    Vt=-0.001*pi*6.25*2.413*w*sin(w*t*0.001)./V;  %dV/dt/V;\n    B=sqrt(2)*0.85*Section_Area(height(t))/V0;\n    for i=1:n-1\n        if ismember(i,j)\n            m(i)=m(1);\n            P(i)=P(1);\n            Rho(i)=Rho(1);\n        end\n        if P(i)>p(i)\n            mt=-CA*sqrt((P(i)-p(i))*Rho(i))*h;\n            m(i+1)=m(i)+mt;\n            tmp1=-mt/V0-B(i)*sqrt(p(i)*rho(i))*h;\n        else\n            mt=0;\n            m(i+1)=m(i);\n            tmp1=-B(i)*sqrt(p(i)*rho(i))*h;\n        end\n        tmp=mt/V(i)-Rho(i)*Vt(i)*h;\n        Rho(i+1)=Rho(i)+tmp;\n        P(i+1)=P(i)+sc(P(i))*tmp/Rho(i);\n        rho(i+1)=rho(i)+tmp1;\n        p(i+1)=p(i)+sc(p(i))*tmp1/rho(i);\n        if p(i+1)<0\n            p(i+1)=0;\n        end\n    end\nend",
+  "m_a2019_3_2.m": "%clear; clc;  %�����ʵڶ�С��   ����a=50\n\n\nfigure\nax1=subplot(3,1,1);\nax2=subplot(3,1,2);\nax3=subplot(3,1,3);\nplot(ax1,q,jiaosudu);\nplot(ax2,q,average);\nplot(ax3,q,zhenfu);\ntitle(ax1,'�ڸ�������ѹǿq�����£���30s��ʹѹǿ�ȶ���100��������ѽ��ٶ�');\ntitle(ax2,'�ڸ�������ѹǿq����Ӧ���ٶ��£���30s��  �͹��ڵ�ƽ��ѹǿ');\ntitle(ax3,'�ڸ�������ѹǿq����Ӧ���ٶ��£���30s��  �͹��ڵ�ѹǿ�����');\n\nq=101:0.1:103; \njiaosudu=zeros(size(q));\nzhenfu=zeros(size(q));\naverage=zeros(size(q));\n\n\nfor i=1:length(q)\n    a1=54;a2=700;\n    [p,~]=f1(30,a2,50,q(i));\n    s=mean(p(2900000:3000000));\n    if s<100\n        jiaosudu(i)=700;\n        zhenfu(i)=max(p(2900000:3000000))-min(p(2900000:3000000));\n        average(i)=s;\n    else\n        while 1\n            tmp=(a1+a2)/2;\n            [p,~]=f1(30,tmp,50,q(i));\n            s=mean(p(2900000:3000000));\n            if s<100\n                a1=tmp;\n            else\n                a2=tmp;\n            end\n            if a2-a1<=0.01\n                break;\n            end\n        end\n        jiaosudu(i)=(a1+a2)/2;  \n        average(i)=s;\n        zhenfu(i)=max(p(2900000:3000000))-min(p(2900000:3000000));\n    end\nend\n\n\n\nfunction  y=Section_Area(h)     %B�� ���Ϳ����\n    t=tan(pi/20);s=sin(pi/20);\n    A1=pi*0.7^2; A2=pi*s*(2.5+t*h).*h;\n    y=(A2>A1).*A1+(A2<=A1).*A2;\nend\n\nfunction h=height(t)     % B�� ���̺���\n    a1=2.017;b1=0.4552;c1=0.1662; b2=1.994;\n    s=mod(t,100);\n    h=a1*(s<=0.45).*exp(-((s-b1)/c1).^2)+2*(s>0.45).*(s<=2)+a1*(s>2).*(s<=2.45).*exp(-((s-b2)/c1).^2);\n\nend\n\nfunction r=rad(w,t)  % ͹�ּ��������� w���ٶ�\n    c=4.826; b=2.413;\n    r=c-b*cos(w*t);\nend\n\nfunction e=sc(x)    %����ģ��\n    p1=3.986e-12;p2=-1.196e-09;p3=2.909e-07;p4=1.024e-05;p5=0.0116;p6=4.857;p7=1538;\n    e=p1*x.^6 + p2*x.^5 + p3*x.^4 + p4*x.^3 + p5*x.^2 +p6.*x + p7;\nend\n\nfunction V=Volume(w,t)  %����ǻ�����  w rad/s   t:ms\n    S=pi*6.25*2.413;\n    V=20+S*(1+cos(w*t*0.001));\nend\n\nfunction rho=dens(p)         %�ܶ�ѹǿ�Ĺ�ϵ\n    n=length(p);rho=zeros(n,1);\n    for i=1:n      \n        s=integral(@(x) 1./sc(x),100,p(i));\n        rho(i)=0.850*exp(s);\n    end\nend\nfunction [p,t]=f1(time,w,a,q)  %��ⷽ���� time ģ��ʱ����w ���ٶ�  rad/s, a �������ʱ�� 0<a<100 ms  q ���򷧿���ѹǿ\n    h=0.01;  %ʱ����\n    n=floor(time*1000/h)+1;\n    k=floor(time*w/(2*pi))+1;\n    j=floor((0:k-1)*1000*2*pi/w/h)+1;\n    t=(0:n-1)*h;P=zeros(1,n);p=P;rho=P;Rho=P;m=P;\n    P(1)=0.5;p(1)=100;rho(1)=0.85; Rho(1)=dens(0.5);\n    CA=sqrt(2)*0.85*pi*1.4^2/4; V0=pi*25*500;\n    V=Volume(w,t); m(1)=Rho(1)*V(1);\n    Vt=-0.001*pi*6.25*2.413*w*sin(w*t*0.001)./V;  %dV/dt/V;\n    B=sqrt(2)*0.85/V0*(Section_Area(height(t))+Section_Area(height(t+a)));\n    for i=1:n-1\n        if ismember(i,j)\n            m(i)=m(1);\n            P(i)=P(1);\n            Rho(i)=Rho(1);\n        end\n        if P(i)>p(i)\n            mt=-CA*sqrt((P(i)-p(i))*Rho(i))*h;\n            m(i+1)=m(i)+mt;\n            tmp1=-mt/V0-B(i)*sqrt(p(i)*rho(i))*h;\n        else\n            mt=0;\n            m(i+1)=m(i);\n            tmp1=-B(i)*sqrt(p(i)*rho(i))*h;\n        end\n        if p(i)>q\n            tmp1=tmp1-CA*sqrt((p(i)-q)*rho(i))*h;\n        end\n        tmp=mt/V(i)-Rho(i)*Vt(i)*h;\n        Rho(i+1)=Rho(i)+tmp;\n        P(i+1)=P(i)+sc(P(i))*tmp/Rho(i);\n        rho(i+1)=rho(i)+tmp1;\n        p(i+1)=p(i)+sc(p(i))*tmp1/rho(i);\n        if p(i+1)<0\n            p(i+1)=0;\n        end\n    end\nend\n\n",
+  "m_test_1.m": "clear\nglobal m r g k F l\n% m ��������\n% r �����뾶\n% g �������ٶ�\n% k ���ɾ�ǿϵ��\n% F A��ʩ�ӵ����µ����Ĵ�С\n% l ����ԭ��\nm=5; r=0.3; g=9.8; k=500; F=50; l=0.8; T=20; % T:ʱ��\n[x,v]=fsolve(@fit,[0,0,-1,0,0,0]);\na=x(4);        %0<a<pi/2\nb=x(5);        %0<b<2*pi,   n3 �����\nc=x(6);        % ȷ��n1����  0<c<2*pi\nO_0=x(1:3);\nn3_0=[sin(a)*cos(b),sin(a)*sin(b),cos(a)];\ntmp=[cos(a)*cos(b),cos(a)*sin(b),-sin(a)];   %tmp��ֱ��n3\ntmp1=cross(n3_0,tmp);                         % tmp1,tmp2 �����������ֱ����\nn1_0=tmp*cos(c)+tmp1*sin(c);                  % n1����\nn2_0=cross(n3_0,n1_0);    \nA=O_0+r*n1_0;\nB=O_0-r/2*n1_0+sqrt(3)/2*r*n2_0;            %A,B,C,D����\nC=O_0-r/2*n1_0-sqrt(3)/2*r*n2_0;\nD=O_0-r*cos(2*pi/9)*n1_0+sin(2*pi/9)*r*n2_0;  \ntheta=acos(n3_0(3))/pi*180;\n\n\nH1=5*m*r^2/12;\nH2=H1;\nH3=2*m*r^2/3;              %���᷽���ת���������������ģ�\n\nh=0.001;           %ʱ�䲽��\nn=floor(T/h)+1;\nt=h*(0:(n-1))';\nv=zeros(n,3);      %�ٶ�\nn3=v;              %���淨��\nn1=v;              %n1����\nn2=v;              %n2����\nO=v;               %��������\nw=v;               %���ٶ�\nv(1,:)=[0,0,0];\nn3(1,:)=n3_0;\nn1(1,:)=n1_0;\nn2(1,:)=n2_0;\nO(1,:)=O_0;\nw(1,:)=[0,0,0];\nfor i=1:n-1\n    A=O(i,:)+r*n1(i,:);\n    B=O(i,:)-r/2*n1(i,:)+sqrt(3)/2*r*n2(i,:);            %A,B,C,D����\n    C=O(i,:)-r/2*n1(i,:)-sqrt(3)/2*r*n2(i,:);\n    p=O(i,:)-r/2*n3(i,:);                                %����p����\n\n    \n    l1=A-p;\n    l2=B-p;\n    l3=C-p;                               %��������������\n    \n    \n    e1=-A/norm(A);\n    e2=-B/norm(B);\n    e3=-C/norm(C);                                  %����A��B,C�ĵ�λ�������ϣ�\n    \n    F1=k*(norm(A)-l)*e1;\n    F2=k*(norm(B)-l)*e2;\n    F3=k*(norm(C)-l)*e3;                             %��������\n    M=cross(l1,F1)+cross(l2,F2)+cross(l3,F3);        %�����ش�С\n    \n    M1=dot(M,n1(i,:));\n    M2=dot(M,n2(i,:));\n    M3=dot(M,n3(i,:));                                    %�����������ϵķ���\n    \n    \n    vc=v(i,:)+((F1+F2+F3)/m-g*[0,0,1])*h;\n    Oc=O(i,:)+v(i,:)*h;\n    \n    w1c=w(i,1)+M1/H1*h;\n    w2c=w(i,2)+M2/H2*h;\n    w3c=w(i,3)+M3/H3*h;\n    \n    n1c=n1(i,:)+(-w(i,2)*n3(i,:)+w(i,3)*n2(i,:))*h;\n    n2c=n2(i,:)+(-w(i,3)*n1(i,:)+w(i,1)*n3(i,:))*h;\n    n3c=n3(i,:)+(-w(i,1)*n2(i,:)+w(i,2)*n1(i,:))*h;\n    n1c=n1c/norm(n1c);\n    n2c=n2c/norm(n2c);\n    n3c=n3c/norm(n3c);\n    \n    A=Oc+r*n1c;\n    B=Oc-r/2*n1c+sqrt(3)/2*r*n2c;            %A,B,C����\n    C=Oc-r/2*n1c-sqrt(3)/2*r*n2c;\n    p=Oc-r/2*n3c;                                %����p����\n\n    \n    l1=A-p;\n    l2=B-p;\n    l3=C-p;                               %��������������\n    \n    \n    e1=-A/norm(A);\n    e2=-B/norm(B);\n    e3=-C/norm(C);                                  %����A��B,C�ĵ�λ�������ϣ�\n    \n    F1=k*(norm(A)-l)*e1;\n    F2=k*(norm(B)-l)*e2;\n    F3=k*(norm(C)-l)*e3;                             %��������\n    M=cross(l1,F1)+cross(l2,F2)+cross(l3,F3);        %�����ش�С\n    \n    M1=dot(M,n1c);\n    M2=dot(M,n2c);\n    M3=dot(M,n3c);                                    %�����������ϵķ���\n\n    vp=v(i,:)+((F1+F2+F3)/m-g*[0,0,1])*h;\n    Op=O(i,:)+vc*h;\n    \n    w1p=w(i,1)+M1/H1*h;\n    w2p=w(i,2)+M2/H2*h;\n    w3p=w(i,3)+M3/H3*h;\n    \n    n1p=n1(i,:)+(-w2c*n3c+w3c*n2c)*h;\n    n2p=n2(i,:)+(-w3c*n1c+w1c*n3c)*h;\n    n3p=n3(i,:)+(-w1c*n2c+w2c*n1c)*h;\n    n1p=n1p/norm(n1p);\n    n2p=n2p/norm(n2p);\n    n3p=n3p/norm(n3p);\n    \n    O(i+1,:)=(Oc+Op)/2;\n    v(i+1,:)=(vc+vp)/2;\n    w(i+1,:)=[w1c+w1p,w2c+w2p,w3c+w3p]/2;\n    \n    n1(i+1,:)=(n1c+n1p)/2;\n    n2(i+1,:)=(n2c+n2p)/2;\n    n3(i+1,:)=(n3c+n3p)/2;\n    n1(i+1,:)=n1(i+1,:)/norm(n1(i+1,:));\n    n2(i+1,:)=n2(i+1,:)/norm(n2(i+1,:));\n    n3(i+1,:)=n3(i+1,:)/norm(n3(i+1,:));\nend\n\nA=O+r*n1;\nB=O-r/2*n1+sqrt(3)/2*r*n2;            %A,B,C����\nC=O-r/2*n1-sqrt(3)/2*r*n2;\np=O-r/2*n3;                          %��������\n\nla=sqrt(sum(A.*A,2));\nlb=sqrt(sum(B.*B,2));              %���ɳ���\nlc=sqrt(sum(C.*C,2));\n\ntheta1=acos(abs(A(:,3))./la)*180/pi;\ntheta2=acos(abs(B(:,3))./lb)*180/pi;      %�������\ntheta3=acos(abs(C(:,3))./lc)*180/pi;\n\ntheta=acos(n3(:,3))*180/pi;        %�������(�ȣ�\n\ne=k*((la-l).^2+(lb-l).^2+(lc-l).^2)/2+m*g*p(:,3)+m*sum(v.*v,2)/2+(H1*w(:,1).^2+H2*w(:,2).^2+H3*w(:,3).^2)/2;\nfigure\nax1=subplot(4,2,1);\nax2=subplot(4,2,2);\nax3=subplot(4,2,3);\nax4=subplot(4,2,4);\nax5=subplot(4,2,5);\nax6=subplot(4,2,6);\nax7=subplot(4,2,7);\nax8=subplot(4,2,8);\nplot(ax1,t,la-l);\ntitle(ax1,'A�˵����쳤�����ף�');\n\nplot(ax2,t,lb-l);\ntitle(ax2,'B�˵����쳤�����ף�');\n\nplot(ax3,t,lc-l)\ntitle(ax3,'C�˵����쳤�����ף�');\n\nplot(ax4,t,theta);\ntitle(ax4,'������б�ǣ��ȣ�');\n\nplot(ax5,t,theta1);\ntitle(ax5,'A�˵����봹ֱ����нǣ��ȣ�');\n\nplot(ax6,t,theta2);\ntitle(ax6,'B�˵����봹ֱ����нǣ��ȣ�');\n\nplot(ax7,t,theta3);\ntitle(ax7,'C�˵����봹ֱ����нǣ��ȣ�');\n\nplot(ax8,t, e);\ntitle(ax8,'ϵͳ������������+���ܣ�');\n\n\n\n\nfunction y=fit(x)\nglobal m r g k F l\n% x(1:3) O������\na=x(4);        %0<a<pi/2\nb=x(5);        %0<b<2*pi,   n3 �����\nc=x(6);        % ȷ��n1����  0<c<2*pi\nO=x(1:3);\nn3=[sin(a)*cos(b),sin(a)*sin(b),cos(a)];\ntmp=[cos(a)*cos(b),cos(a)*sin(b),-sin(a)];   %tmp��ֱ��n3\ntmp1=cross(n3,tmp);                         % tmp1,tmp2 �����������ֱ����\nn1=tmp*cos(c)+tmp1*sin(c);                  % n1����\nn2=cross(n3,n1);    \nA=O+r*n1;\nB=O-r/2*n1+sqrt(3)/2*r*n2;            %A,B,C,D����\nC=O-r/2*n1-sqrt(3)/2*r*n2;\nD=O-r*cos(2*pi/9)*n1+sin(2*pi/9)*r*n2;\np=O-r/2*n3;                          %����p����\n\n\ne1=-A/norm(A);\ne2=-B/norm(B);\ne3=-C/norm(C);  %����A��B,C�ĵ�λ�������ϣ�\n\nF1=k*(norm(A)-l)*e1;\nF2=k*(norm(B)-l)*e2;\nF3=k*(norm(C)-l)*e3;                             %����A��B,C����\ny(1:3)=F1+F2+F3-(F+m*g)*[0,0,1];                 % ������С\n\nl1=A-p;\nl2=B-p;\nl3=C-p;                                             %��������������\nl4=D-p;\n\ny(4:6)=cross(l1,F1)+cross(l2,F2)+cross(l3,F3)-F*cross(l4,[0,0,1]);  % �����ش�С\nend\n\n\n\n\n\n",
+  "m_BreedPSO.m": "function [xm, fv]=BreedPSO(fitness, N ,w, c1, c2,xmax,xmin,Pc,Sp,M,D)\n%�����ӽ�������Ⱥ�㷨\n% fitness:���Ż���Ŀ�꺯��\n% N:������Ŀ\n% w: ����Ȩ��\n% c1: ѧϰ����1\n% c2: ѧϰ����2\n% �Ա�������������ֵ��xmax, ������\n% �Ա������������Сֵ��xmin  ������\n% Pc: �ӽ�����\n% SP: �ӽ��صĴ�С����\n% M: ����������\n% D:�Ա�������\n% xm�� Ŀ�꺯��ȡ��Сֵʱ���Ա���ֵ\n% fv:  Ŀ�꺯����Сֵ\nformat long\nVm=0.2*(xmax-xmin);\nx=zeros(N,D);v=x;\nfor i=1:N\n    for j=1:D\n        x(i,j)=xmin(j)+rand*(xmax(j)-xmin(j));\n        v(i,j)=Vm(j)*(-1+2*rand);\n    end\nend\np=zeros(N,1); y=x;\nfor i=1:N\n    p(i)=fitness(x(i,:));\n    y(i,:)=x(i,:);\nend\npx=x(N,:); pg=p(N);\n   \nfor i=1:(N-1)\n    if p(i)<pg\n       pg=p(i);\n       px=x(i,:);\n    end\n        \nend\nf=p;childx1=x;childv1=v;\nfor t=1:M\n    for i=1:N\n        v(i,:)=w*v(i,:)+c1*(y(i,:)-x(i,:))*rand+c2*rand*(px-x(i,:));\n         for j=1:D\n            if v(i,j)>Vm(j)\n                v(i,j)=Vm(j);\n            end\n            if v(i,j)<-Vm(j)\n                v(i,j)=-Vm(j);\n            end\n        end\n        x(i,:)=x(i,:)+v(i,:);\n        tp1=x(i,:)<=xmax;\n        tp2=x(i,:)>=xmin;\n        if (sum(tp1)+sum(tp2))==2*D\n            f(i)=fitness(x(i,:));\n        else\n            f(i)=inf;\n        end\n        if f(i)<p(i)\n           p(i)=f(i);\n           y(i,:)=x(i,:);\n        end\n        if p(i)<pg\n           pg=p(i);\n           px=y(i,:);\n        end\n        r1=rand;\n        if r1<Pc\n           numPool=round(Sp*N);\n           PoolX=x(1:numPool,:);\n           PoolVx=v(1:numPool,:);\n           for j=1:numPool\n               seed1=floor(rand*(numPool-1))+1;\n               seed2=floor(rand*(numPool-1))+1;\n               pb=rand;\n               childx1(j,:)=pb*PoolX(seed1,:)+(1-pb)*PoolX(seed2,:);\n               childv1(j,:)=(PoolVx(seed1,:)+PoolVx(seed2,:))*norm(PoolVx(seed1,:))/norm(PoolVx(seed1,:)+PoolVx(seed2,:));\n           end\n           x(1:numPool,:)=childx1(1:numPool,:);\n           v(1:numPool,:)=childv1(1:numPool,:);\n        end\n    end        \nend\nxm=px';\nfv=pg;\n                \n            ",
+  "m_CLSPSO.m": "function [xm, fv]=CLSPSO(fitness, N ,w, c1, c2,xmax,xmin,M,D)\n% fitness:���Ż���Ŀ�꺯��\n% N:������Ŀ\n% w: ����Ȩ��\n% c1: ѧϰ����1\n% c2: ѧϰ����2\n% �Ա�������������ֵ��xmax, ������\n% �Ա������������Сֵ��xmin  ������\n% M: ����������\n% D:�Ա�������\n% xm�� Ŀ�꺯��ȡ��Сֵʱ���Ա���ֵ\n% fv:  Ŀ�꺯����Сֵ\nformat long\nVm=0.2*(xmax-xmin);\nx=zeros(N,D); v=x; \nfor i=1:N\n    for j=1:D\n        x(i,j)=xmin(j)+rand*(xmax(j)-xmin(j));\n        v(i,j)=randn;\n    end\nend\np=zeros(1,N);f=p;y=x;\nfor i=1:N\n    p(i)=fitness(x(i,:));\nend\npx=x(N,:); pg=p(N);\nfor i=1:(N-1)\n   if p(i)<pg\n       pg=p(i);\n       px=x(i,:);\n    end\nend\nfor t=1:M\n    for i=1:N\n        v(i,:)=w*v(i,:)+c1*rand*(y(i,:)-x(i,:))+c2*rand*(px-x(i,:));\n        for j=1:D\n            if v(i,j)>Vm(j)\n                v(i,j)=Vm(j);\n            end\n            if v(i,j)<-Vm(j)\n                v(i,j)=-Vm(j);\n            end\n        end\n        x(i,:)=x(i,:)+v(i,:);\n        tp1=x(i,:)<=xmax;\n        tp2=x(i,:)>=xmin;\n        if (sum(tp1)+sum(tp2))==2*D\n            f(i)=fitness(x(i,:));\n        else\n            f(i)=inf;\n        end\n        if f(i)<p(i)\n            p(i)=f(i);\n            y(i,:)=x(i,:);\n        end\n        if p(i)<pg\n            pg=p(i);\n            px=y(i,:);\n        end\n    end\nend\nxm=px';\nfv=pg;            \n         \n             \n           \n        \n        \n    ",
+  "m_SelPSO.m": "function [xm, fv]=SelPSO(fitness, N , w,c1, c2,xmax,xmin,M,D)\n%������Ȼѡ�������Ⱥ�㷨\n% fitness:���Ż���Ŀ�꺯��\n% N:������Ŀ\n% w: ����Ȩ��\n% c1: ѧϰ����1\n% c2: ѧϰ����2\n% �Ա�������������ֵ��xmax, ������\n% �Ա������������Сֵ��xmin  ������\n% M: ����������\n% D:�Ա�������\n% xm�� Ŀ�꺯��ȡ��Сֵʱ���Ա���ֵ\n% fv:  Ŀ�꺯����Сֵ\nformat long\nVm=0.2*(xmax-xmin);\nx=zeros(N,D);v=x;\nfor i=1:N\n    for j=1:D\n        x(i,j)=xmin(j)+rand*(xmax(j)-xmin(j));\n        v(i,j)=Vm(j)*(-1+2*rand);\n    end\nend\n    p=zeros(N,1);y=zeros(N,D);\nfor i=1:N\n    p(i)=fitness(x(i,:));\n    y(i,:)=x(i,:);\nend\npx=x(N,:); pg=p(N);\nfor i=1:(N-1)\n    if p(i)<pg\n       pg=p(i);\n       px=x(i,:);\n    end\nend\nf=zeros(N,1);\nfor t=1:M\n    for i=1:N\n        v(i,:)=w*v(i,:)+c1*(y(i,:)-x(i,:))*rand+c2*rand*(px-x(i,:));\n        for j=1:D\n            if v(i,j)>Vm(j)\n                v(i,j)=Vm(j);\n            end\n            if v(i,j)<-Vm(j)\n                v(i,j)=-Vm(j);\n            end\n        end\n        x(i,:)=x(i,:)+v(i,:);\n        tp1=x(i,:)<=xmax;\n        tp2=x(i,:)>=xmin;\n        if (sum(tp1)+sum(tp2))==2*D\n            f(i)=fitness(x(i,:));\n        else\n            f(i)=inf;\n        end\n        if f(i)<p(i)\n           p(i)=f(i);\n           y(i,:)=x(i,:);\n        end\n        if p(i)<pg\n           pg=p(i);\n           px=y(i,:);\n        end\n    end\n    [~,sortx]=sort(f);\n    exindex=round((N-1)/2);\n    x(sortx((N-exindex+1):N))=x(sortx(1:exindex));\n   v(sortx((N-exindex+1):N))=v(sortx(1:exindex));\nend\nxm=px';\nfv=pg;\n                \n            ",
+  "m_SimuAPSO.m": "function [xm, fv]=SimuAPSO(fitness, N , w,c1, c2,xmax,xmin,M,D)\n%����ģ���˻������Ⱥ�㷨\n% fitness:���Ż���Ŀ�꺯��\n% N:������Ŀ\n% w: �˻���\n% c1: ѧϰ����1\n% c2: ѧϰ����2\n% �Ա�������������ֵ��xmax, ������\n% �Ա������������Сֵ��xmin  ������\n% M: ����������\n% D:�Ա�������\n% xm�� Ŀ�꺯��ȡ��Сֵʱ���Ա���ֵ\n% fv:  Ŀ�꺯����Сֵ\nformat long\nVm=0.2*(xmax-xmin);\nx=zeros(N,D);v=x;\nfor i=1:N\n    for j=1:D\n        x(i,j)=xmin(j)+rand*(xmax(j)-xmin(j));\n        v(i,j)=Vm(j)*(-1+2*rand);\n    end\nend\np=zeros(N,1); y=x;\nfor i=1:N\n    p(i)=fitness(x(i,:));\n    y(i,:)=x(i,:);\nend\npx=x(N,:); pg=p(N);\n   \nfor i=1:(N-1)\n    if p(i)<pg\n       pg=p(i);\n       px=x(i,:);\n    end      \nend\n\ntfit=zeros(N,1); f=tfit;comfit=tfit;\nT=pg/log(5);\nfor t=1:M\n    groupfit=pg;\n    for i=1:N\n       tfit(i)=exp(-(p(i)-groupfit)/T);\n    end\n    sumtfit=sum(tfit);\n    tfit=tfit/sumtfit;\n    pbet=rand();\n    for i=1:N\n        comfit(i)=sum(tfit(1:i));\n        if pbet<=comfit(i)\n            pg_plus=x(i,:);\n            break;\n        end\n    end\n    C=c1+c2;\n    ksi=2/abs(2-C-sqrt(C^2-4*C));\n    for i=1:N\n        v(i,:)=ksi*v(i,:)+c1*(y(i,:)-x(i,:))*rand+c2*rand*(pg_plus-x(i,:));\n        for j=1:D\n            if v(i,j)>Vm(j)\n                v(i,j)=Vm(j);\n            end\n            if v(i,j)<-Vm(j)\n                v(i,j)=-Vm(j);\n            end\n        end\n        x(i,:)=x(i,:)+v(i,:);\n        tp1=x(i,:)<=xmax;\n        tp2=x(i,:)>=xmin;\n        if (sum(tp1)+sum(tp2))==2*D\n            f(i)=fitness(x(i,:));\n        else\n            f(i)=inf;\n        end\n        if f(i)<p(i)\n           p(i)=f(i);\n           y(i,:)=x(i,:);\n        end\n        if p(i)<pg\n            pg=p(i);\n            px=y(i,:);\n        end\n    end\n    T=T*w;\nend\nxm=px';\nfv=pg;\n                \n            ",
+  "m_angle.m": "function theta=angle(x)\n%�����������Ĵ�С��ʱ��\nn=10;L=2;g=9.8;M=3.6; H0=0.2; h=0.6; m=0.27;\nF=L/(4*n*M*H0^2)*(m*sqrt(2*g*h)+sqrt(2*m^2*g*h+4*M^2*H0*g))^2;     %��һ���µ���С����\nt0=pi/2*sqrt(M*L/n/F);                                            %��һ���µ���ײʱ�̣�ƽ��̬��ʼʱ��t=0��\na=sqrt(2*g*h);\nv0=a*[tan(pi/180)*cos(pi/15),tan(pi/180)*sin(pi/15),-1];\nF=[zeros(1,n);F*ones(1,n)];\nF(1,:)=x(1:n); F(2,:)=x(n+1:2*n);\n[e,v]=drum_angle1(F,t0);\nv1=dot(v0,e);\nv2=v0-v1*e;\nV1=dot(v,e);\nv=((m-M)*v1+2*M*V1)/(M+m)*e+v2;\nif v(3)<a\n    theta=2;\nelse\n    theta=acos(v(3)/norm(v))*180/pi;    \nend",
+  "m_angle1.m": "function theta=angle1(x)\n%ֻ�����������Ĵ�С��ʱ��\nn=10;L=2;g=9.8;M=3.6; H0=0.2; h=0.6; m=0.27;\nF=L/(4*n*M*H0^2)*(m*sqrt(2*g*h)+sqrt(2*m^2*g*h+4*M^2*H0*g))^2;     %��һ���µ���С����\nt0=pi/2*sqrt(M*L/n/F);                                            %��һ���µ���ײʱ�̣�ƽ��̬��ʼʱ��t=0��\na=sqrt(2*g*h);\nv0=a*[tan(pi/180)*cos(pi/15),tan(pi/180)*sin(pi/15),-1];\nF=[zeros(1,n);F*ones(1,n)];\nF(1,1)=x(1); F(1,2)=x(2); F(2,1)=x(3); F(2,2)=x(4);\n[e,v]=drum_angle1(F,t0);\nv1=dot(v0,e);\nv2=v0-v1*e;\nV1=dot(v,e);\nv=((m-M)*v1+2*M*V1)/(M+m)*e+v2;\nif v(3)<a\n    theta=2;\nelse\n    theta=acos(v(3)/norm(v))*180/pi;    \nend",
+  "m_collision_pt.m": "function collision_pt(F,t0)\n\nclear;      %ŷ���������淭ת��\nm=8;L=1.7; h=0.11; r0=0.2; dt=0.0001; C1=1;rho=1.2258;g=9.8;M=3.6; T=0.1;\nR=sqrt(L^2-h^2)+r0;    %�������Բ�뾶\nF0=M*g*L/(m*(R-r0));    % ����ƽ��λ��ʱ���ӵ�����\nS=pi*r0^2;   % �������\nI=M*(r0^3/4+r0^2*h+r0*h^2+2*h^3/3)/(r0+2*h);  % ��ת������I\nJ=M*(r0^3+4*r0^2*h)/(2*r0+4*h);               % ��ת������J\nX=zeros(8,3);   %X ������꣬ ��һ�������x������\nx=zeros(8,3); % x ��Ӧ�����Ķ�����\nr1=zeros(8,3);  % ���ĵ����Ķ˵�����\nF=[0,0,0,0,80,0,0,80;90,80,80,80,80,80,80,80];\na=sqrt(2)/2;\n\nX(1,:)=R*[1,0,0];X(2,:)=R*[a,a,0];X(3,:)=R*[0,1,0];X(4,:)=R*[-a,a,0];\nX(5,:)=-X(1,:);X(6,:)=-X(2,:); X(7,:)=-X(3,:);X(8,:)=-X(4,:);\nX(:,3)=X(:,3)+h;  \nx(1,:)=r0*[1,0,0];x(2,:)=r0*[a,a,0];x(3,:)=r0*[0,1,0];x(4,:)=r0*[-a,a,0];\nx(5,:)=-x(1,:);x(6,:)=-x(2,:); x(7,:)=-x(3,:);x(8,:)=-x(4,:);\n\nif any(F(1,:))\n    t=-0.1:dt:T;\nelse\n    t=0:dt:T;\nend\nv=zeros(length(t),3); w1=v;w2=zeros(length(t),1); theta1=w2;theta2=w2; c=v; n=v; n(1,:)=[0,0,1]; %��ʼ�� v �ٶȣ�w1,w2 ���ٶȣ�theta1: ���淭ת�Ƕ� theta2: �ƹķ������ת�ǣ�c �������ꣻn ���浥λ����;\nf=zeros(8,3);f1=f;\nfor i=1:length(t)-1\n    if t(i)<0\n        Q=F(1,:)+F0;        \n    else\n        Q=F(2,:)+F0;\n    end\n    for j=1:8\n        f(j,:)=(Q(j))*(X(j,:)-x(j,:))/norm(X(j,:)-x(j,:));\n        f1(j,:)=dot(f(j,:),n(i,:))*n(i,:);\n    end\n    tmp1=sum(f)/M-[0,0,g]-C1*rho*S*norm(v(i,:))*v(i,:)/(2*M);\n    v(i+1,:)=v(i,:)+tmp1*dt;\n    c(i+1,:)=c(i,:)+v(i,:)*dt;\n    tmp21=zeros(8,3); tmp22=0;\n    for j=1:8\n        r1(j,:)=x(j,:)-c(i,:);\n        tmp21(j,:)=cross(r1(j,:),f1(j,:));\n        tmp22=tmp22+dot(cross(r1(j,:),f(j,:)),n(i,:));\n    end\n    tmp31=sum(tmp21)/I;  tmp32=tmp22/J;\n    w1(i+1,:)=w1(i,:)+tmp31*dt;\n    w2(i+1)=w2(i)+tmp32*dt;\n    theta2(i+1)=theta2(i)+w2(i)*dt;\n    tmp4=cross(w1(i,:),n(i,:));\n    if ~norm(tmp4)\n        n(i+1,:)=n(i,:);        \n    else\n        n(i+1,:)=n(i,:)*cos(norm(w1(i,:))*dt)+tmp4/norm(tmp4)*sin(norm(w1(i,:))*dt);\n    end\n    xc=zeros(8,3);\n    r1c=zeros(8,3);\n    for j=1:8\n        e2=r1(j,:)/r0;\n        if theta2(i+1)-theta2(i)>0\n            e1=n(i,:);e3=cross(e1,e2);\n            r1c(j,:)=r0*(e2*cos(w2(i)*dt)+e3*sin(w2(i)*dt));\n        elseif theta2(i+1)-theta2(i)<0\n            e1=-n(i,:);e3=cross(e1,e2);\n            r1c(j,:)=r0*(e2*cos(w2(i)*dt)+e3*sin(w2(i)*dt));\n        else\n            r1c(j,:)=r1(j,:);\n        end   \n    end\n    if ~norm(w1(i,:))\n        x(:,1)=r1c(:,1)+c(i+1,1);\n        x(:,2)=r1c(:,2)+c(i+1,2);\n        x(:,3)=r1c(:,3)+c(i+1,3);\n    else\n        e1=w1(i,:)/norm(w1(i,:));\n        e2=tmp4/norm(tmp4);\n        for j=1:8          \n          r1(j,:)=dot(r1c(j,:),e1)*e1+dot(r1c(j,:),e2)*(dot(n(i+1,:),n(i,:))*e2-n(i,:)*norm(cross(n(i+1,:),n(i,:))));\n          x(j,:)=r1(j,:)+c(i+1,:);            \n        end\n    end    \nend   \nfor i=1:length(t)\n    theta1(i)=acos(dot(n(1,:),n(i,:)))*180/pi;\nend",
+  "m_drum1.m": "global dt\nn=8;L=1.7; R=1.88; h=0.11; r=0.2; a=0.4; e=1;\nF1=20; F2=80;\nV1=zeros(50,1); i=1;\ndt=0.001;\nwhile 1\n    tmp=(F1+F2)/2;  \n    [~,speed,height]=drum(n,L,R,tmp);\n    collision_height=height(length(height));\n    [ ~,~,v2 ] = balldescend(a+h,collision_height );\n    v=v2(length(v2));\n    V1(i)=v;i=i+1;\n    v1=collision(speed,v,e);\n    if v1>min_ascend_speed(a+h,collision_height)\n        F2=tmp;\n    else\n        F1=tmp;\n    end\n    if F2-F1<=1e-4\n        break;\n    end\nend\n\nF=(F1+F2)/2;\n[time,speed,height]=drum(n,L,R,F);\ncollision_height=height(length(height));\nt0=time(length(time));\nfigure\nhold on\n[ t,pos,v2 ] = balldescend(a+h,collision_height );\nv=v2(length(v2));\nt1=t(length(t));\nplot(t,pos,'b');\nplot(t1-t0+time,height,'r');\nH=zeros(100,1);H(1)=a; i=2;\nwhile 1\n    if t1>30\n        break;\n    end\n    tmp=collision(speed,v,e);\n    [ t,pos ] = ballascend( collision_height,tmp);\n    H(i)=pos(length(pos))-h;i=i+1;\n    plot(t1+t,pos,'b');\n    t1=t1+t(length(t));\n    [t,pos,v2]=balldescend(pos(length(pos)),collision_height);\n    v=v2(length(v2));\n    plot(t1+t,pos,'b');\n    t1=t1+t(length(t));\n    plot(t1-t0+time,height,'r');\nend\n\nlegend('������˶��켣','ͬ�Ĺ��������켣');\nxlabel('ʱ�䣨�룩');\nylabel('�߶ȣ��ף�');\ntitle(['������Ϊ',num2str(n),'������Ϊ',num2str(L),'�ס��˾������Ϊ',num2str(R),'�ס�������ĵĳ�ʼ����Ϊ',num2str(a),'�ס���ײ�ָ�ϵ��Ϊ',num2str(e),'������Ϊ',num2str(F),'ţ��ʱ��������ͬ�Ĺĵ��˶��켣']);\n\n\nfunction [time,speed,height ] = drum( n,L,R,F )\nglobal dt\n% ͬ�Ĺĵ��˶����� \n% n: ��ҵĸ���\n% L: ����\n% R: ��Ҿ���ĵľ���\n% F: ���ϵ�����\n% time: ͬ�Ĺ��ٶ����ʱ����ʱ����\n% speed: ͬ�Ĺĵ�����ٶ�\n% height: ͬ�ĹĵĹ�������Ӧʱ�����ϵĸ߶�\nh=0.11;\nt=0:dt:10;\nm=length(t);\ny=zeros(m,2); y(1,:)=[0,0];\nfor i=1:m-1\n    tmp=odedrum(y(i,:),n,L,R,F)*dt;\n    yc=y(i,:)+tmp';\n    tmp=odedrum(y(i,:),n,L,R,F)*dt;\n    yp=y(i,:)+tmp';\n    y(i+1,:)=(yp+yc)/2;\n    if y(i+1,2)<y(i,2)\n        time=t(1:i);speed=y(i,2);height=y(1:i,1)+h;\n        break;\n    end  \nend\nend\n\nfunction dydt=odedrum(y,n,L,R,F)\n% y(1) ���������꣬y(2) ���Ĵ�ֱ�����ٶ�\ndydt=zeros(2,1);\nM=3.6; r=0.2;C=1;rho=1.2258;g=9.8; \nH0=sqrt(L^2-(R-r)^2); % �Ĵ�ƽ��λ�õ���ˮƽλ�õľ���\nS=pi*r^2;            % ͬ�Ĺ����\nt1=n*F/M/L;  t2=C*rho*S/2/M;\ndydt(1)=y(2);\ndydt(2)=t1*(H0-y(1))-t2*y(2)^2-g;\nend\n\nfunction dydt=balldrop(y)\n% y(1) ���������꣬y(2) ��ֱ�����ٶ�\ndydt=zeros(2,1);\nC=0.5;rho=1.2258; m=0.27;r=0.21; g=9.8;\ns=pi*r^2;\nt1=C*rho*s/2/m;\ndydt(1)=y(2);\ndydt(2)=-g+t1*y(2)^2;\nend\n\nfunction dydt=ballup(y)\n% y(1) ���������꣬y(2) ��ֱ�����ٶ�\ndydt=zeros(2,1);\nC=0.5;rho=1.2258; m=0.27;r=0.21; g=9.8;\ns=pi*r^2;\nt1=C*rho*s/2/m;\ndydt(1)=y(2);\ndydt(2)=-g-t1*y(2)^2;\nend\n\n\nfunction [ time,pos,v ] = balldescend( a,b )\n%  a: ����ʼ�߶�\n%  b: �������ĸ߶�\n%  time: ���a�䵽b����ʱ����\n%  pos: ������Ӧʱ�����ϵĸ߶�\n%  v:������Ӧʱ�����ϵ��ٶ�\nglobal dt\nt=0:dt:10;\nn=length(t);\ny=zeros(n,2);\ny(1,:)=[a,0];\nfor i=1:n-1\n    if y(i,1)<b\n        time=t(1:i);\n        pos=y(1:i,1);\n        v=y(1:i,2);\n        break;\n    end\n    tmp=balldrop(y(i,:))*dt;\n    yc=y(i,:)+tmp';\n    tmp=balldrop(yc)*dt;\n    yp=y(i,:)+tmp';\n    y(i+1,:)=(yc+yp)/2;\nend\nend\n\nfunction v = collision( v1,v2 ,e)\n% �ġ�����ײ����ٶ�\n% v1: ����ײǰ��ֱ�����ٶ�  +�����ٶ�����\n% v2: ����ײǰ��ֱ�����ٶ�  \n% v: ����ײ��ֱ�����ٶ�  \n% e: �ǵ�����ײ�ָ�ϵ�� e=1,������ײ\n% M: ͬ�Ĺĵ�����\n% m: �������\nM=3.6;m=0.27;\nif v1>v2\n    v=((m-e*M)*v2+M*(1+e)*v1)/(m+M);\nelse\n    v=v2;\nend\nend\n\nfunction speed = min_ascend_speed(a, b )\nglobal dt\n%ascend�� ����������\n%  a: ���������С����\n%  b: ����ײ�߶�\n% speed: ʹ��������ĸ߶ȳ���a�׵���С�ٶ�\nt=0:-dt:-10;\nn=length(t);\ny=zeros(n,2);\nfor i=1:n-1\n    if y(i,1)<=b-a\n        speed=y(i,2);\n        break;\n    end\n    tmp=-dt*ballup(y(i,:));\n    yc=y(i,:)+tmp';\n    tmp=-dt*ballup(yc);\n    yp=y(i,:)+tmp';\n    y(i+1,:)=(yc+yp)/2;\nend\nend\n\nfunction [ time,height ] = ballascend( b,v0 )\n%ascend�� ����������\n%  b: ����ʼ�߶�\n%  v0:����ʼ�ٶ�\n%  time: ����������ߵ�����ʱ����\n%  height: ������Ӧʱ�����ϵĸ߶�ֵ\nglobal dt\nt=0:dt:10;\nn=length(t);\ny=zeros(n,2);\ny(1,:)=[b,v0];\n\nfor i=1:n-1\n    if y(i,2)<0\n        time=t(1:i);\n        height=y(1:i,1);\n        break;\n    end\n    tmp=ballup(y(i,:))*dt;\n    yc=y(i,:)+tmp';\n    tmp=ballup(yc)*dt;\n    yp=y(i,:)+tmp';\n    y(i+1,:)=(yp+yc)/2;\nend\nend\n",
+  "m_drum2.m": "clear;\nF1=[0,0,0,0,0,0,0,0;90,80,80,80,80,80,80,80];\nF2=[0,0,0,0,0,0,0,0;90,90,80,80,80,80,80,80];\nF3=[0,0,0,0,0,0,0,0;90,80,80,90,80,80,80,80];\nF4=[-0.1,0,0,0,0,0,0,0;80,80,80,80,80,80,80,80];\nF5=[-0.1,-0.1,0,0,0,0,0,0;80,80,80,80,80,80,80,80];\nF6=[-0.1,0,0,-0.1,0,0,0,0;80,80,80,80,80,80,80,80];\nF7=[-0.1,0,0,0,0,0,0,0;90,80,80,80,80,80,80,80];\nF8=[0,-0.1,0,0,-0.1,0,0,0;90,80,80,90,80,80,80,80];\nF9=[0,0,0,0,-0.1,0,0,-0.1;90,80,80,80,80,80,80,80];\ntheta0=zeros(9,1);\nT=0.5;  T0=0.1; h=0.11;\n[t,theta,a]=drum_angle(F1,h,T);\ntheta0(1)=a;\nfigure\nhold on\nax1=subplot(5,2,1);\nplot(ax1,t,theta);\nhold on\nplot(ax1,0.1,a,'*r');\ntext(ax1,0.1,a,num2str(a));\ntitle(ax1,'��һ�������¹�����Ǻ�ʱ��Ĺ�ϵ');\n\n[t,theta,a]=drum_angle(F2,h,T);\ntheta0(2)=a;\nax2=subplot(5,2,3);\nplot(ax2,t,theta);\nhold on\nplot(ax2,0.1,a,'*r');\ntext(ax2,0.1,a,num2str(a));\ntitle(ax2,'�ڶ��������¹�����Ǻ�ʱ��Ĺ�ϵ');\n\n[t,theta,a]=drum_angle(F3,h,T);\ntheta0(3)=a;\nax3=subplot(5,2,5);\nplot(ax3,t,theta);\nhold on\nplot(ax3,0.1,a,'*r');\ntext(ax3,0.1,a,num2str(a));\ntitle(ax3,'�����������¹�����Ǻ�ʱ��Ĺ�ϵ');\n\n[t,theta,a]=drum_angle(F4,h,T);\ntheta0(4)=a;\nax4=subplot(5,2,7);\nplot(ax4,t,theta);\nhold on\nplot(ax4,0.1,a,'*r');\ntext(ax4,0.1,a,num2str(a));\na=theta(find(t==0));\nplot(ax4,0,a,'*r');\ntext(ax4,0,a,num2str(a));\ntitle(ax4,'�����������¹�����Ǻ�ʱ��Ĺ�ϵ');\n\n[t,theta,a]=drum_angle(F5,h,T);\ntheta0(5)=a;\nax5=subplot(5,2,9);\nplot(ax5,t,theta);\nhold on\nplot(ax5,0.1,a,'*r');\ntext(ax5,0.1,a,num2str(a));\na=theta(find(t==0));\nplot(ax5,0,a,'*r');\ntext(ax5,0,a,num2str(a));\ntitle(ax5,'�����������¹�����Ǻ�ʱ��Ĺ�ϵ');\n\n[t,theta,a]=drum_angle(F6,h,T);\ntheta0(6)=a;\nax6=subplot(5,2,2);\nplot(ax6,t,theta);\nhold on\nplot(ax6,0.1,a,'*r');\ntext(ax6,0.1,a,num2str(a));\na=theta(find(t==0));\nplot(ax6,0,a,'*r');\ntext(ax6,0,a,num2str(a));\ntitle(ax6,'�����������¹�����Ǻ�ʱ��Ĺ�ϵ');\n\n[t,theta,a]=drum_angle(F7,h,T);\ntheta0(7)=a;\nax7=subplot(5,2,4);\nplot(ax7,t,theta);\nhold on\nplot(ax7,0.1,a,'*r');\ntext(ax7,0.1,a,num2str(a));\na=theta(find(t==0));\nplot(ax7,0,a,'*r');\ntext(ax7,0,a,num2str(a));\ntitle(ax7,'�����������¹�����Ǻ�ʱ��Ĺ�ϵ');\n\n[t,theta,a]=drum_angle(F8,h,T);\ntheta0(8)=a;\nax8=subplot(5,2,6);\nplot(ax8,t,theta);\nhold on\nplot(ax8,0.1,a,'*r');\ntext(ax8,0.1,a,num2str(a));\na=theta(find(t==0));\nplot(ax8,0,a,'*r');\ntext(ax8,0,a,num2str(a));\ntitle(ax8,'�ڰ��������¹�����Ǻ�ʱ��Ĺ�ϵ');\n\n[t,theta,a]=drum_angle(F9,h,T);\ntheta0(9)=a;\nax9=subplot(5,2,8);\nplot(ax9,t,theta);\nhold on\nplot(ax9,0.1,a,'*r');\ntext(ax9,0.1,a,num2str(a));\na=theta(find(t==0));\nplot(ax9,0,a,'*r');\ntext(ax9,0,a,num2str(a));\ntitle(ax9,'�ھ��������¹�����Ǻ�ʱ��Ĺ�ϵ');",
+  "m_drum3.m": "F9=[0,0,0,0,-0.1,0,0,-0.1;90,80,80,80,80,80,80,80];\nT=0.1;\nh=0.05:0.01:0.30;\ntheta=zeros(size(h));\nfor i=1:length(h)\n    [~,~,theta(i)]=drum_angle(F9,h(i),T);\nend\nfigure\nplot(h,theta);\ntitle('�ھ��������¹�����0.1sʱ����Ǻ͹����½��߶ȵĹ�ϵ');\n\nt=0:0.01:0.15;\ntheta=zeros(size(t));\nfor i=1:length(t)\n   F=[0,0,0,0,-t(i),0,0,-t(i);90,80,80,80,80,80,80,80];\n   [~,~,theta(i)]=drum_angle(F,0.11,T);\nend\nfigure\nplot(t,theta);\ntitle('�ھ��������¹�����0.1sʱ����Ǻ���ǰ����ʱ��Ĺ�ϵ');\n\nf=80:100;\ntheta=zeros(size(f));\nfor i=1:length(f)\n    F=[0,0,0,0,-0.1,0,0,-0.1;f(i),80,80,80,80,80,80,80];\n    [~,~,theta(i)]=drum_angle(F,0.11,T);\nend\nfigure\nplot(f,theta);\ntitle('�ھ��������¹�����0.1sʱ����Ǻ���ǰ������С�Ĺ�ϵ');",
+  "m_drum4.m": "n=10;L=2;g=9.8;M=3.6; H0=0.2; h=0.6; m=0.27;\nF=L/(4*n*M*H0^2)*(m*sqrt(2*g*h)+sqrt(2*m^2*g*h+4*M^2*H0*g))^2;    %��һ���µ���С���� \nt0=pi/2*sqrt(M*L/n/F);\na=sqrt(2*g*h);\nv0=a*[tan(pi/180)*cos(pi/15),tan(pi/180)*sin(pi/15),-1];\nxmin=[-0.1,-0.1,F-10,F-10];\nxmax=[0.1,0.1,F+10,F+10];\n%xm=[0.0737026079465291;0.00413946526444900;0.0141500001310562;0.0250924800376894;-0.00346164159666702;-0.0472426265086194;0.0520275397881584;-0.0491366503628402;-0.0812868891321784;0.0984855516237167;50.1833106253933;40.3780082115605;37.8553577728565;48.9403570473207;48.2630831355176;41.5340527974601;49.2352794463654;39.0171734314818;34.0929673322567;48.0541901107748];fv=0.031154366938995\n%xm=[0.020296427937021;0.085382586930352;51.369533798531070;42.368487518481600],fv=0.020510562900680\nxm=[0.084351945917343;0.025189961153441;46.695928678404854;44.430263262962455],fv=0.009911423852987;\n%[xm, fv]=SimuAPSO(@angle1, 1000 ,0.8, 2, 2,xmin,xmax,500,4);\ntheta=angle1(xm);\n\n",
+  "m_drum_angle.m": "function [t,theta1,theta]=drum_angle(F,h,T)\n% F: ����������ʱ���б�\n% h: �����½��߶�\n% T: ����ʱ��\n% t: ʱ��ڵ�����\n% theta1: �����������\n% theta: t=0.1ʱ��������б��\nm=8;L=1.7; r0=0.2; dt=0.001; C=1;rho=1.2258;g=9.8;M=3.6;H=0.11;\nF0=M*g*L/(m*h);    % ����ƽ��λ��ʱ���ӵ�����\nS=pi*r0^2;   % �������\nI=M*(r0^2/2+H^2/3);  % ����x���y���ת������I\nJ=M*r0^2;               % ����z���ת������J\nX=zeros(m,3);   %X ������꣬ ��һ�������x������\nx=zeros(m,3); % x ��Ӧ�����Ķ�����\nr1=zeros(m,3);  % ���ĵ����Ķ˵�����\n\nt=min([0,F(1,:)]):dt:T;\ne1=zeros(length(t),3); e2=e1;e3=e1;     %����x,y,z�ᵥλ�����ڴ�\nw=e1;                                   %������ٶ������ڴ�\ne1(1,:)=[1,0,0]; e2(1,:)=[0,1,0]; e3(1,:)=[0,0,1];   %x,y,z���ʼ��λ����\nv=zeros(length(t),3);                   % �����ƽ���ٶ������ڴ�        \nc=v;                                    %������������ڴ�;\nf=zeros(m,3);\nfor i=1:length(t)-1\n    \n    for j=1:m\n        r1(j,:)=r0*(e1(i,:)*cos(2*pi*(j-1)/m)+e2(i,:)*sin(2*pi*(j-1)/m));\n    end\n    \n    \n    for j=1:m\n        x(j,:)=r1(j,:)+c(i,:);\n    end\n    \n    for j=1:m\n      tmp=dot([x(j,1),x(j,2)],[cos(2*pi*(j-1)/m),sin(2*pi*(j-1)/m)])+sqrt(L^2-x(j,1)^2-x(j,2)^2-(x(j,3)-h)^2);  \n      X(j,:)=[tmp*[cos(2*pi*(j-1)/m),sin(2*pi*(j-1)/m)],h];\n    end\n    \n    \n    Q=F0+(F(1,:)<=t(i)).*(F(2,:)-F0);\n    for j=1:m\n        f(j,:)=(Q(j))*(X(j,:)-x(j,:))/norm(X(j,:)-x(j,:));    %������\n    end\n    \n    \n    tmp1=sum(f)/M-[0,0,g]-C*rho*S*norm(v(i,:))*v(i,:)/(2*M);\n    vp=v(i,:)+tmp1*dt;                                   %�м��ٶ����������\n    cp=c(i,:)+v(i,:)*dt;\n     \n       \n    M0=zeros(1,3);   %��������\n    for j=1:8\n        M0=M0+cross(r1(j,:),f(j,:));\n    end\n    \n    M1=dot(M0,e1(i,:));                   % M��e1 ����ķ���\n    M2=dot(M0,e2(i,:));                   % M��e2 ����ķ���\n    M3=dot(M0,e3(i,:));                   % M��e3 ����ķ���\n    \n    \n    tmp=-(J/I-1)*w(i,2)*w(i,3)+M1/I;\n    w1p=w(i,1)+tmp*dt;\n    \n    tmp=(J/I-1)*w(i,1)*w(i,3)+M2/I;\n    w2p=w(i,2)+tmp*dt;\n    \n    tmp=M3/J;\n    w3p=w(i,3)+tmp*dt;                           %�½��ٶ������� w(1)*e1+w(2)*e2+w3*e3\n    \n    tmp=cross(w(i,2)*e2(i,:)+w(i,3)*e3(i,:),e1(i,:));\n    e1p=(e1(i,:)+tmp*dt)/(norm(e1(i,:)+tmp*dt));\n    \n    tmp=cross(w(i,1)*e1(i,:)+w(i,3)*e3(i,:),e2(i,:));\n    e2p=(e2(i,:)+tmp*dt)/(norm(e2(i,:)+tmp*dt));\n    \n    tmp=cross(w(i,1)*e1(i,:)+w(i,2)*e2(i,:),e3(i,:));\n    e3p=(e3(i,:)+tmp*dt)/(norm(e3(i,:)+tmp*dt));     %�µ�x,y,z��\n    \n    for j=1:m\n        r1(j,:)=r0*(e1p*cos(2*pi*(j-1)/m)+e2p*sin(2*pi*(j-1)/m));\n    end\n    \n    for j=1:m\n        x(j,:)=r1(j,:)+cp;\n    end\n    \n    \n    for j=1:m\n      tmp=dot([x(j,1),x(j,2)],[cos(2*pi*(j-1)/m),sin(2*pi*(j-1)/m)])+sqrt(L^2-x(j,1)^2-x(j,2)^2-(x(j,3)-h)^2);  \n      X(j,:)=[tmp*[cos(2*pi*(j-1)/m),sin(2*pi*(j-1)/m)],h];\n    end                                                             %�µ��ֶ�����\n    \n    for j=1:m\n        f(j,:)=(Q(j))*(X(j,:)-x(j,:))/norm(X(j,:)-x(j,:));    \n    end\n    tmp1=sum(f)/M-[0,0,g]-C*rho*S*norm(vp)*vp/(2*M);\n    vc=v(i,:)+tmp1*dt;                                   %�м��ٶ����������\n    cc=c(i,:)+vp*dt;\n    \n     M0=zeros(1,3);   %��������\n    for j=1:m\n        M0=M0+cross(r1(j,:),f(j,:));\n    end\n    \n    M1=dot(M0,e1p);                   % M��e1 ����ķ���\n    M2=dot(M0,e2p);                   % M��e2 ����ķ���\n    M3=dot(M0,e3p);                   % M��e3 ����ķ���\n    \n    \n    tmp=-(J/I-1)*w2p*w3p+M1/I;\n    w1c=w(i,1)+tmp*dt;\n    \n    tmp=(J/I-1)*w1p*w3p+M2/I;\n    w2c=w(i,2)+tmp*dt;\n    \n    tmp=M3/J;\n    w3c=w(i,3)+tmp*dt;                           %�½��ٶ������� w(1)*e1+w(2)*e2+w3*e3\n    \n    tmp=cross(w2p*e2p+w3p*e3p,e1p);\n    e1c=(e1(i,:)+tmp*dt)/(norm(e1(i,:)+tmp*dt));\n    \n    tmp=cross(w1p*e1p+w3p*e3p,e2p);\n    e2c=(e2(i,:)+tmp*dt)/(norm(e2(i,:)+tmp*dt));\n    \n    tmp=cross(w1p*e1p+w2p*e2p,e3p);\n    e3c=(e3(i,:)+tmp*dt)/(norm(e3(i,:)+tmp*dt));     %�µ�x,y,z��\n    \n    v(i+1,:)=(vp+vc)/2;\n    c(i+1,:)=(cc+cp)/2;\n    w(i+1,1)=(w1p+w1c)/2;\n    w(i+1,2)=(w2p+w2c)/2;\n    w(i+1,3)=(w3p+w3c)/2;\n    e1(i+1,:)=(e1p+e1c)/2;\n    e2(i+1,:)=(e2p+e2c)/2;\n    e3(i+1,:)=(e3p+e3c)/2;\n    \n    \nend\ntheta1=zeros(length(t),1);    \nfor i=1:length(t)\n    theta1(i)=acos(e3(i,3))*180/pi;\nend\ntheta=theta1(find(t==0.1));\n\n\n\nend",
+  "m_drum_angle1.m": "function [e,v]=drum_angle1(F,T)\n% F: ����������ʱ���б�\n% h: �����½��߶�\n% T: ����ʱ��\n% e: ���浥λ����\n% v: ���ٶ�\nm=10;L=2; r0=0.2; dt=0.001;g=9.8;M=3.6;h=0.2;H=0.11;\nF0=M*g*L/(m*h);    % ����ƽ��λ��ʱ���ӵ�����\nI=M*(r0^2/2+H^2/3);  % ����x���y���ת������I\nJ=M*r0^2;               % ����z���ת������J\nX=zeros(m,3);   %X ������꣬ ��һ�������x������\nx=zeros(m,3); % x ��Ӧ�����Ķ�����\nr1=zeros(m,3);  % ���ĵ����Ķ˵�����\n\n\nt=min([0,F(1,:)]):dt:T;\ne1=zeros(length(t),3); e2=e1;e3=e1;     %����x,y,z�ᵥλ�����ڴ�\nw=e1;                                   %������ٶ������ڴ�\ne1(1,:)=[1,0,0]; e2(1,:)=[0,1,0]; e3(1,:)=[0,0,1];   %x,y,z���ʼ��λ����\nv=zeros(length(t),3);                   % �����ƽ���ٶ������ڴ�        \nc=v;                                    %������������ڴ�;\nf=zeros(m,3);\nfor i=1:length(t)-1\n    \n    for j=1:m\n        r1(j,:)=r0*(e1(i,:)*cos(2*pi*(j-1)/m)+e2(i,:)*sin(2*pi*(j-1)/m));\n    end\n    \n    for j=1:m\n        x(j,:)=r1(j,:)+c(i,:);\n    end\n    \n    for j=1:m\n      tmp=dot([x(j,1),x(j,2)],[cos(2*pi*(j-1)/m),sin(2*pi*(j-1)/m)])+sqrt(L^2-x(j,1)^2-x(j,2)^2-(x(j,3)-h)^2);  \n      X(j,:)=[tmp*[cos(2*pi*(j-1)/m),sin(2*pi*(j-1)/m)],h];\n    end\n    \n    \n    Q=F0+(F(1,:)<=t(i)).*(F(2,:)-F0);\n    for j=1:m\n        f(j,:)=(Q(j))*(X(j,:)-x(j,:))/norm(X(j,:)-x(j,:));    %������\n    end\n    \n    \n    tmp1=sum(f)/M-[0,0,g];\n    vp=v(i,:)+tmp1*dt;                                   %�м��ٶ����������\n    cp=c(i,:)+v(i,:)*dt;\n     \n       \n    M0=zeros(1,3);   %��������\n    for j=1:m\n        M0=M0+cross(r1(j,:),f(j,:));\n    end\n    \n    M1=dot(M0,e1(i,:));                   % M��e1 ����ķ���\n    M2=dot(M0,e2(i,:));                   % M��e2 ����ķ���\n    M3=dot(M0,e3(i,:));                   % M��e3 ����ķ���\n    \n    \n    tmp=-(J/I-1)*w(i,2)*w(i,3)+M1/I;\n    w1p=w(i,1)+tmp*dt;\n    \n    tmp=(J/I-1)*w(i,1)*w(i,3)+M2/I;\n    w2p=w(i,2)+tmp*dt;\n    \n    tmp=M3/J;\n    w3p=w(i,3)+tmp*dt;                           %�½��ٶ������� w(1)*e1+w(2)*e2+w3*e3\n    \n    tmp=cross(w(i,2)*e2(i,:)+w(i,3)*e3(i,:),e1(i,:));\n    e1p=(e1(i,:)+tmp*dt)/(norm(e1(i,:)+tmp*dt));\n    \n    tmp=cross(w(i,1)*e1(i,:)+w(i,3)*e3(i,:),e2(i,:));\n    e2p=(e2(i,:)+tmp*dt)/(norm(e2(i,:)+tmp*dt));\n    \n    tmp=cross(w(i,1)*e1(i,:)+w(i,2)*e2(i,:),e3(i,:));\n    e3p=(e3(i,:)+tmp*dt)/(norm(e3(i,:)+tmp*dt));     %�µ�x,y,z��\n    \n    for j=1:m\n        r1(j,:)=r0*(e1p*cos(2*pi*(j-1)/m)+e2p*sin(2*pi*(j-1)/m));\n    end\n    \n    for j=1:m\n        x(j,:)=r1(j,:)+cp;\n    end\n    \n    \n    for j=1:m\n      tmp=dot([x(j,1),x(j,2)],[cos(2*pi*(j-1)/m),sin(2*pi*(j-1)/m)])+sqrt(L^2-x(j,1)^2-x(j,2)^2-(x(j,3)-h)^2);  \n      X(j,:)=[tmp*[cos(2*pi*(j-1)/m),sin(2*pi*(j-1)/m)],h];\n    end                                                         %�µ��ֶ�����\n    \n    for j=1:m\n        f(j,:)=(Q(j))*(X(j,:)-x(j,:))/norm(X(j,:)-x(j,:));    \n    end\n    tmp1=sum(f)/M-[0,0,g];\n    vc=v(i,:)+tmp1*dt;                                   %�м��ٶ����������\n    cc=c(i,:)+vp*dt;\n    \n     M0=zeros(1,3);   %��������\n    for j=1:m\n        M0=M0+cross(r1(j,:),f(j,:));\n    end\n    \n    M1=dot(M0,e1p);                   % M��e1 ����ķ���\n    M2=dot(M0,e2p);                   % M��e2 ����ķ���\n    M3=dot(M0,e3p);                   % M��e3 ����ķ���\n    \n    \n    tmp=-(J/I-1)*w2p*w3p+M1/I;\n    w1c=w(i,1)+tmp*dt;\n    \n    tmp=(J/I-1)*w1p*w3p+M2/I;\n    w2c=w(i,2)+tmp*dt;\n    \n    tmp=M3/J;\n    w3c=w(i,3)+tmp*dt;                           %�½��ٶ������� w(1)*e1+w(2)*e2+w3*e3\n    \n    tmp=cross(w2p*e2p+w3p*e3p,e1p);\n    e1c=(e1(i,:)+tmp*dt)/(norm(e1(i,:)+tmp*dt));\n    \n    tmp=cross(w1p*e1p+w3p*e3p,e2p);\n    e2c=(e2(i,:)+tmp*dt)/(norm(e2(i,:)+tmp*dt));\n    \n    tmp=cross(w1p*e1p+w2p*e2p,e3p);\n    e3c=(e3(i,:)+tmp*dt)/(norm(e3(i,:)+tmp*dt));     %�µ�x,y,z��\n    \n    v(i+1,:)=(vp+vc)/2;\n    c(i+1,:)=(cc+cp)/2;\n    w(i+1,1)=(w1p+w1c)/2;\n    w(i+1,2)=(w2p+w2c)/2;\n    w(i+1,3)=(w3p+w3c)/2;\n    e1(i+1,:)=(e1p+e1c)/2;\n    e2(i+1,:)=(e2p+e2c)/2;\n    e3(i+1,:)=(e3p+e3c)/2;    \nend\n[n,~]=size(v);\nv=v(n,:);\ne=e3(n,:);",
+  "m_min_descend_speed.m": "function speed = min_descend_speed( a,b,v0,e)\n%ascend�� ����������\n%  a: �������С�߶�\n%  b: ����ײ�߶�\n%  v0: ������ײλ�õ��ٶ�\n% speed: ʹ���������b����ײ������ĸ߶ȳ���0.4�׵���С�½��ٶ�\n% M: ͬ�Ĺĵ�����\n% m: ������\n% e: ��ײ�ָ�ϵ��  ��ȡe=1\nM=3.6; m=0.27;\n[~,~,v1]=descend(a,b);\nv=min_ascend_speed(a,b);\ntmp=((m+M)*v-M*(1+e)*v0)/(m-e*M);\nspeed=max(-1*(tmp<0)*tmp,abs(v1));\nend\n\n",
+  "m_A2020.m": "clc; clear;  %��С���� �Ż�����\nglobal F v L T T0 u0 t0\nF=[25,175,195,235,255,25];v=7/6;L=50+30.5*11+5*10; T=L/v; T0=19;\nfilename=\"����.xlsx\";\nE=xlsread(filename,1);\nu0=E(:,2); t0=E(:,1);\nxm=[6.955337193621688e-04;2.738544323025462e+03;0.001107930618471;2.563787849379793e+02;5.929551984955881e-04;5.282989961113213e+02]; %fv=9.717344977672112e+02\n%xm=[7.094792228468003e-04;2.019401739773151e+03;0.001176162262659;2.082486120937800e+02;6.080931613908350e-04;4.602488848608684e+02],fv=8.793774286691689e+02;\n%xm=[7.114481817530871e-04;1.923365271990470e+03;0.001184466631737;2.034140604282468e+02;6.066493954535490e-04;4.679787229260577e+02];fv=8.788398701536670e+02;\n%[xm, fv]=CLSPSO(@zuixiao, 100 ,0.8, 2, 2,[9e-4,4000,2e-3,600,7e-4,600],[4e-4,1000,4e-4,100,4e-4,200],500,6);\n%xm=[7.114481817530871e-04;1.923365271990470e+03;0.001184466631737;2.034140604282468e+02;6.066493954535490e-04;4.679787229260577e+02];\nu=heat(xm(1),xm(2),xm(3),xm(4),xm(5),xm(6));\ntmp=u-u0;\nfigure\nax1=subplot(2,1,1); ax2=subplot(2,1,2);\nplot(ax1,t0,u0,t0,u);\nxlabel(ax1, '���루cm��');ylabel(ax1,'�¶ȣ��棩');\ntitle(ax1,'ʵ���¶���ģ���¶ȱȽ�ͼ');\nlegend(ax1,'ʵ���¶�','ģ���¶�');\nplot(ax2,t0,u-u0);\ntitle(ax2,'ģ���¶���ʵ���¶Ȳ�');\nxlabel(ax2, '���루cm��');ylabel(ax2,'�¶ȣ��棩');\n\n\nfunction y=zuixiao(x)\nglobal u0\nu=heat(x(1),x(2),x(3),x(4),x(5),x(6));\ntmp=u-u0;\ny=tmp'*tmp;\nend\n\n\n\nfunction y=f(x)\nglobal F\nl=5; L=30.5; s=25;\nx1=0; x2=25;\nx3=x2+5*L+4*l; x4=x3+l;\nx5=x4+L;x6=x5+l;\nx7=x6+L;x8=x7+l;\nx9=x8+2*L+l;x10=x9+l;\ny=((F(2)-F(1))/s.*(x-x1)+F(1)).*(x<=x2)+F(2).*(x>x2).*(x<=x3)+((F(3)-F(2))/l.*(x-x3)+F(2)).*(x>x3).*(x<=x4)+F(3).*(x>x4).*(x<=x5)...\n+((F(4)-F(3))/l.*(x-x5)+F(3)).*(x>x5).*(x<=x6)+F(4).*(x>x6).*(x<=x7)...\n+((F(5)-F(4))/l.*(x-x7)+F(4)).*(x>x7).*(x<=x8)+F(5).*(x>x8).*(x<=x9)...\n+((F(6)-F(5))/l.*(x-x9)+F(5)).*(x>x9).*(x<=x10) + F(6).*(x>x10);\nend\n\nfunction t=heat(a1,h1,a2,h2,a3,h3)     % a^2=k/(c*rho)  h=h1/k, h1 �Ƚ���ϵ��\n    global T T0  v\n    L1=25+5*30.5+5*5; \n    t1=L1/v;dt=0.5; \n    m1=floor(t1/dt)+1;\n    l=0.015; \n    x=1e-4; \n    r1=a1^2*dt/(x^2);\n    r2=a2^2*dt/(x^2);\n    r3=a3^2*dt/(x^2);\n    n=ceil(l/x)+1; m=floor(T/dt)+1;\n    u=zeros(n,m);t=ones(m,1)*25;\n    u(:,1)=25;\n    u0=f(v*(0:floor(T/dt))*dt);\n    k=ceil(l/2/x);i=floor(T0/dt)+1;\n    A1=diag([1+h1*x,2*ones(1,n-2)*(1+r1),1+h1*x]);\n    A1=A1+diag([-1,-r1*ones(1,n-2)],1);\n    A1=A1+diag([-r1*ones(1,n-2),-1],-1);          \n    B1=diag([0,2*ones(1,n-2)*(1-r1),0]);\n    B1=B1+diag([0,r1*ones(1,n-2)],1);\n    B1=B1+diag([r1*ones(1,n-2),0],-1);\n    C1=A1\\B1;\n    c=zeros(n,m); c(1,:)=h1*u0*x; \n    c(n,:)=c(1,:);\n    c=A1\\c;    \n    for j=1:m1-1\n       u(:,j+1)=C1*u(:,j)+c(:,j+1);\n       t(j+1)=u(k,j+1);\n    end\n    \n    A2=diag([1+h2*x,2*ones(1,n-2)*(1+r2),1+h2*x]);\n    A2=A2+diag([-1,-r2*ones(1,n-2)],1);\n    A2=A2+diag([-r2*ones(1,n-2),-1],-1);          \n    B2=diag([0,2*ones(1,n-2)*(1-r2),0]);\n    B2=B2+diag([0,r2*ones(1,n-2)],1);\n    B2=B2+diag([r2*ones(1,n-2),0],-1);\n    C2=A2\\B2;\n    c2(1,:)=h2*u0*x; \n    c2(n,:)=c2(1,:);\n    c2=A2\\c2;    \n        \n    A3=diag([1+h3*x,2*ones(1,n-2)*(1+r3),1+h3*x]);\n    A3=A3+diag([-1,-r3*ones(1,n-2)],1);\n    A3=A3+diag([-r3*ones(1,n-2),-1],-1);          \n    B3=diag([0,2*ones(1,n-2)*(1-r3),0]);\n    B3=B3+diag([0,r3*ones(1,n-2)],1);\n    B3=B3+diag([r3*ones(1,n-2),0],-1);\n    C3=A3\\B3;\n    c3(1,:)=h3*u0*x; \n    c3(n,:)=c3(1,:);\n    c3=A3\\c3;    \n    for j=m1:m-1\n       if t(j)>=t(j-1)\n            u(:,j+1)=C2*u(:,j)+c2(:,j+1);            \n       else\n           u(:,j+1)=C3*u(:,j)+c3(:,j+1); \n       end\n       t(j+1)=u(k,j+1);\n    end\n    t=t(i:length(t));\nend",
+  "m_A20200.m": "clc; clear;  %��С���� �Ż�����\nglobal F v L T T0 u0 t0\nF=[25,175,195,235,255,25];v=7/6;L=50+30.5*11+5*10; T=L/v; T0=19;\nfilename=\"����.xlsx\";\nE=xlsread(filename,1);\nu0=E(:,2); t0=E(:,1);\nxm=[6.683140781153043e-04;2.498727636628837e+04;8.076275611754757e-04;1.431525270900793e+03;9.743913118484225e-04;8.279199794106737e+02;8.492734595661612e-04;6.547702252291799e+02;5.286841991732021e-04;1.337603876051590e+03];%fv=2.599072466668719e+02\n\n%xm=[6.706049305559698e-04;1.501897860420496e+04;8.230831565094375e-04;1.082310031285083e+03;9.951209778230026e-04;7.000231370676250e+02;8.814506554381792e-04;5.182389658637186e+02;5.468530793778080e-04;9.370283345040026e+02];fv=2.652073904723211e+02\n[xm, fv]=SelPSO(@zuixiao,40 ,0.8, 2.05, 2.05,[9e-4,30000,2e-3,1500,2e-3,1500,2e-3,1000,2e-3,1500],[4e-4,20000,4e-4,700,4e-4,700,4e-4,200,4e-4,700],1000,10);\n\nu=heat(xm);\ntmp=u-u0;\nfigure\nax1=subplot(2,1,1); ax2=subplot(2,1,2);\nplot(ax1,t0*v,u0,t0*v,u);\nxlabel(ax1, '���루cm��');ylabel(ax1,'�¶ȣ��棩');\ntitle(ax1,'ʵ���¶���ģ���¶ȱȽ�ͼ');\nlegend(ax1,'ʵ���¶�','ģ���¶�');\nplot(ax2,t0*v,u-u0);\ntitle(ax2,'ģ���¶���ʵ���¶Ȳ�');\nxlabel(ax2, '���루cm��');ylabel(ax2,'�¶ȣ��棩');\n\n\nfunction y=zuixiao(x)\nglobal u0\nu=heat(x);\ntmp=u-u0;\ny=tmp'*tmp;\nend\n\n\n\nfunction y=f(x)\nglobal F\nl=5; L=30.5; s=25;\nx1=0; x2=25;\nx3=x2+5*L+4*l; x4=x3+l;\nx5=x4+L;x6=x5+l;\nx7=x6+L;x8=x7+l;\nx9=x8+2*L+l;x10=x9+l;\ny=((F(2)-F(1))/s.*(x-x1)+F(1)).*(x<=x2)+F(2).*(x>x2).*(x<=x3)+((F(3)-F(2))/l.*(x-x3)+F(2)).*(x>x3).*(x<=x4)+F(3).*(x>x4).*(x<=x5)...\n+((F(4)-F(3))/l.*(x-x5)+F(3)).*(x>x5).*(x<=x6)+F(4).*(x>x6).*(x<=x7)...\n+((F(5)-F(4))/l.*(x-x7)+F(4)).*(x>x7).*(x<=x8)+F(5).*(x>x8).*(x<=x9)...\n+((F(6)-F(5))/l.*(x-x9)+F(5)).*(x>x9).*(x<=x10) + F(6).*(x>x10);\nend\n\nfunction t=heat(xm)     \n    global T T0  v\n    L1=25+5*30.5+5*5; \n    L2=L1+30.5+5;\n    L3=L2+30.5+5;\n    t1=L1/v;t2=L2/v;t3=L3/v;\n    dt=0.5; \n    m1=floor(t1/dt)+1;\n    m2=floor(t2/dt)+1;\n    m3=floor(t3/dt)+1;\n   \n    l=0.015; \n    x=1e-4; \n    r1=xm(1)^2*dt/(x^2);\n    r2=xm(3)^2*dt/(x^2);\n    r3=xm(5)^2*dt/(x^2);\n    r4=xm(7)^2*dt/(x^2);\n    r5=xm(9)^2*dt/(x^2);\n    h1=xm(2);h2=xm(4);h3=xm(6);h4=xm(8);h5=xm(10);\n    n=ceil(l/x)+1; m=floor(T/dt)+1;\n    u=zeros(n,m);t=ones(m,1)*25;\n    u(:,1)=25;\n    u0=f(v*(0:floor(T/dt))*dt);\n    k=ceil(l/2/x);i=floor(T0/dt)+1;\n    A1=diag([1+h1*x,2*ones(1,n-2)*(1+r1),1+h1*x]);\n    A1=A1+diag([-1,-r1*ones(1,n-2)],1);\n    A1=A1+diag([-r1*ones(1,n-2),-1],-1);          \n    B1=diag([0,2*ones(1,n-2)*(1-r1),0]);\n    B1=B1+diag([0,r1*ones(1,n-2)],1);\n    B1=B1+diag([r1*ones(1,n-2),0],-1);\n    C1=A1\\B1;\n    c=zeros(n,m); c(1,:)=h1*u0*x; \n    c(n,:)=c(1,:);\n    c=A1\\c;    \n    for j=1:m1-1\n       u(:,j+1)=C1*u(:,j)+c(:,j+1);\n       t(j+1)=u(k,j+1);\n    end\n    \n    A2=diag([1+h2*x,2*ones(1,n-2)*(1+r2),1+h2*x]);\n    A2=A2+diag([-1,-r2*ones(1,n-2)],1);\n    A2=A2+diag([-r2*ones(1,n-2),-1],-1);          \n    B2=diag([0,2*ones(1,n-2)*(1-r2),0]);\n    B2=B2+diag([0,r2*ones(1,n-2)],1);\n    B2=B2+diag([r2*ones(1,n-2),0],-1);\n    C2=A2\\B2;\n    c=zeros(n,m); c(1,:)=h2*u0*x; \n    c(n,:)=c(1,:);\n    c=A2\\c;    \n    for j=m1:m2-1\n       u(:,j+1)=C2*u(:,j)+c(:,j+1);\n       t(j+1)=u(k,j+1);\n    end\n    \n    A3=diag([1+h3*x,2*ones(1,n-2)*(1+r3),1+h3*x]);\n    A3=A3+diag([-1,-r3*ones(1,n-2)],1);\n    A3=A3+diag([-r3*ones(1,n-2),-1],-1);          \n    B3=diag([0,2*ones(1,n-2)*(1-r3),0]);\n    B3=B3+diag([0,r3*ones(1,n-2)],1);\n    B3=B3+diag([r3*ones(1,n-2),0],-1);\n    C3=A3\\B3;\n    c=zeros(n,m); c(1,:)=h3*u0*x; \n    c(n,:)=c(1,:);\n    c=A3\\c;    \n    for j=m2:m3-1\n       u(:,j+1)=C3*u(:,j)+c(:,j+1);\n       t(j+1)=u(k,j+1);\n    end\n        \n    \n    A4=diag([1+h4*x,2*ones(1,n-2)*(1+r4),1+h4*x]);\n    A4=A4+diag([-1,-r4*ones(1,n-2)],1);\n    A4=A4+diag([-r4*ones(1,n-2),-1],-1);          \n    B4=diag([0,2*ones(1,n-2)*(1-r4),0]);\n    B4=B4+diag([0,r4*ones(1,n-2)],1);\n    B4=B4+diag([r4*ones(1,n-2),0],-1);\n    C4=A4\\B4;\n    c4(1,:)=h4*u0*x; \n    c4(n,:)=c4(1,:);\n    c4=A4\\c4;    \n        \n    A5=diag([1+h5*x,2*ones(1,n-2)*(1+r5),1+h5*x]);\n    A5=A5+diag([-1,-r5*ones(1,n-2)],1);\n    A5=A5+diag([-r5*ones(1,n-2),-1],-1);          \n    B5=diag([0,2*ones(1,n-2)*(1-r5),0]);\n    B5=B5+diag([0,r5*ones(1,n-2)],1);\n    B5=B5+diag([r5*ones(1,n-2),0],-1);\n    C5=A5\\B5;\n    c5(1,:)=h5*u0*x; \n    c5(n,:)=c5(1,:);\n    c5=A5\\c5;    \n    for j=m3:m-1\n       if t(j)>=t(j-1)\n            u(:,j+1)=C4*u(:,j)+c4(:,j+1);            \n       else\n           u(:,j+1)=C5*u(:,j)+c5(:,j+1); \n       end\n       t(j+1)=u(k,j+1);\n    end\n    t=t(i:length(t));\nend",
+  "m_A20201.m": "clc; clear;  %����һ\nglobal F v T\nF=[25,173,198,230,257,25];v=78/60;L=50+30.5*11+5*10; T=L/v; dt=0.5;\nt=0:dt:T;\nxm=[6.683140781153043e-04;2.498727636628837e+04;8.076275611754757e-04;1.431525270900793e+03;9.743913118484225e-04;8.279199794106737e+02;8.492734595661612e-04;6.547702252291799e+02;5.286841991732021e-04;1.337603876051590e+03];\nu=heat(xm);\nfigure\nplot(t*v,f(v*t),t*v,u);\nxlabel( '���루cm��');ylabel('�¶ȣ��棩');\ntitle('¯�������������¶ȱȽ�');\nlegend('�غ�¯���¶�����','¯������');\ni=1+floor((25+2*(30.5+5)+30.5/2)/v/dt);\nj=1+floor((25+5*(30.5+5)+30.5/2)/v/dt);\nl=1+floor((25+6*(30.5+5)+30.5/2)/v/dt);\nm=1+floor((25+7*(30.5+5)+30.5)/v/dt);\na=[u(i),u(j),u(l),u(m)];\n\n\n\nfunction y=f(x)\nglobal F\nl=5; L=30.5; s=25;\nx1=0; x2=25;\nx3=x2+5*L+4*l; x4=x3+l;\nx5=x4+L;x6=x5+l;\nx7=x6+L;x8=x7+l;\nx9=x8+2*L+l;x10=x9+l;\ny=((F(2)-F(1))/s.*(x-x1)+F(1)).*(x<=x2)+F(2).*(x>x2).*(x<=x3)+((F(3)-F(2))/l.*(x-x3)+F(2)).*(x>x3).*(x<=x4)+F(3).*(x>x4).*(x<=x5)...\n+((F(4)-F(3))/l.*(x-x5)+F(3)).*(x>x5).*(x<=x6)+F(4).*(x>x6).*(x<=x7)...\n+((F(5)-F(4))/l.*(x-x7)+F(4)).*(x>x7).*(x<=x8)+F(5).*(x>x8).*(x<=x9)...\n+((F(6)-F(5))/l.*(x-x9)+F(5)).*(x>x9).*(x<=x10) + F(6).*(x>x10);\nend\n\nfunction t=heat(xm)     \n    global T  v\n    L1=25+5*30.5+5*5; \n    L2=L1+30.5+5;\n    L3=L2+30.5+5;\n    t1=L1/v;t2=L2/v;t3=L3/v;\n    dt=0.5; \n    m1=floor(t1/dt)+1;\n    m2=floor(t2/dt)+1;\n    m3=floor(t3/dt)+1;\n   \n    l=0.015; \n    x=1e-4; \n    r1=xm(1)^2*dt/(x^2);\n    r2=xm(3)^2*dt/(x^2);\n    r3=xm(5)^2*dt/(x^2);\n    r4=xm(7)^2*dt/(x^2);\n    r5=xm(9)^2*dt/(x^2);\n    h1=xm(2);h2=xm(4);h3=xm(6);h4=xm(8);h5=xm(10);\n    n=ceil(l/x)+1; m=floor(T/dt)+1;\n    u=zeros(n,m);t=ones(m,1)*25;\n    u(:,1)=25;\n    u0=f(v*(0:floor(T/dt))*dt);\n    k=ceil(l/2/x);\n    A1=diag([1+h1*x,2*ones(1,n-2)*(1+r1),1+h1*x]);\n    A1=A1+diag([-1,-r1*ones(1,n-2)],1);\n    A1=A1+diag([-r1*ones(1,n-2),-1],-1);          \n    B1=diag([0,2*ones(1,n-2)*(1-r1),0]);\n    B1=B1+diag([0,r1*ones(1,n-2)],1);\n    B1=B1+diag([r1*ones(1,n-2),0],-1);\n    C1=A1\\B1;\n    c=zeros(n,m); c(1,:)=h1*u0*x; \n    c(n,:)=c(1,:);\n    c=A1\\c;    \n    for j=1:m1-1\n       u(:,j+1)=C1*u(:,j)+c(:,j+1);\n       t(j+1)=u(k,j+1);\n    end\n    \n    A2=diag([1+h2*x,2*ones(1,n-2)*(1+r2),1+h2*x]);\n    A2=A2+diag([-1,-r2*ones(1,n-2)],1);\n    A2=A2+diag([-r2*ones(1,n-2),-1],-1);          \n    B2=diag([0,2*ones(1,n-2)*(1-r2),0]);\n    B2=B2+diag([0,r2*ones(1,n-2)],1);\n    B2=B2+diag([r2*ones(1,n-2),0],-1);\n    C2=A2\\B2;\n    c=zeros(n,m); c(1,:)=h2*u0*x; \n    c(n,:)=c(1,:);\n    c=A2\\c;    \n    for j=m1:m2-1\n       u(:,j+1)=C2*u(:,j)+c(:,j+1);\n       t(j+1)=u(k,j+1);\n    end\n    \n    A3=diag([1+h3*x,2*ones(1,n-2)*(1+r3),1+h3*x]);\n    A3=A3+diag([-1,-r3*ones(1,n-2)],1);\n    A3=A3+diag([-r3*ones(1,n-2),-1],-1);          \n    B3=diag([0,2*ones(1,n-2)*(1-r3),0]);\n    B3=B3+diag([0,r3*ones(1,n-2)],1);\n    B3=B3+diag([r3*ones(1,n-2),0],-1);\n    C3=A3\\B3;\n    c=zeros(n,m); c(1,:)=h3*u0*x; \n    c(n,:)=c(1,:);\n    c=A3\\c;    \n    for j=m2:m3-1\n       u(:,j+1)=C3*u(:,j)+c(:,j+1);\n       t(j+1)=u(k,j+1);\n    end\n        \n    \n    A4=diag([1+h4*x,2*ones(1,n-2)*(1+r4),1+h4*x]);\n    A4=A4+diag([-1,-r4*ones(1,n-2)],1);\n    A4=A4+diag([-r4*ones(1,n-2),-1],-1);          \n    B4=diag([0,2*ones(1,n-2)*(1-r4),0]);\n    B4=B4+diag([0,r4*ones(1,n-2)],1);\n    B4=B4+diag([r4*ones(1,n-2),0],-1);\n    C4=A4\\B4;\n    c4(1,:)=h4*u0*x; \n    c4(n,:)=c4(1,:);\n    c4=A4\\c4;    \n        \n    A5=diag([1+h5*x,2*ones(1,n-2)*(1+r5),1+h5*x]);\n    A5=A5+diag([-1,-r5*ones(1,n-2)],1);\n    A5=A5+diag([-r5*ones(1,n-2),-1],-1);          \n    B5=diag([0,2*ones(1,n-2)*(1-r5),0]);\n    B5=B5+diag([0,r5*ones(1,n-2)],1);\n    B5=B5+diag([r5*ones(1,n-2),0],-1);\n    C5=A5\\B5;\n    c5(1,:)=h5*u0*x; \n    c5(n,:)=c5(1,:);\n    c5=A5\\c5;    \n    for j=m3:m-1\n       if t(j)>=t(j-1)\n            u(:,j+1)=C4*u(:,j)+c4(:,j+1);            \n       else\n           u(:,j+1)=C5*u(:,j)+c5(:,j+1); \n       end\n       t(j+1)=u(k,j+1);\n    end\nend",
+  "m_A20202.m": "clc; clear;  %�����\nglobal F v T xm\nF=[25,182,203,237,254,25];L=50+30.5*11+5*10; \nxm=[6.683140781153043e-04;2.498727636628837e+04;8.076275611754757e-04;1.431525270900793e+03;9.743913118484225e-04;8.279199794106737e+02;8.492734595661612e-04;6.547702252291799e+02;5.286841991732021e-04;1.337603876051590e+03];\nt1=zeros(41,1);t2=t1; umax=t1; kmax=t1; \nfor i=0:40\n    v=1+i/60;\n    T=L/v;\n    u=heat(xm);\n    u=u(u>=30);\n    tmp2=find(u>=217);\n    t2(i+1)=(length(tmp2)-1)*0.5;\n    umax(i+1)=max(u);  \n    tmp3=abs(u(2:length(u))-u(1:length(u)-1))/0.5;\n    kmax(i+1)=max(tmp3);\n    u=u(u(2:length(u))>=u(1:length(u)-1));\n    u=u(u>=150);\n    u=u(u<=190);\n    t1(i+1)=(length(u)-1)*0.5;   \nend\n\nfigure\nax1=subplot(2,2,1);ax2=subplot(2,2,2);\nax3=subplot(2,2,3);ax4=subplot(2,2,4);\nplot(ax1,60:100,kmax);\ntitle(ax1,'б�ʵ����ֵ���¯�ٶȵĹ�ϵ');\nxlabel(ax1, '��¯�ٶȣ�cm/min��');ylabel(ax1,'б��');\n\nplot(ax2,60:100,umax);\ntitle(ax2,'�¶ȷ�ֵ���¯�ٶȵĹ�ϵ');\nxlabel(ax2, '��¯�ٶȣ�cm/min��');ylabel(ax2,'�¶ȣ��棩');\n\nplot(ax3,60:100,t1);\ntitle(ax3,'�������¶���150-190���ʱ�����¯�ٶȵĹ�ϵ');\nxlabel(ax3, '��¯�ٶȣ�cm/min��');ylabel(ax3,'ʱ��(s)');\n\nplot(ax4,60:100,t2);\ntitle(ax4,'�¶���217���ʱ�����¯�ٶȵĹ�ϵ');\nxlabel(ax4, '��¯�ٶȣ�cm/min��');ylabel(ax4,'ʱ��(s)');\n\n\nv1=70/60; v2=85/60;\nwhile 1\n    v=(v1+v2)/2; T=L/v;\n    if check()\n        v1=v;\n    else\n        v2=v;\n    end\n    if v2-v1<1e-4\n        break;\n    end        \nend\nv=(v1+v2)/2*60;\n\n\nfunction y=f(x)\nglobal F\nl=5; L=30.5; s=25;\nx1=0; x2=25;\nx3=x2+5*L+4*l; x4=x3+l;\nx5=x4+L;x6=x5+l;\nx7=x6+L;x8=x7+l;\nx9=x8+2*L+l;x10=x9+l;\ny=((F(2)-F(1))/s.*(x-x1)+F(1)).*(x<=x2)+F(2).*(x>x2).*(x<=x3)+((F(3)-F(2))/l.*(x-x3)+F(2)).*(x>x3).*(x<=x4)+F(3).*(x>x4).*(x<=x5)...\n+((F(4)-F(3))/l.*(x-x5)+F(3)).*(x>x5).*(x<=x6)+F(4).*(x>x6).*(x<=x7)...\n+((F(5)-F(4))/l.*(x-x7)+F(4)).*(x>x7).*(x<=x8)+F(5).*(x>x8).*(x<=x9)...\n+((F(6)-F(5))/l.*(x-x9)+F(5)).*(x>x9).*(x<=x10) + F(6).*(x>x10);\nend\n\nfunction t=heat(xm)     \n    global T   v\n    L1=25+5*30.5+5*5; \n    L2=L1+30.5+5;\n    L3=L2+30.5+5;\n    t1=L1/v;t2=L2/v;t3=L3/v;\n    dt=0.5; \n    m1=floor(t1/dt)+1;\n    m2=floor(t2/dt)+1;\n    m3=floor(t3/dt)+1;\n   \n    l=0.015; \n    x=1e-4; \n    r1=xm(1)^2*dt/(x^2);\n    r2=xm(3)^2*dt/(x^2);\n    r3=xm(5)^2*dt/(x^2);\n    r4=xm(7)^2*dt/(x^2);\n    r5=xm(9)^2*dt/(x^2);\n    h1=xm(2);h2=xm(4);h3=xm(6);h4=xm(8);h5=xm(10);\n    n=ceil(l/x)+1; m=floor(T/dt)+1;\n    u=zeros(n,m);t=ones(m,1)*25;\n    u(:,1)=25;\n    u0=f(v*(0:floor(T/dt))*dt);\n    k=ceil(l/2/x);\n    A1=diag([1+h1*x,2*ones(1,n-2)*(1+r1),1+h1*x]);\n    A1=A1+diag([-1,-r1*ones(1,n-2)],1);\n    A1=A1+diag([-r1*ones(1,n-2),-1],-1);          \n    B1=diag([0,2*ones(1,n-2)*(1-r1),0]);\n    B1=B1+diag([0,r1*ones(1,n-2)],1);\n    B1=B1+diag([r1*ones(1,n-2),0],-1);\n    C1=A1\\B1;\n    c=zeros(n,m); c(1,:)=h1*u0*x; \n    c(n,:)=c(1,:);\n    c=A1\\c;    \n    for j=1:m1-1\n       u(:,j+1)=C1*u(:,j)+c(:,j+1);\n       t(j+1)=u(k,j+1);\n    end\n    \n    A2=diag([1+h2*x,2*ones(1,n-2)*(1+r2),1+h2*x]);\n    A2=A2+diag([-1,-r2*ones(1,n-2)],1);\n    A2=A2+diag([-r2*ones(1,n-2),-1],-1);          \n    B2=diag([0,2*ones(1,n-2)*(1-r2),0]);\n    B2=B2+diag([0,r2*ones(1,n-2)],1);\n    B2=B2+diag([r2*ones(1,n-2),0],-1);\n    C2=A2\\B2;\n    c=zeros(n,m); c(1,:)=h2*u0*x; \n    c(n,:)=c(1,:);\n    c=A2\\c;    \n    for j=m1:m2-1\n       u(:,j+1)=C2*u(:,j)+c(:,j+1);\n       t(j+1)=u(k,j+1);\n    end\n    \n    A3=diag([1+h3*x,2*ones(1,n-2)*(1+r3),1+h3*x]);\n    A3=A3+diag([-1,-r3*ones(1,n-2)],1);\n    A3=A3+diag([-r3*ones(1,n-2),-1],-1);          \n    B3=diag([0,2*ones(1,n-2)*(1-r3),0]);\n    B3=B3+diag([0,r3*ones(1,n-2)],1);\n    B3=B3+diag([r3*ones(1,n-2),0],-1);\n    C3=A3\\B3;\n    c=zeros(n,m); c(1,:)=h3*u0*x; \n    c(n,:)=c(1,:);\n    c=A3\\c;    \n    for j=m2:m3-1\n       u(:,j+1)=C3*u(:,j)+c(:,j+1);\n       t(j+1)=u(k,j+1);\n    end\n        \n    \n    A4=diag([1+h4*x,2*ones(1,n-2)*(1+r4),1+h4*x]);\n    A4=A4+diag([-1,-r4*ones(1,n-2)],1);\n    A4=A4+diag([-r4*ones(1,n-2),-1],-1);          \n    B4=diag([0,2*ones(1,n-2)*(1-r4),0]);\n    B4=B4+diag([0,r4*ones(1,n-2)],1);\n    B4=B4+diag([r4*ones(1,n-2),0],-1);\n    C4=A4\\B4;\n    c4(1,:)=h4*u0*x; \n    c4(n,:)=c4(1,:);\n    c4=A4\\c4;    \n        \n    A5=diag([1+h5*x,2*ones(1,n-2)*(1+r5),1+h5*x]);\n    A5=A5+diag([-1,-r5*ones(1,n-2)],1);\n    A5=A5+diag([-r5*ones(1,n-2),-1],-1);          \n    B5=diag([0,2*ones(1,n-2)*(1-r5),0]);\n    B5=B5+diag([0,r5*ones(1,n-2)],1);\n    B5=B5+diag([r5*ones(1,n-2),0],-1);\n    C5=A5\\B5;\n    c5(1,:)=h5*u0*x; \n    c5(n,:)=c5(1,:);\n    c5=A5\\c5;    \n    for j=m3:m-1\n       if t(j)>=t(j-1)\n            u(:,j+1)=C4*u(:,j)+c4(:,j+1);            \n       else\n           u(:,j+1)=C5*u(:,j)+c5(:,j+1); \n       end\n       t(j+1)=u(k,j+1);\n    end\nend\n\nfunction y=check()\nglobal xm\n    u=heat(xm);\n    u=u(u>=30);\n    tmp2=find(u>=217);\n    t2=length(tmp2)*0.5;\n    umax=max(u);  \n    tmp3=abs(u(2:length(u))-u(1:length(u)-1))/0.5;\n    kmax=max(tmp3);\n    s=u(u(2:length(u))>=u(1:length(u)-1));\n    s=s(s>=150);\n    s=s(s<=190);\n    t1=length(s)*0.5;   \n    y=(umax<=250)*(umax>=240)*(t2>=40)*(t2<=90)*(kmax<=3)*(t1<=120)*(t1>=60);\nend",
+  "m_A20203.m": "clc; clear;  %������\nglobal xm L u0\nL=50+30.5*11+5*10;\nxm=[6.683140781153043e-04;2.498727636628837e+04;8.076275611754757e-04;1.431525270900793e+03;9.743913118484225e-04;8.279199794106737e+02;8.492734595661612e-04;6.547702252291799e+02;5.286841991732021e-04;1.337603876051590e+03];\nx=[1.792186138356053e+02;1.961138441942145e+02;2.287700888258109e+02;2.649997068223830e+02;1.539745823162197]; %fv=3.957753927514420e+02\ntic\n[x, fv]=SelPSO(@area, 60 ,0.8, 2, 2,[185,205,245,265,10/6],[165,185,225,245,65/60],500,5);\ntoc\nF=[25,x(1),x(2),x(3),x(4),25]; v=x(5);\nT=L/v;\nS=area(x);\nt=0:0.5:T;\nk=find(u0==max(u0));\nfigure  \nhold on\nplot(t*v,f(v*t,F),t*v,u0,t*v,217*ones(length(t),1));\nxlabel( '���루cm��');ylabel('�¶ȣ��棩');\ntitle('�غ�¯���¶���¯�����߱Ƚ�ͼ');\n\ntext(L,217,'T=217��','color','b');\nplot(t(k)*v,u0(k),'*');\ntext(t(k)*v,u0(k),['T=',num2str(u0(k)),'��'],'color','b');\nline([t(k)*v,t(k)*v],[0,270],'color','g');\ntext(t(k)*v,270,['x=',num2str(t(k)*v),'cm'],'color','b');\nlegend('�غ�¯���¶�����','¯������');\n\n\nfunction y=f(x,F)\nl=5; L=30.5; s=25;\nx1=0; x2=25;\nx3=x2+5*L+4*l; x4=x3+l;\nx5=x4+L;x6=x5+l;\nx7=x6+L;x8=x7+l;\nx9=x8+2*L+l;x10=x9+l;\ny=((F(2)-F(1))/s.*(x-x1)+F(1)).*(x<=x2)+F(2).*(x>x2).*(x<=x3)+((F(3)-F(2))/l.*(x-x3)+F(2)).*(x>x3).*(x<=x4)+F(3).*(x>x4).*(x<=x5)...\n+((F(4)-F(3))/l.*(x-x5)+F(3)).*(x>x5).*(x<=x6)+F(4).*(x>x6).*(x<=x7)...\n+((F(5)-F(4))/l.*(x-x7)+F(4)).*(x>x7).*(x<=x8)+F(5).*(x>x8).*(x<=x9)...\n+((F(6)-F(5))/l.*(x-x9)+F(5)).*(x>x9).*(x<=x10) + F(6).*(x>x10);\nend\n\nfunction t=heat(u1,u2,u3,u4,v)     \n    global xm L\n    F=[25,u1,u2,u3,u4,25]; T=L/v;\n    L1=25+5*30.5+5*5; \n    L2=L1+30.5+5;\n    L3=L2+30.5+5;\n    t1=L1/v;t2=L2/v;t3=L3/v;\n    dt=0.5; \n    m1=floor(t1/dt)+1;\n    m2=floor(t2/dt)+1;\n    m3=floor(t3/dt)+1;\n   \n    l=0.015; \n    x=1e-4; \n    r1=xm(1)^2*dt/(x^2);\n    r2=xm(3)^2*dt/(x^2);\n    r3=xm(5)^2*dt/(x^2);\n    r4=xm(7)^2*dt/(x^2);\n    r5=xm(9)^2*dt/(x^2);\n    h1=xm(2);h2=xm(4);h3=xm(6);h4=xm(8);h5=xm(10);\n    n=ceil(l/x)+1; m=floor(T/dt)+1;\n    u=zeros(n,m);t=ones(m,1)*25;\n    u(:,1)=25;\n    u0=f(v*(0:floor(T/dt))*dt,F);\n    k=ceil(l/2/x);\n    A1=diag([1+h1*x,2*ones(1,n-2)*(1+r1),1+h1*x]);\n    A1=A1+diag([-1,-r1*ones(1,n-2)],1);\n    A1=A1+diag([-r1*ones(1,n-2),-1],-1);          \n    B1=diag([0,2*ones(1,n-2)*(1-r1),0]);\n    B1=B1+diag([0,r1*ones(1,n-2)],1);\n    B1=B1+diag([r1*ones(1,n-2),0],-1);\n    C1=A1\\B1;\n    c=zeros(n,m); c(1,:)=h1*u0*x; \n    c(n,:)=c(1,:);\n    c=A1\\c;    \n    for j=1:m1-1\n       u(:,j+1)=C1*u(:,j)+c(:,j+1);\n       t(j+1)=u(k,j+1);\n    end\n    \n    A2=diag([1+h2*x,2*ones(1,n-2)*(1+r2),1+h2*x]);\n    A2=A2+diag([-1,-r2*ones(1,n-2)],1);\n    A2=A2+diag([-r2*ones(1,n-2),-1],-1);          \n    B2=diag([0,2*ones(1,n-2)*(1-r2),0]);\n    B2=B2+diag([0,r2*ones(1,n-2)],1);\n    B2=B2+diag([r2*ones(1,n-2),0],-1);\n    C2=A2\\B2;\n    c=zeros(n,m); c(1,:)=h2*u0*x; \n    c(n,:)=c(1,:);\n    c=A2\\c;    \n    for j=m1:m2-1\n       u(:,j+1)=C2*u(:,j)+c(:,j+1);\n       t(j+1)=u(k,j+1);\n    end\n    \n    A3=diag([1+h3*x,2*ones(1,n-2)*(1+r3),1+h3*x]);\n    A3=A3+diag([-1,-r3*ones(1,n-2)],1);\n    A3=A3+diag([-r3*ones(1,n-2),-1],-1);          \n    B3=diag([0,2*ones(1,n-2)*(1-r3),0]);\n    B3=B3+diag([0,r3*ones(1,n-2)],1);\n    B3=B3+diag([r3*ones(1,n-2),0],-1);\n    C3=A3\\B3;\n    c=zeros(n,m); c(1,:)=h3*u0*x; \n    c(n,:)=c(1,:);\n    c=A3\\c;    \n    for j=m2:m3-1\n       u(:,j+1)=C3*u(:,j)+c(:,j+1);\n       t(j+1)=u(k,j+1);\n    end\n        \n    \n    A4=diag([1+h4*x,2*ones(1,n-2)*(1+r4),1+h4*x]);\n    A4=A4+diag([-1,-r4*ones(1,n-2)],1);\n    A4=A4+diag([-r4*ones(1,n-2),-1],-1);          \n    B4=diag([0,2*ones(1,n-2)*(1-r4),0]);\n    B4=B4+diag([0,r4*ones(1,n-2)],1);\n    B4=B4+diag([r4*ones(1,n-2),0],-1);\n    C4=A4\\B4;\n    c4(1,:)=h4*u0*x; \n    c4(n,:)=c4(1,:);\n    c4=A4\\c4;    \n        \n    A5=diag([1+h5*x,2*ones(1,n-2)*(1+r5),1+h5*x]);\n    A5=A5+diag([-1,-r5*ones(1,n-2)],1);\n    A5=A5+diag([-r5*ones(1,n-2),-1],-1);          \n    B5=diag([0,2*ones(1,n-2)*(1-r5),0]);\n    B5=B5+diag([0,r5*ones(1,n-2)],1);\n    B5=B5+diag([r5*ones(1,n-2),0],-1);\n    C5=A5\\B5;\n    c5(1,:)=h5*u0*x; \n    c5(n,:)=c5(1,:);\n    c5=A5\\c5;    \n    for j=m3:m-1\n       if t(j)>=t(j-1)\n            u(:,j+1)=C4*u(:,j)+c4(:,j+1);            \n       else\n           u(:,j+1)=C5*u(:,j)+c5(:,j+1); \n       end\n       t(j+1)=u(k,j+1);\n    end\nend\n\nfunction a=area(x)\nglobal u0\n    u0=heat(x(1),x(2),x(3),x(4),x(5));\n    u=u0(u0>=30);\n    tmp2=u(u>=217)-217;\n    t2=length(tmp2)*0.5;\n    umax=max(u);  \n    tmp3=abs(u(2:length(u))-u(1:length(u)-1))/0.5;\n    kmax=max(tmp3);\n    s=u(u(2:length(u))>=u(1:length(u)-1));\n    s=s(s>=150);\n    s=s(s<=190);\n    t1=length(s)*0.5;   \n    y=logical((umax<=250)*(umax>=240)*(t2>=40)*(t2<=90)*(kmax<=3)*(t1<=120)*(t1>=60));\n    if y\n        k=find(tmp2==max(tmp2));\n        if k>2\n            a=(sum(tmp2(1:k))-(tmp2(1)+tmp2(k))/2)*0.5;\n        else\n            a=(tmp2(1)+tmp2(k))*0.5/2;\n        end\n    else\n        a=inf;\n    end\nend\n",
+  "m_A20204.m": "clc; clear;  %������\nglobal xm L u0\nL=50+30.5*11+5*10;\nxm=[6.683140781153043e-04;2.498727636628837e+04;8.076275611754757e-04;1.431525270900793e+03;9.743913118484225e-04;8.279199794106737e+02;8.492734595661612e-04;6.547702252291799e+02;5.286841991732021e-04;1.337603876051590e+03];\n\n[x, fv]=SelPSO(@area, 60 ,0.8, 2, 2,[185,205,245,265,10/6],[165,185,225,245,65/60],500,5);\n\nv=x(5);F=[25,x(1),x(2),x(3),x(4),25];\nT=L/v;\n[S,s1,s2]=area1(x);\nt=0:0.5:T;\nk=find(u0==max(u0));\nfigure  \nhold on\nplot(t*v,f(v*t,F),t*v,u0,t*v,217*ones(length(t),1));\nxlabel( '���루cm��');ylabel('�¶ȣ��棩');\ntitle('�غ�¯���¶���¯�����߱Ƚ�ͼ');\n\ntext(L,217,'T=217��','color','b');\nplot(t(k)*v,u0(k),'*');\ntext(t(k)*v,u0(k),['T=',num2str(u0(k)),'��'],'color','b');\nline([t(k)*v,t(k)*v],[0,270],'color','g');\ntext(t(k)*v,270,['x=',num2str(t(k)*v),'cm'],'color','b');\nlegend('�غ�¯���¶�����','¯������');\n\n\nfunction y=f(x,F)\nl=5; L=30.5; s=25;\nx1=0; x2=25;\nx3=x2+5*L+4*l; x4=x3+l;\nx5=x4+L;x6=x5+l;\nx7=x6+L;x8=x7+l;\nx9=x8+2*L+l;x10=x9+l;\ny=((F(2)-F(1))/s.*(x-x1)+F(1)).*(x<=x2)+F(2).*(x>x2).*(x<=x3)+((F(3)-F(2))/l.*(x-x3)+F(2)).*(x>x3).*(x<=x4)+F(3).*(x>x4).*(x<=x5)...\n+((F(4)-F(3))/l.*(x-x5)+F(3)).*(x>x5).*(x<=x6)+F(4).*(x>x6).*(x<=x7)...\n+((F(5)-F(4))/l.*(x-x7)+F(4)).*(x>x7).*(x<=x8)+F(5).*(x>x8).*(x<=x9)...\n+((F(6)-F(5))/l.*(x-x9)+F(5)).*(x>x9).*(x<=x10) + F(6).*(x>x10);\nend\n\nfunction t=heat(u1,u2,u3,u4,v)     \n    global xm L\n    F=[25,u1,u2,u3,u4,25]; T=L/v;\n    L1=25+5*30.5+5*5; \n    L2=L1+30.5+5;\n    L3=L2+30.5+5;\n    t1=L1/v;t2=L2/v;t3=L3/v;\n    dt=0.5; \n    m1=floor(t1/dt)+1;\n    m2=floor(t2/dt)+1;\n    m3=floor(t3/dt)+1;\n   \n    l=0.015; \n    x=1e-4; \n    r1=xm(1)^2*dt/(x^2);\n    r2=xm(3)^2*dt/(x^2);\n    r3=xm(5)^2*dt/(x^2);\n    r4=xm(7)^2*dt/(x^2);\n    r5=xm(9)^2*dt/(x^2);\n    h1=xm(2);h2=xm(4);h3=xm(6);h4=xm(8);h5=xm(10);\n    n=ceil(l/x)+1; m=floor(T/dt)+1;\n    u=zeros(n,m);t=ones(m,1)*25;\n    u(:,1)=25;\n    u0=f(v*(0:floor(T/dt))*dt,F);\n    k=ceil(l/2/x);\n    A1=diag([1+h1*x,2*ones(1,n-2)*(1+r1),1+h1*x]);\n    A1=A1+diag([-1,-r1*ones(1,n-2)],1);\n    A1=A1+diag([-r1*ones(1,n-2),-1],-1);          \n    B1=diag([0,2*ones(1,n-2)*(1-r1),0]);\n    B1=B1+diag([0,r1*ones(1,n-2)],1);\n    B1=B1+diag([r1*ones(1,n-2),0],-1);\n    C1=A1\\B1;\n    c=zeros(n,m); c(1,:)=h1*u0*x; \n    c(n,:)=c(1,:);\n    c=A1\\c;    \n    for j=1:m1-1\n       u(:,j+1)=C1*u(:,j)+c(:,j+1);\n       t(j+1)=u(k,j+1);\n    end\n    \n    A2=diag([1+h2*x,2*ones(1,n-2)*(1+r2),1+h2*x]);\n    A2=A2+diag([-1,-r2*ones(1,n-2)],1);\n    A2=A2+diag([-r2*ones(1,n-2),-1],-1);          \n    B2=diag([0,2*ones(1,n-2)*(1-r2),0]);\n    B2=B2+diag([0,r2*ones(1,n-2)],1);\n    B2=B2+diag([r2*ones(1,n-2),0],-1);\n    C2=A2\\B2;\n    c=zeros(n,m); c(1,:)=h2*u0*x; \n    c(n,:)=c(1,:);\n    c=A2\\c;    \n    for j=m1:m2-1\n       u(:,j+1)=C2*u(:,j)+c(:,j+1);\n       t(j+1)=u(k,j+1);\n    end\n    \n    A3=diag([1+h3*x,2*ones(1,n-2)*(1+r3),1+h3*x]);\n    A3=A3+diag([-1,-r3*ones(1,n-2)],1);\n    A3=A3+diag([-r3*ones(1,n-2),-1],-1);          \n    B3=diag([0,2*ones(1,n-2)*(1-r3),0]);\n    B3=B3+diag([0,r3*ones(1,n-2)],1);\n    B3=B3+diag([r3*ones(1,n-2),0],-1);\n    C3=A3\\B3;\n    c=zeros(n,m); c(1,:)=h3*u0*x; \n    c(n,:)=c(1,:);\n    c=A3\\c;    \n    for j=m2:m3-1\n       u(:,j+1)=C3*u(:,j)+c(:,j+1);\n       t(j+1)=u(k,j+1);\n    end\n        \n    \n    A4=diag([1+h4*x,2*ones(1,n-2)*(1+r4),1+h4*x]);\n    A4=A4+diag([-1,-r4*ones(1,n-2)],1);\n    A4=A4+diag([-r4*ones(1,n-2),-1],-1);          \n    B4=diag([0,2*ones(1,n-2)*(1-r4),0]);\n    B4=B4+diag([0,r4*ones(1,n-2)],1);\n    B4=B4+diag([r4*ones(1,n-2),0],-1);\n    C4=A4\\B4;\n    c4(1,:)=h4*u0*x; \n    c4(n,:)=c4(1,:);\n    c4=A4\\c4;    \n        \n    A5=diag([1+h5*x,2*ones(1,n-2)*(1+r5),1+h5*x]);\n    A5=A5+diag([-1,-r5*ones(1,n-2)],1);\n    A5=A5+diag([-r5*ones(1,n-2),-1],-1);          \n    B5=diag([0,2*ones(1,n-2)*(1-r5),0]);\n    B5=B5+diag([0,r5*ones(1,n-2)],1);\n    B5=B5+diag([r5*ones(1,n-2),0],-1);\n    C5=A5\\B5;\n    c5(1,:)=h5*u0*x; \n    c5(n,:)=c5(1,:);\n    c5=A5\\c5;    \n    for j=m3:m-1\n       if t(j)>=t(j-1)\n            u(:,j+1)=C4*u(:,j)+c4(:,j+1);            \n       else\n           u(:,j+1)=C5*u(:,j)+c5(:,j+1); \n       end\n       t(j+1)=u(k,j+1);\n    end\nend\n\nfunction e=area(x)\nglobal u0\n    u0=heat(x(1),x(2),x(3),x(4),x(5));\n    u=u0(u0>=30);\n    tmp2=u(u>=217)-217;\n    t2=length(tmp2)*0.5;\n    umax=max(u);  \n    tmp3=abs(u(2:length(u))-u(1:length(u)-1))/0.5;\n    kmax=max(tmp3);\n    s=u(u(2:length(u))>=u(1:length(u)-1));\n    s=s(s>=150);\n    s=s(s<=190);\n    t1=length(s)*0.5;   \n    y=logical((umax<=250)*(umax>=240)*(t2>=40)*(t2<=90)*(kmax<=3)*(t1<=120)*(t1>=60));\n    if y\n        k=find(tmp2==max(tmp2));\n        if k>2\n            a1=(sum(tmp2(1:k))-(tmp2(1)+tmp2(k))/2)*0.5;\n        else\n            a1=(tmp2(1)+tmp2(k))*0.5/2;\n        end\n        if length(tmp2)-k>2\n            a2=(sum(tmp2(k:length(tmp2)))-(tmp2(length(tmp2))+tmp2(k))/2)*0.5;\n        else\n            a2=(tmp2(length(tmp2))+tmp2(k))/2*0.5;\n        end\n        e=max(abs(a1-a2)/max(a1,a2),abs(1+length(tmp2)-2*k)/max(k-1,length(tmp2)-k));\n    else\n        e=inf;\n    end\nend\n\nfunction [a,sigma1,sigma2]=area1(x)\n    global u0\n    S=3.949241144080618e+02;\n    u0=heat(x(1),x(2),x(3),x(4),x(5));\n    u=u0(u0>=30);\n    tmp2=u(u>=217)-217;\n    t2=length(tmp2)*0.5;\n    umax=max(u);  \n    tmp3=abs(u(2:length(u))-u(1:length(u)-1))/0.5;\n    kmax=max(tmp3);\n    s=u(u(2:length(u))>=u(1:length(u)-1));\n    s=s(s>=150);\n    s=s(s<=190);\n    t1=length(s)*0.5;   \n    y=logical((umax<=250)*(umax>=240)*(t2>=40)*(t2<=90)*(kmax<=3)*(t1<=120)*(t1>=60));\n    if y\n        k=find(tmp2==max(tmp2));\n        if k>2\n            a=(sum(tmp2(1:k))-(tmp2(1)+tmp2(k))/2)*0.5;\n        else\n            a=(tmp2(1)+tmp2(k))*0.5/2;\n        end\n        if length(tmp2)-k>2\n            a2=(sum(tmp2(k:length(tmp2)))-(tmp2(length(tmp2))+tmp2(k))/2)*0.5;\n        else\n            a2=(tmp2(length(tmp2))+tmp2(k))/2*0.5;\n        end\n        sigma1=max(abs(a-a2)/max(a,a2),abs(1+length(tmp2)-2*k)/max(k-1,length(tmp2)-k));\n        sigma2=abs(a-S)/S;      \n    else\n        a=inf; sigma1=1;sigma2=1;\n    end\nend\n",
+  "m_A2021_1.m": "global R E\nload('data.mat','l','L','P','E','e');\n\nR=300.4;       %����뾶\n%l                    ����������ƽ��\n%L                    �ٶ���ԭ��  \n%e                    �ٶ�������\n%P                    �ٶ����¶�����\n%E                    �����ڵ�ԭ����\n\nfigure\nax1=subplot(1,3,1);\nax2=subplot(1,3,2);\nax3=subplot(1,3,3);\ns=-0.6:0.1:0.6; S=s;\nfor i=1:length(s)\n    S(i)=shensuoliang(s(i));\nend\nplot(ax1,s,S);\nylabel(ax1,'�α������дٶ�����������������ף�');\n[s1,v1]=fminbnd(@shensuoliang, -0.6,0.6);   \n\n\ns=-0.6:0.1:0.6; S=s;\nfor i=1:length(s)\n    S(i)=weiyiliang(s(i));\nend\nplot(ax2,s,S);\nylabel(ax2, '�α������������ƶ��������ƽ������^2��');\nxlabel(ax2,'x�᣺��͵�Ĵٶ��������������ף�');\n[s2,v2]=fminbnd(@weiyiliang, -0.6,0.6); \n\nfor i=1:length(s)\n    S(i)=pingjunjuli(s(i));\nend\nplot(ax3,s,S);\nylabel(ax3,'�α���������Ӧ���ƶ���ƽ�����루�ף�');\n\n\n[s3,v3]=fminbnd(@pingjunjuli, -0.6,0.6);   \n\n\nfunction S=pingjunjuli(s)          %s ��͵�Ĵٶ����쳤��\nglobal R \nf=0.466*R;     %����\nF=f-s;\nh=0.01;\nxp=0:h:150;\nhp=xp.^2/4/F;\nzp=s-R+hp;\nhb=4*(sqrt(F)*(hp+F).^1.5-F^2)/3/R;\nzb=hb-R;\nxb=sqrt(R^2-zb.^2);\ntmp=sqrt((xp-xb).^2+(zp-zb).^2);\nS=2*sum(tmp)*h/150;\nend\n\nfunction S=shensuoliang(s)           %s ��͵�Ĵٶ����쳤��\nglobal R E L l e P \nf=0.466*R;     %����\nF=f-s;\nH1=150^2/4/F;                       %�ھ�300��������߶�\nH0=4*(sqrt(F)*(H1+F)^(3/2)-F^2)/3/R; %�����α������߶�\nk=find(E(:,3)<=H0-R);                %�α������ڵĽڵ�����\nX=E(k,:);                            %�α������ڵĽڵ�ԭ����\nt=((X(:,3)+R)~=0).*height(F,X(:,3)+R);\ntmp=sqrt(4*F*t);\nt1=X(:,1:2);\nt2=sqrt(sum(t1.*t1,2));\ntmp1=find(t2);\nt1(tmp1,:)=t1(tmp1,:)./t2(tmp1);\nQ=[tmp.*t1,t+s-R];                  %�α������ڵĽڵ�������\ntmp2=P(k,:)-Q;\nb=sum(e(k,:).*tmp2,2);\nc=sum(tmp2.*tmp2,2)-l(k);\ntmp3=sqrt(b.^2-c);\nS=max(min(abs(-L(k)-b-tmp3), abs(-L(k)-b+tmp3)));  %�α�����ٶ��������������ֵ\nend \n\nfunction S=weiyiliang(s)           %s ��͵�Ĵٶ����쳤��\nglobal R E\nf=0.466*R;     %����\nF=f-s;\nH1=150^2/4/F;                        %�ھ�300��������߶�\nH0=4*(sqrt(F)*(H1+F)^(3/2)-F^2)/3/R; %�����α������߶�\nk=find(E(:,3)<=H0-R);                %�α������ڵĽڵ�����\nX=E(k,:);                            %�α������ڵĽڵ�ԭ����\nt=((X(:,3)+R)~=0).*height(F,X(:,3)+R);\ntmp=sqrt(4*F*t);\nt1=X(:,1:2);\nt2=sqrt(sum(t1.*t1,2));\ntmp1=find(t2);\nt1(tmp1,:)=t1(tmp1,:)./t2(tmp1);\nQ=[tmp.*t1,t+s-R];                  %�α������ڵĽڵ�������\ntmp=Q-X;\nS=max(sum(tmp.*tmp,2));\nend \n\n\nfunction z=height(f,x)             %��x�����������α�Ϊ��Ϊz,����Ϊf��������\nglobal R \nz=((3.*x*R/4+f^2)./sqrt(f)).^(2/3)-f;\nend\n\n\n\n",
+  "m_A2021_2.m": "load('data.mat','l','L','P','E','e','index','side_ind_square');\nglobal k R err1 err2  err3 p \nR=300.4;       %����뾶\nf=0.466*R;     %����\ns=-0.3361;\nF=f-s;\nalpha=36.795*pi/180;\nbeta=78.169*pi/180;\np=[cos(alpha)*cos(beta),cos(beta)*sin(alpha),sin(beta)];\nH1=150^2/4/F*1.01^2;                    %�ھ���1%��������߶�\nH0=4*(sqrt(F)*(H1+F)^(3/2)-F^2)/3/R;    %�����α������߶�\nk=find(E(:,1:3)*p'<=H0-R);              %�α������ڵĽڵ�����\n%l                    ����������ƽ��\n%L                    �ٶ���ԭ��  \n%e                    �ٶ�������\n%P                    �ٶ����¶�����\n%E                    �����ڵ�ԭ����\n%side_ind_square      ������������������ƽ��\n%index                �����йصľ���\n%err1                 max(0,0.07%-�߳����������)  err1=0, ��ʾ���㲻��ʽ   \n%err2                 ���������������\n%err3                 �ٶ����������������  err3=0, |si|<0.6\n\nerr1=1; err2=1;err3=1;\nload('x0.mat');\nc=200000;    \ng1=fun(x0);\ng2=ineq(x0);\ng3=eqf(x0);\ng0=g1+c*(g2+g3);\nr=2;                             %�Ŵ�ϵ��\neps=1e-6;                        %����\nrange=10;tol=1;\nwhile tol>eps\n     x1=x0;\n     while 1\n        y0=dfun(x0)+c*(dineq(x0)+deqf(x0));\n        tmp=norm(y0);\n        if tmp<eps\n           break;\n        end\n        h=-y0/tmp;\n        fhandle=@(t) fun(x0+t*h)+c*(ineq(x0+t*h)+eqf(x0+t*h));\n        range=max(tmp,range);\n        [t,g0]=funm(fhandle,range);\n        range=t*50;\n        g1=fun(x0);\n        g2=ineq(x0);\n        g3=eqf(x0);\n        x0=x0+t*h;\n    end\n    if c>1e8\n        break;\n    else\n        c=r*c;\n    end\n    tol=max([err1,err2,err3]); \nend\n\n\n\nfunction y=dineq(x)                    %x(n,4) �����ڵ����꼰�ٶ���������\n%y ����ʽԼ����x���ݶ�ֵ\nglobal side_ind_square index           \nr=0.0007;                               % �߳��������������\nE=x(:,1:3);                             % �����ڵ�����\ns=x(:,4);                               %�ٶ����쳤��\ny=zeros(size(x));\ntmp=E(side_ind_square(:,1),:)-E(side_ind_square(:,2),:);\ntmp1=sum(tmp.*tmp,2);\ntmp2=tmp1-side_ind_square(:,3)*(1+r)^2;\ntmp3=side_ind_square(:,3)*(1-r)^2-tmp1;\ntmp2=max(0,tmp2);\ntmp3=max(0,tmp3);\ntmp4=4*(tmp2-tmp3).*tmp;\ntmp5=max(0,s.^2-0.36);\ny(:,1:3)=index*tmp4;\ny(:,4)=4*s.*tmp5;\nend\n\nfunction g=ineq(x)                    %x(n,4) �����ڵ����꼰�ٶ���������\n%g ����ʽԼ����xֵ\nglobal side_ind_square err1 err3 \nr=0.0007;                               % �߳��������������\nE=x(:,1:3);                             % �����ڵ�����\ns=x(:,4);                               %�ٶ����쳤��\ntmp=E(side_ind_square(:,1),:)-E(side_ind_square(:,2),:);\ntmp1=sum(tmp.*tmp,2);\ntmp2=tmp1-side_ind_square(:,3)*(1+r)^2;\ntmp3=side_ind_square(:,3)*(1-r)^2-tmp1;\ntmp2=max(0,tmp2);\ntmp3=max(0,tmp3);\ntmp4=max(0,s.^2-0.36);\ng=sum(tmp2.^2)+sum(tmp3.^2)+sum(tmp4.^2);\nerr3=max(tmp4/0.72);\nerr1=max(max(tmp2,tmp3)./side_ind_square(:,3));\nend\n\nfunction g=eqf(x)       %x(n,4) �����ڵ����꼰�ٶ���������\n%g ��ʽԼ����xֵ\nglobal L l P e err2                       \nE=x(:,1:3);                       % �����ڵ�����\ns=x(:,4);                         %�ٶ����쳤��\ntmp=P-E+e(:,1:3).*(L+s);\ntmp1=sum(tmp.*tmp,2)-l;\nt1=tmp1.^2;\ng=sum(t1);\nerr2=max(abs(tmp1)./l)/2;\nend\n\n\n\n\nfunction y=deqf(x)       %x(n,4) �����ڵ����꼰�ٶ���������\n%y ��ʽԼ����x���ݶ�ֵ\nglobal L l P e                       \nE=x(:,1:3);                       % �����ڵ�����\ns=x(:,4);                         %�ٶ����쳤��\ny=zeros(size(x));\ntmp=P-E+e(:,1:3).*(L+s);\ntmp1=sum(tmp.*tmp,2)-l;\ntmp2=sum((P-E).*e,2);\ny(:,1:3)=4*tmp1.*(E-P-(L+s).*e);\ny(:,4)=4*tmp1.*(L+s+tmp2);\nend\n\nfunction g=fun(x)                  %x(n,4) �����ڵ����꼰�ٶ���������\n%g �Ż�������xֵ\nglobal k R p\nf=0.466*R;                       \ns=-0.3361;\nF=f-s;                    %����\nE=x(k,1:3);  \ntmp=sum(E.^2,2);\ntmp1=E(:,1:3)*p';\ntmp2=tmp1.^2;\ntmp3=tmp-tmp2-4*F*(tmp1-s+R);\ng=tmp3'*tmp3;\nend\n\n\n\n\nfunction y=dfun(x)                  %x(n,4) �����ڵ����꼰�ٶ���������\n%y �Ż�������x���ݶ�ֵ\nglobal k R p\nf=0.466*R;                       \ns=-0.3361;\nF=f-s;                    %����\ny=zeros(size(x));\nE=x(k,1:3);  \ntmp=sum(E.^2,2);\ntmp1=E(:,1:3)*p';\ntmp2=tmp1.^2;\ntmp3=tmp-tmp2-4*F*(tmp1-s+R);\ny(k,1:3)=4*tmp3.*(E-tmp1*p-2*F*ones(length(k),1)*p);\nend\n\nfunction [x,y]=funm(f,x1)\n tmp1=f(0); tmp2=f(x1);\n if tmp1<=tmp2\n     a=0;   fmin=tmp1; b=x1;\n else\n     a=x1;b=0; fmin=tmp2;\n end\n while 1\n    x=(a+b)/2;\n    tmp=f(x);\n    if tmp<fmin\n        b=a; a=x; fmin=tmp;\n    else\n        b=x;\n    end\n    if abs(a-b)<1e-12\n        x=a; y=fmin;\n        break;\n    end\n end      \nend",
+  "m_A2021_3.m": "clear\nglobal R p\nR=300.4;       %����뾶\nf=0.466*R;     %����\ns=-0.3361;\nF=f-s;\nalpha=36.795*pi/180;\nbeta=78.169*pi/180;\np=[cos(alpha)*cos(beta),cos(beta)*sin(alpha),sin(beta)];\nH1=150^2/4/F;\n\nload('data.mat','ind_area');\nload('x0.mat');\nE=x0(:,1:3);                           %�����ڵ�����\nk=find(E*p'<=H1-R+s);                  %�����α�������ڵ�\nS1=zeros(4300,2);\nfor i=1:4300\n    A=ind_area(i,1);B=ind_area(i,2);C=ind_area(i,3);\n    tag=sum(sum(k==[A,B,C]));           %�жϾ�������һ�����ڹ���������\n    if tag\n      A=E(A,:); B=E(B,:);C=E(C,:); u=ind_area(i,4);\n      S1(i,:)=area1(A,B,C,u);\n    end\nend\nrate1=sum(S1(:,1))/sum(S1(:,2));                %���ʷּ����300�׿ھ��Ļ�׼���淴���\n\n\nload('data.mat','E');\nH0=R-sqrt(R^2-150^2);                      %�ھ�300������߶�\nk=find(E(:,3)<=H0-R);                      %���������ڵĽڵ�����\nS2=zeros(4300,2);\nfor i=1:4300\n    A=ind_area(i,1);B=ind_area(i,2);C=ind_area(i,3);\n    tag=sum(sum(k==[A,B,C]));\n    if tag\n      A=E(A,:); B=E(B,:);C=E(C,:); u=ind_area(i,4);\n      S2(i,:)=area2(A,B,C,u);\n    end\nend\nrate=sum(S2(:,1))/sum(S2(:,2));                %���ʷּ����300�׿ھ��Ļ�׼���淴���\n\n\nfun=@(x) -2*x.^2+(2.*x+1)*R^2-4*0.534*R*x.*sqrt(R^2-x.^2);          %ȷ����Ч��������ھ�\nfun1=@(x) 2*x.^2+(2.*x-1)*R^2-4*0.534*R*x.*sqrt(R^2-x.^2);      \na=7; b=8;\n\nwhile 1\n    tmp=(a+b)/2;\n    tmp1=fun(tmp);\n    if tmp1>0\n        a=tmp;\n    else \n        b=tmp;\n    end\n    if b-a<1e-12\n        r1=(a+b)/2;\n        break;\n    end\nend\n\na=90; b=120;\nwhile 1\n    tmp=(a+b)/2;\n    tmp1=fun(tmp);\n    if tmp1>0\n        b=tmp;\n    else \n        a=tmp;\n    end\n    if b-a<1e-12\n        r2=(a+b)/2;\n        break;\n    end\nend\n\na=90; b=120;\nwhile 1\n    tmp=(a+b)/2;\n    tmp1=fun1(tmp);\n    if tmp1>0\n        b=tmp;\n    else \n        a=tmp;\n    end\n    if b-a<1e-12\n        r3=(a+b)/2;\n        break;\n    end\nend\nrate2=(sqrt(R^2-0.25)-sqrt(R^2-r1^2)+sqrt(R^2-r2^2)-sqrt(R^2-r3^2))/(R-sqrt(R^2-150^2));    %���ڿھ�300�Ļ�׼�������Դ�ֽ��ܱ�\n\nE=x0(:,1:3);                           %�����ڵ�����\nk=find(E*p'<=H1-R+s);                    %�������ڵĽڵ�����\nk1=zeros(4300,1);\nfor i=1:length(k)\n    k1=k1+(ind_area(:,1)==k(i))+(ind_area(:,2)==k(i))+(ind_area(:,3)==k(i));\nend\nk1=find(k1~=0);                        %�������ڵľ�������(������һ�������ڹ�������)\n\n\nn=1000;                             %���������\ntheta=rand(n,1)*2*pi;               %(0,2*pi)֮����ȷֲ����ݵ�\nr=150*sqrt(rand(n,1));                  %(0,1)֮��r^2���ȷֲ����ݵ�    ������Ȳ���\nn1=[cos(alpha)*sin(beta),sin(beta)*sin(alpha),-cos(beta)];\nn2=cross(p,n1);\nQx=r.*cos(theta)*n1(1)+r.*sin(theta)*n2(1);\nQy=r.*cos(theta)*n1(2)+r.*sin(theta)*n2(2);\nQz=r.*cos(theta)*n1(3)+r.*sin(theta)*n2(3);        %�����������\nQ=[Qx';Qy';Qz']';\ncounter=0;\nA=E(ind_area(k1,1),:); B=E(ind_area(k1,2),:); C=E(ind_area(k1,3),:); \na=B-A;b=C-A;\ntmp=[a(:,2).*b(:,3)-b(:,2).*a(:,3),b(:,1).*a(:,3)-a(:,1).*b(:,3),a(:,1).*b(:,2)-a(:,2).*b(:,1)];                %������ƽ�淨��\nc=sum(A.*tmp,2);\nd=sum(tmp.*p,2);\nfor i=1:n\n    t0=(c-sum(tmp.*Q(i,:),2))./d;\n    D=Q(i,:)+t0.*p;\n    e=D-A;\n    tmp1=sum(a.*a,2);tmp2=sum(a.*b,2);tmp3=sum(b.*b,2);\n    tmp4=sum(e.*a,2);tmp5=sum(e.*b,2);\n    s=(tmp4.*tmp3-tmp5.*tmp2)./(tmp1.*tmp3-tmp2.*tmp2);\n    t=(tmp1.*tmp5-tmp2.*tmp4)./(tmp1.*tmp3-tmp2.*tmp2);\n    j=find((s>=0).*(t>=0).*(s+t<=1));\n    if ~isempty(j)\n        o=yuanxin(A(j,:),B(j,:),C(j,:));                         %��������\n        tmp1=norm(D(j,:)-o);\n        e=o+R/tmp1*(D(j,:)-o);                                %QD�뾵��Ľ���e\n        q=2*(o-e)*p'*(o-e)/R^2-p;                               %������߷���\n        tmp3=q*p';\n        if(tmp3>0)\n            t=(-0.534*R-e*p')/tmp3;\n            tmp4=e+t*q+0.534*R*p;\n            counter=counter+(norm(tmp4)<=0.5);\n        end  \n    end\nend\nrate3=counter/n;\n\n\n%���Ȳ���\nx=-150:3:150;y=x;\n[x,y]=meshgrid(x,y);\nr=sqrt(x.^2+y.^2);\nk=find(r<=150);\nr=r(k); x=x(k); y=y(k);\ntheta=(x>=0).*asin(y./(r+(r==0)))+(x<0).*(pi-asin(y./(r+(r==0))));\nn1=[cos(alpha)*sin(beta),sin(beta)*sin(alpha),-cos(beta)];\nn2=cross(p,n1);\nQx=r.*cos(theta)*n1(1)+r.*sin(theta)*n2(1);\nQy=r.*cos(theta)*n1(2)+r.*sin(theta)*n2(2);\nQz=r.*cos(theta)*n1(3)+r.*sin(theta)*n2(3);        %�����������\nQ=[Qx(:)';Qy(:)';Qz(:)']';\ncounter=0;\nA=E(ind_area(k1,1),:); B=E(ind_area(k1,2),:); C=E(ind_area(k1,3),:); \na=B-A;b=C-A;\ntmp=[a(:,2).*b(:,3)-b(:,2).*a(:,3),b(:,1).*a(:,3)-a(:,1).*b(:,3),a(:,1).*b(:,2)-a(:,2).*b(:,1)];                %������ƽ�淨��\nc=sum(A.*tmp,2);\nd=sum(tmp.*p,2);\nfor i=1:length(r)\n    t0=(c-sum(tmp.*Q(i,:),2))./d;\n    D=Q(i,:)+t0.*p;\n    e=D-A;\n    tmp1=sum(a.*a,2);tmp2=sum(a.*b,2);tmp3=sum(b.*b,2);\n    tmp4=sum(e.*a,2);tmp5=sum(e.*b,2);\n    s=(tmp4.*tmp3-tmp5.*tmp2)./(tmp1.*tmp3-tmp2.*tmp2);\n    t=(tmp1.*tmp5-tmp2.*tmp4)./(tmp1.*tmp3-tmp2.*tmp2);\n    j=find((s>=0).*(t>=0).*(s+t<=1));\n    if ~isempty(j)\n        o=yuanxin(A(j,:),B(j,:),C(j,:));                         %��������\n        tmp1=norm(D(j,:)-o);\n        e=o+R/tmp1*(D(j,:)-o);                                %QD�뾵��Ľ���e\n        q=2*(o-e)*p'*(o-e)/R^2-p;                               %������߷���\n        tmp3=q*p';\n        if(tmp3>0)\n            t=(-0.534*R-e*p')/tmp3;\n            tmp4=e+t*q+0.534*R*p;\n            counter=counter+(norm(tmp4)<=0.5);\n        end  \n    end\nend\nrate4=counter/length(r);\n\n\nfunction S=area1(A,B,C,u)                          %һ������¾���ķ����������Ч��� \n%u ������ABC���\n%S(1)�������  S(2)��Ч���\nglobal R p\nf=0.466*R;     %����\ns=-0.3361;\nF=f-s;\nH=150^2/4/F;                                     %300�ھ�������������߶�\nn=50;\no=yuanxin(A,B,C);\nw=(B-A)/n; z=(C-A)/n; \na=[];\nfor i=1:n\n    tmp1=A+(i-1)*w+(w+z)/3;\n    tmp2=A+(i-1)*w+2*(w+z)/3;\n    a=[a;tmp1+(0:n-i)'*z;tmp2+(0:n-i-1)'*z];            %�ʷ���������\nend\ntmp=sqrt(sum((a-o).*(a-o),2));\ne=o+R./tmp.*(a-o);                                    %�ʷ����������潻�������\ns2=e*p'<=H-R+s;                                       %�ж�e�Ƿ��ڹ�������\nq=2*(o-e)*p'.*(o-e)/R^2-p;\ntmp=q*p';\nk=find(tmp>0);\nt=zeros(n^2,1);\nt(k)=(-0.534*R-e*p')./tmp;\ntmp=e(k,:)+t(k).*q(k,:)+0.534*R*p;\ns1=sum(tmp.*tmp,2)<=0.25;\nS=[sum(s1),sum(s2)]*u/n/n;\nend\n\n\n\n\n\n\n\n\n\nfunction S=area2(A,B,C,u)                          %��׼����ķ����������Ч��� \n%u ������ABC���\n%S(1)�������  S(2)��Ч���\nglobal R\np=[0,0,1];\nH=R-sqrt(R^2-150^2);\nn=50;\no=yuanxin(A,B,C);\nw=(B-A)/n; z=(C-A)/n;\na=[];\n for i=1:n\n    tmp1=A+(i-1)*w+(w+z)/3;\n    tmp2=A+(i-1)*w+2*(w+z)/3;\n    a=[a;tmp1+(0:n-i)'*z;tmp2+(0:n-i-1)'*z];            %�ʷ���������\nend\ntmp=sqrt(sum((a-o).*(a-o),2));\ne=o+R./tmp.*(a-o);                                    %�ʷ����������潻�������\ns2=e(:,3)<=H-R;                                       %�ж�e�Ƿ��ڹ�������\nq=2*(o-e)*p'.*(o-e)./R^2-p;\ntmp=q*p';\nk=find(tmp>0);\nt=zeros(n^2,1);\nt(k)=(-0.534*R-e*p')./tmp;\ntmp=e(k,:)+t(k).*q(k,:)+0.534*R*p;\ns1=sum(tmp.*tmp,2)<=0.25;\nS=[sum(s1),sum(s2)]*u/n/n;\nend\n\n\n\n\n\n\n\nfunction o=yuanxin(A,B,C)                          %��A��B��C�� Ϊ����ľ���Բ��\nR=300.4;\no=zeros(1,3);\np1=A-C;\np2=A-B;\nd1=(dot(A,A)-dot(C,C))/2;\nd2=(dot(A,A)-dot(B,B))/2;\nn=cross(p1,p2);\ndc=(d1*p2(3)-d2*p1(3));\nda=(d1*p2(1)-d2*p1(1));\ndb=(d1*p2(2)-d2*p1(2));\nif n(1)~=0\n    o(1)=0;\n    o(2)=dc/n(1);\n    o(3)=-db/n(1);\nelseif n(2)~=0\n    o(2)=0;\n    o(1)=-dc/n(2);\n    o(3)=da/n(2);\nelse\n    o(3)=0;\n    o(1)=db/n(3);\n    o(2)=-da/n(3);\nend\n    a=dot(n,n);\n    b=2*dot(n,o-A);\n    c=dot(o-A,o-A)-R^2;\n    if n(3)>0\n        t=(-b+sqrt(b^2-4*a*c))/2/a;\n    else\n        t=(-b-sqrt(b^2-4*a*c))/2/a;\n    end\n    o=n*t+o;\nend\n\n\n\n",
+  "m_Untitled.m": "x=r.*cos(theta);\ny=r.*sin(theta);\n\nfigure\nplot(x,y,'r.');\naxis square",
+  "m_prepare.m": "global P e L l R  index side_ind_square ind_area\nR=300.4;       %����뾶\nf=0.466*R;     %����\ns=-0.3361;\nF=f-s;\nalpha=36.795*pi/180;\nbeta=78.169*pi/180;\np=[cos(alpha)*cos(beta),cos(beta)*sin(alpha),sin(beta)];\nH1=150^2/4/F*1.01^2;                    %�ھ���1%��������߶�\nH0=4*(sqrt(F)*(H1+F)^(3/2)-F^2)/3/R;    %�����α������߶�\nfilename=\"����1.csv\";\n[E,c]=xlsread(filename,1);             %E:�����ڵ�ԭʼ����\nind2=string(c(2:length(c),1));          %ind2  �����ڵ��ʶ\nk=find(E(:,1:3)*p'<=H0-R);              %�ڶ����α������ڵĽڵ�����\nfilename=\"����2.csv\";\nG=xlsread(filename,1);\nX=E-G(:,4:6);            \nl=sum(X.*X,2);                          %����������ƽ��\nX=G(:,4:6)-G(:,1:3);\nL=sqrt(sum(X.*X,2));                    %�ٶ���ԭ��      \ne=(G(:,4:6)-G(:,1:3))./L;               %�ٶ�������\nP=G(:,1:3);                             %�ٶ����¶�����\nfilename=\"����3.csv\";\n[~,c]=xlsread(filename,1);\ntmp=string(c(2:length(c),1:3));\nind_area=zeros(4300,4);                   %���涥���������������\nind=zeros(4300,3);                        %���涥����������\nfor i=1:2226                            \n    j=find(tmp==ind2(i));\n    ind(j)=i;\nend\nind_area(:,1:3)=ind;\ntmp=zeros(2226);\nfor i=1:4300\n    tmp(ind(i,1),ind(i,2))=1;\n    tmp(ind(i,2),ind(i,3))=1;\n    tmp(ind(i,3),ind(i,1))=1;\nend\nfor i=1:2226\n    for j=i+1:2226\n        if tmp(j,i)\n            tmp(i,j)=1;\n            tmp(j,i)=0;\n        end \n    end\nend\nt=find(tmp);  \nn=length(t);                        %n=6525  ��������\nside_ind_square=zeros(n,3);         %1,2 �������˵㡢3 ��������\nfor i=1:n\n    a=floor(t(i)/2226)+1;\n    b=mod(t(i),2226);\n    side_ind_square(i,1:2)=[b,a];\n    side_ind_square(i,3)=sum((E(b,:)-E(a,:)).^2);\nend\n\nindex=zeros(2226,n);                %|Q_i-Q_j|^2���ݶ�ʱ����ľ���             \nfor i=1:n\n    index(side_ind_square(i,1),i)=1;\n    index(side_ind_square(i,2),i)=-1;\nend\n\n\nfor i=1:4300\n     tmp=find(side_ind_square(:,1)==ind(i,1));\n     tmp1= side_ind_square(tmp,2)==ind(i,2);\n     a=sqrt(side_ind_square(tmp(tmp1),3));\n     tmp1= side_ind_square(tmp,2)==ind(i,3);\n     b=sqrt(side_ind_square(tmp(tmp1),3));\n     tmp=find(side_ind_square(:,1)==ind(i,2));\n     tmp1=find(side_ind_square(tmp,2)==ind(i,3));\n     c=sqrt(side_ind_square(tmp(tmp1),3));\n     p=(a+b+c)/2;\n     ind_area(i,4)=sqrt(p*(p-a)*(p-b)*(p-c));\nend\n\nsave data.mat E L P e l ind_area ind2 index side_ind_square;\n\n\n",
+  "m_test.m": "clear\nglobal m r g k F l\n% m ��������\n% r �����뾶\n% g �������ٶ�\n% k ���ɾ�ǿϵ��\n% F A��ʩ�ӵ����µ����Ĵ�С\n% l ����ԭ��\nm=5; r=0.3; g=9.8; k=500; F=50; l=0.8; T=20; % T:ʱ��\n[x,v]=fsolve(@fit,[0,0,-1.5,0,0,0]);\na=x(4);        %0<a<pi/2\nb=x(5);        %0<b<2*pi,   n3 �����\nc=x(6);        % ȷ��n1����  0<c<2*pi\nO_0=x(1:3);\nn3_0=[sin(a)*cos(b),sin(a)*sin(b),cos(a)];\ntmp=[cos(a)*cos(b),cos(a)*sin(b),-sin(a)];   %tmp��ֱ��n3\ntmp1=cross(n3_0,tmp);                         % tmp1,tmp2 �����������ֱ����\nn1_0=tmp*cos(c)+tmp1*sin(c);                  % n1����\nn2_0=cross(n3_0,n1_0);    \nA=O_0+r*n1_0;\nB=O_0-r/2*n1_0+sqrt(3)/2*r*n2_0;            %A,B,C����\nC=O_0-r/2*n1_0-sqrt(3)/2*r*n2_0;\ntheta=acos(n3_0(3))/pi*180;\n\n\nH1=5*m*r^2/12;\nH2=H1;\nH3=2*m*r^2/3;              %���᷽���ת���������������ģ�\n\nh=0.001;           %ʱ�䲽��\nn=floor(T/h)+1;\nt=h*(0:(n-1))';\nv=zeros(n,3);      %�ٶ�\nn3=v;              %���淨��\nn1=v;              %n1����\nn2=v;              %n2����\nO=v;               %��������\nw=v;               %���ٶ�\nv(1,:)=[0,0,0];\nn3(1,:)=n3_0;\nn1(1,:)=n1_0;\nn2(1,:)=n2_0;\nO(1,:)=O_0;\nw(1,:)=[0,0,0];\nfor i=1:n-1\n    A=O(i,:)+r*n1(i,:);\n    B=O(i,:)-r/2*n1(i,:)+sqrt(3)/2*r*n2(i,:);            %A,B,C����\n    C=O(i,:)-r/2*n1(i,:)-sqrt(3)/2*r*n2(i,:);\n    p=O(i,:)-r/2*n3(i,:);                                %����p����\n\n    \n    l1=A-p;\n    l2=B-p;\n    l3=C-p;                               %��������������\n    \n    \n    e1=-A/norm(A);\n    e2=-B/norm(B);\n    e3=-C/norm(C);                                  %����A��B,C�ĵ�λ�������ϣ�\n    \n    F1=k*(norm(A)-l)*e1;\n    F2=k*(norm(B)-l)*e2;\n    F3=k*(norm(C)-l)*e3;                             %��������\n    M=cross(l1,F1)+cross(l2,F2)+cross(l3,F3);        %�����ش�С\n    \n    M1=dot(M,n1(i,:));\n    M2=dot(M,n2(i,:));\n    M3=dot(M,n3(i,:));                                    %�����������ϵķ���\n    \n    \n    vc=v(i,:)+((F1+F2+F3)/m-g*[0,0,1])*h;\n    Oc=O(i,:)+v(i,:)*h;\n    \n    w1c=w(i,1)+M1/H1*h;\n    w2c=w(i,2)+M2/H2*h;\n    w3c=w(i,3)+M3/H3*h;\n    \n    n1c=n1(i,:)+(-w(i,2)*n3(i,:)+w(i,3)*n2(i,:))*h;\n    n2c=n2(i,:)+(-w(i,3)*n1(i,:)+w(i,1)*n3(i,:))*h;\n    n3c=n3(i,:)+(-w(i,1)*n2(i,:)+w(i,2)*n1(i,:))*h;\n    n1c=n1c/norm(n1c);\n    n2c=n2c/norm(n2c);\n    n3c=n3c/norm(n3c);\n    \n    A=Oc+r*n1c;\n    B=Oc-r/2*n1c+sqrt(3)/2*r*n2c;            %A,B,C����\n    C=Oc-r/2*n1c-sqrt(3)/2*r*n2c;\n    p=Oc-r/2*n3c;                                %����p����\n\n    \n    l1=A-p;\n    l2=B-p;\n    l3=C-p;                               %��������������\n    \n    \n    e1=-A/norm(A);\n    e2=-B/norm(B);\n    e3=-C/norm(C);                                  %����A��B,C�ĵ�λ�������ϣ�\n    \n    F1=k*(norm(A)-l)*e1;\n    F2=k*(norm(B)-l)*e2;\n    F3=k*(norm(C)-l)*e3;                             %��������\n    M=cross(l1,F1)+cross(l2,F2)+cross(l3,F3);        %�����ش�С\n    \n    M1=dot(M,n1c);\n    M2=dot(M,n2c);\n    M3=dot(M,n3c);                                    %�����������ϵķ���\n\n    vp=v(i,:)+((F1+F2+F3)/m-g*[0,0,1])*h;\n    Op=O(i,:)+vc*h;\n    \n    w1p=w(i,1)+M1/H1*h;\n    w2p=w(i,2)+M2/H2*h;\n    w3p=w(i,3)+M3/H3*h;\n    \n    n1p=n1(i,:)+(-w2c*n3c+w3c*n2c)*h;\n    n2p=n2(i,:)+(-w3c*n1c+w1c*n3c)*h;\n    n3p=n3(i,:)+(-w1c*n2c+w2c*n1c)*h;\n    n1p=n1p/norm(n1p);\n    n2p=n2p/norm(n2p);\n    n3p=n3p/norm(n3p);\n    \n    O(i+1,:)=(Oc+Op)/2;\n    v(i+1,:)=(vc+vp)/2;\n    w(i+1,:)=[w1c+w1p,w2c+w2p,w3c+w3p]/2;\n    \n    n1(i+1,:)=(n1c+n1p)/2;\n    n2(i+1,:)=(n2c+n2p)/2;\n    n3(i+1,:)=(n3c+n3p)/2;\n    n1(i+1,:)=n1(i+1,:)/norm(n1(i+1,:));\n    n2(i+1,:)=n2(i+1,:)/norm(n2(i+1,:));\n    n3(i+1,:)=n3(i+1,:)/norm(n3(i+1,:));\nend\n\nA=O+r*n1;\nB=O-r/2*n1+sqrt(3)/2*r*n2;            %A,B,C����\nC=O-r/2*n1-sqrt(3)/2*r*n2;\np=O-r/2*n3;                          %��������\n\nla=sqrt(sum(A.*A,2));\nlb=sqrt(sum(B.*B,2));              %���ɳ���\nlc=sqrt(sum(C.*C,2));\n\ntheta1=acos(abs(A(:,3))./la)*180/pi;\ntheta2=acos(abs(B(:,3))./lb)*180/pi;      %�������\ntheta3=acos(abs(C(:,3))./lc)*180/pi;\n\ntheta=acos(n3(:,3))*180/pi;        %�������(�ȣ�\n\ne=k*((la-l).^2+(lb-l).^2+(lc-l).^2)/2+m*g*p(:,3)+m*sum(v.*v,2)/2+(H1*w(:,1).^2+H2*w(:,2).^2+H3*w(:,3).^2)/2;\nfigure(1);\nax1=subplot(4,2,1);\nax2=subplot(4,2,2);\nax3=subplot(4,2,3);\nax4=subplot(4,2,4);\nax5=subplot(4,2,5);\nax6=subplot(4,2,6);\nax7=subplot(4,2,7);\nax8=subplot(4,2,8);\nplot(ax1,t,la-l);\ntitle(ax1,'A�˵����쳤�����ף�');\n\nplot(ax2,t,lb-l);\ntitle(ax2,'B�˵����쳤�����ף�');\n\nplot(ax3,t,lc-l)\ntitle(ax3,'C�˵����쳤�����ף�');\n\nplot(ax4,t,theta);\ntitle(ax4,'������б�ǣ��ȣ�');\n\nplot(ax5,t,theta1);\ntitle(ax5,'A�˵����봹ֱ����нǣ��ȣ�');\n\nplot(ax6,t,theta2);\ntitle(ax6,'B�˵����봹ֱ����нǣ��ȣ�');\n\nplot(ax7,t,theta3);\ntitle(ax7,'C�˵����봹ֱ����нǣ��ȣ�');\n\nplot(ax8,t, e);\ntitle(ax8,'ϵͳ������������+���ܣ�');\n\nfigure(2);\nplot3(O(:,1),O(:,2),O(:,3));\ntitle('O��켣ͼ');\n\nfigure(3);\na=r*0:0.01:1;\nb=0:0.01*pi:2*pi;\n[x,y]=meshgrid(a,b);\nfor i=1:100:n\n    X=x.*cos(y)*n1(i,1)+x.*sin(y)*n2(i,1)-sqrt(1-x.^2)*n3(i,1)+O(i,1);\n    Y=x.*cos(y)*n1(i,2)+x.*sin(y)*n2(i,2)-sqrt(1-x.^2)*n3(i,2)+O(i,2);\n    Z=x.*cos(y)*n1(i,3)+x.*sin(y)*n2(i,3)-sqrt(1-x.^2)*n3(i,3)+O(i,3);\n\tmesh(X,Y,Z);\n    pause(0.1);\nend\n\n\n\n\nfunction y=fit(x)\nglobal m r g k F l\n% x(1:3) O������\na=x(4);        %0<a<pi/2\nb=x(5);        %0<b<2*pi,   n3 �����\nc=x(6);        % ȷ��n1����  0<c<2*pi\nO=x(1:3);\nn3=[sin(a)*cos(b),sin(a)*sin(b),cos(a)];\ntmp=[cos(a)*cos(b),cos(a)*sin(b),-sin(a)];   %tmp��ֱ��n3\ntmp1=cross(n3,tmp);                         % tmp1,tmp2 �����������ֱ����\nn1=tmp*cos(c)+tmp1*sin(c);                  % n1����\nn2=cross(n3,n1);    \nA=O+r*n1;\nB=O-r/2*n1+sqrt(3)/2*r*n2;            %A,B,C����\nC=O-r/2*n1-sqrt(3)/2*r*n2;\np=O-r/2*n3;                          %����p����\n\n\ne1=-A/norm(A);\ne2=-B/norm(B);\ne3=-C/norm(C);  %����A��B,C�ĵ�λ�������ϣ�\n\nF1=k*(norm(A)-l)*e1;\nF2=k*(norm(B)-l)*e2;\nF3=k*(norm(C)-l)*e3;                             %����A��B,C����\ny(1:3)=F1+F2+F3-(F+m*g)*[0,0,1];                 % ������С\n\nl1=A-p;\nl2=B-p;\nl3=C-p;                                             %��������������\n\ny(4:6)=cross(l1,F1)+cross(l2,F2)+cross(l3,F3)-F*cross(l1,[0,0,1]);  % �����ش�С\nend\n\n\n\n\n\n",
+  "pptx_储油罐的变位识别与罐容表标定.pptx": [
+    [
+      "储油罐的变位识别与罐容表标定"
+    ],
+    [
+      "基本假设",
+      "罐体没有形变；",
+      "倾斜角度相对较小；",
+      "在理论体积计算时，忽略探针、进出油管和油浮子等的体积；",
+      "探针、进油管及出油管均匀到底"
+    ],
+    [
+      "小椭圆油罐理论油容量计算",
+      "1.箱体无位变",
+      "h",
+      "侧面·图",
+      "h",
+      "截面图·",
+      "椭圆半长轴长度a,",
+      "半短轴长度 b",
+      "油箱长度L",
+      "高为h的椭圆部分的面积",
+      "a",
+      "b",
+      "h",
+      "2倍（扇形面积-三角形面积）"
+    ],
+    [
+      "高为h的油箱的理论容积",
+      "用到的原函数"
+    ],
+    [
+      "2.箱体有小角度纵向位变",
+      "侧面图",
+      "H=1.2m",
+      "L=2.5m",
+      "h:油面标高",
+      "x(h):标高为h时的 油面的长度",
+      "h(l): 油面长度在l时的油截面高度",
+      "h1, h2 油面的特殊标高",
+      "α=4.1度： 水平夹角"
+    ],
+    [
+      "1.剩余油量",
+      "2.",
+      "利用给出的原函数及变量替换可给出V的表达式",
+      "较长，故没有给出，下同"
+    ],
+    [
+      "3.",
+      "4."
+    ],
+    [
+      "油位探针、进油管和出油管的体积",
+      "1.无位变情形",
+      "可由理论油容量与实际油容量的差值得到",
+      "2. 有纵向位变的情形",
+      "油位探针、进油管和出油管体积是为油位高度h的线性函数，即",
+      "可由有位变时理论油容量与实际油容量的差值求c"
+    ],
+    [
+      "数值实验",
+      "1.无位变情形，w近似为h的线性函数，由进油数据及出油数据计算，数据吻合的非常好，拟合的结果为：h(mm), w(L)",
+      "2.有位变的情形",
+      "1.由进油量数据计算： w不是h的单增函数，（进油数据有误？油箱有变形？）",
+      "2. 可由进油量数据及最小二乘法得最佳的c值",
+      "3. 在有位变情形，可以无未变及有位变时的误差带入，多做比较",
+      "3. 油量标定",
+      "实际油量=理论油量V(h,alpha)-w(h)-c"
+    ],
+    [
+      "实际油罐的理论容量计算",
+      "纵向位变角度α，横向位变角度β",
+      "纵向倾角α侧面图",
+      "β",
+      "h",
+      "h'",
+      "探针位置垂直于y轴的截面图",
+      "h'相当于第一问中的h",
+      "半径为r高为h的圆截面面积",
+      "h",
+      "r",
+      "r=1.5m",
+      "L=8m",
+      "h：油面标高",
+      "R=13/8: 球冠半径",
+      "x(h):标高为h时的 油面的长度",
+      "h(l): 油面长度在l时的油截面高度",
+      "h1, h2 油面的特殊标高"
+    ],
+    [
+      "柱体部分体积的计算（类似于第一题）",
+      "1. h和h'的关系",
+      "2. 特殊的h‘值",
+      "3.                   (无右球冠）"
+    ],
+    [
+      "4.",
+      "5.",
+      "柱体部分的体积可积出表达式"
+    ],
+    [
+      "左球冠部分的体积计算",
+      "x",
+      "y",
+      "左球冠方程",
+      "h'",
+      "直线方程",
+      "特殊的h (h')的值",
+      "α及β充分小时，总有"
+    ],
+    [
+      "1.                 球冠与直线左交点x坐标",
+      "x处的圆截面面积",
+      "圆半径",
+      "截面高度",
+      "左球冠部分的体积"
+    ],
+    [
+      "2.                                或                                 球冠与直线左交点x坐标",
+      "x处的圆截面面积",
+      "圆半径",
+      "截面高度",
+      "x处的圆截面面积",
+      "圆半径",
+      "截面高度",
+      "左球冠部分的体积"
+    ],
+    [
+      "3.",
+      "整个左球冠体积",
+      "右球冠部分体积的计算",
+      "右球冠方程",
+      "直线方程"
+    ],
+    [
+      "2.",
+      "1.",
+      "直线与右球冠交点",
+      "x处的圆截面面积",
+      "圆半径",
+      "截面高度"
+    ],
+    [
+      "右球冠部分的体积",
+      "2.",
+      "直线与右球冠交点",
+      "x处的圆截面面积",
+      "圆半径",
+      "截面高度"
+    ],
+    [
+      "x处的圆截面面积",
+      "圆半径",
+      "截面高度",
+      "右球冠部分的体积",
+      "球冠部分的体积可直接由数值积分得出"
+    ],
+    [
+      "数据实验",
+      "附件2的E、F列分别给出了无变位条件下的实际油位高度和实际油量",
+      "1. 对上述数据与理论计算的油量相比较，拟合误差的估计函数（误差函数可取0，误差在0.05L以内）",
+      "2. 故实际油量=理论计算油量",
+      "3. 取出油量数据段（1--302）做倾角角度的估计，",
+      "另一段（304-603） 做结果验证",
+      "纵向倾角2.1°，横向倾角4.4°  E=247.988",
+      "4. 油量对横向倾角敏感，对纵向倾角不敏感。（略）"
+    ],
+    [
+      "位变角度α、β的估值",
+      "理论油量",
+      "每次出油量数据",
+      "出油后油量标高",
+      "极小化函数",
+      "可用方法：逐点法、粒子群法、遗传算法等等",
+      "取α、β在0到10°之间，以0.1°为间隔，计算Ε(α,β)最小值",
+      "油量标定",
+      "实际油量=V(h,alpha,beta)",
+      "时，实际油量约比原标定流量最多时小2000L"
+    ]
+  ],
+  "pptx_高温作业专用服装设计.pptx": [
+    [
+      "高温作业专用服装设计"
+    ],
+    [
+      "基本假设",
+      "各材质是均匀的",
+      "热量只沿着材料的厚度方向传播（问题可看作是一个一维的热传导问题）",
+      "空气层无对流",
+      "忽略热辐射",
+      "热量不能在各层面上积累",
+      "温度变化对材质的各相关常数不产生影响",
+      "热防护服的初始温度和体表温度相同"
+    ],
+    [
+      "问题可视为一维的热传导问题，由于有4层不同的材料，热的传递在不同材质中满足不同的热传导方程， 记",
+      "各层密度",
+      "各层比热",
+      "各层长度",
+      "各层热传导率",
+      "温度",
+      "外界与最外层材料的热交换系数",
+      "皮肤与最内层材料的热交换系数",
+      "外界环境温度",
+      "体表温度",
+      "时间变量"
+    ],
+    [
+      "在     处",
+      "在     处",
+      "在     处",
+      "在     处",
+      "各层满足的方程",
+      "在边界处满足第三类边界条件",
+      "在     处",
+      "牛顿实验定理",
+      "在各层交点处，热传导平衡",
+      "初值条件",
+      "实际问题都是第三类边界问题",
+      "同一层面两侧的热量传导速率相同，温度相同"
+    ],
+    [
+      "方程的数值求解方法（差分法）",
+      "将区域等分成小区间，区间长度分别为Δx、Δt，区间端点记为         ，函数值记为",
+      "二维数组",
+      "关于x的左导数",
+      "关于x的右导数",
+      "一阶差分代替导数",
+      "二阶中心差分代替二阶导数"
+    ],
+    [
+      "迭代过程（                   ）由j层格点的函数值，求j+1层格点的函数值",
+      "由方程得",
+      "j层",
+      "j+1层",
+      "古典显格式",
+      "记",
+      "当              时， 上述格点法可能不收敛，不能用于求热传导问题的数值解",
+      "j层",
+      "j+1层",
+      "（反向二阶差分）",
+      "古典隐格式",
+      "无法直接求解，可转化为线性方程组求解，亦存在不收敛情况"
+    ],
+    [
+      "Crank-Nicolson 隐格式(当                      时，数值解收敛于原方程的解）",
+      "取古典显格式和古典隐格式的平均",
+      "可转化为线性方程组求解，且收敛性与稳定性都优于古典显格式和古典隐格式",
+      "由第三类边界条件求端点温度",
+      "j+1层",
+      "左端点",
+      "右端点",
+      "区间等分成m份"
+    ],
+    [
+      "由间隔点的导数条件",
+      "材料间隔点情形",
+      "j+1层",
+      "间隔点"
+    ],
+    [
+      "单层材料+第三类边界条件（区间等分为m份，时间等分为n份）",
+      "区间每层有m+1个节点",
+      "可转化为线性方程组求解",
+      "由时间第一层的初值，依次求时间第j层的节点的值"
+    ],
+    [
+      "份",
+      "份",
+      "四层材料+第三类边界条件的情形",
+      "时间第j层",
+      "份",
+      "份",
+      "记",
+      "由第三类边界条件+间隔点条件"
+    ],
+    [
+      "*表示r 出现的行号，  由初值依次可求j层格点的函数值"
+    ],
+    [
+      "数据实验",
+      "h0，h1的确定， 最小二乘法",
+      "记计算得到的防护服内温度为               ，实验给出的内温为      ， 则",
+      "则h0、h1 理论上可由极小化 W 得到。（计算量极其大）",
+      "h0,h1大致范围的选择（关键）",
+      "1. 查阅资料可知空气自然对流换热系数在3--10 W/m2•°C",
+      "2. h1,h0之间的关系可由给出的数据得到， 30分钟后，温度稳定，可视为热方程的稳态解",
+      "由此稳态解和时间无关，温度只与x有关且是x的分段线性函数"
+    ],
+    [
+      "热传导率公式（百度）",
+      "其中a是常数，和材料有关，稳态情形下有",
+      "温差"
+    ],
+    [
+      "两个变量的优化问题转化为一个变量的优化问题。     为减少计算量，做分步优化",
+      "1. 取h1在 3-10， 以1为间隔，得最优的h1=8",
+      "2. 取h1在7--9， 以0.1为间隔，得最优的h1=8.4",
+      "3.取h1在8.3-8.7， 以0.01为间隔， 得最优的h1=8.37, h0=122.3928, W=0.3496",
+      "4. 可作W在h1=7--9上的图像，观察误差W的变换情况（略）"
+    ],
+    [
+      "第二问： 相对简单",
+      "末端温度是II段长度的单调递减函数，是时间的单增函数， 故可用二分法",
+      "取l1=0.6(不满足条件), l2=25满足条件",
+      "取 长度（l1+l2)/2, 如此长度满足条件，则设为新的l2; 否则设为新的l1",
+      "重复上述过程只到l2-l1<0.01,  (误差由你设定）",
+      "最佳l2=17.5954",
+      "第三问：如何理解最优厚度？",
+      "从成本上讲，空气层越厚越节约成本（减轻重量）， 故L4=6.4, 求L2 （如同第二问）",
+      "判断条件为 u(T)<=47°&& u(T-5)<=44°"
+    ]
+  ],
+  "pptx_高压油管的压力控制(2019a).pptx": [
+    [
+      "高压油管的压力控制",
+      "徐浩渊"
+    ],
+    [
+      "基本假设",
+      "不考虑液体与管壁的粘性",
+      "管道是水平的",
+      "液体被压缩或稀释时内能不变（不考虑内能的变化）",
+      "液体的温度恒定（不考虑热传递）",
+      "液体在管道内的压力和密度相同，即密度、压力只是t的函数",
+      "问题可以看作是零维的流体运动问题",
+      "除了液体的内部压力，忽略液体重量作用",
+      "注：问题本质上可以看成是一个一维的流体运动问题，但由于流体问题的求解（即使是数值解）是非常困难的，故将问题简化为只和时间有关的常微分问题"
+    ],
+    [
+      "一些记号",
+      "液体在管道内t时刻的密度",
+      "液体在管道内t时刻的压强",
+      "液体在管道内t时刻的质量， V管道体积",
+      "A处的进油速率",
+      "B处的出油速率"
+    ],
+    [
+      "密度、压力满足的微分方程",
+      "推到密度满足的微分方程",
+      "在                   时间段内",
+      "常微分方程组",
+      "初始条件"
+    ],
+    [
+      "由附件可拟合出的函数关系式",
+      "弹性模量和压力的关系",
+      "针阀升程函数（0<t<100, 一个周期）",
+      "注：如果时间间隔为0.01，可直接使用附件的数据；如果想要更高的精度，可用此函数",
+      "凸轮的极径和极角的关系",
+      "注：θ=0，表示下止点",
+      "上述函数皆可由cftool拟合得到"
+    ],
+    [
+      "问题1.1",
+      "f(t)是以100ms为周期的周期函数",
+      "假设A处在t=a时开启，开启时长是T， (0<a<100ms)",
+      "以T+10为周期函数",
+      "其中，A为A点处的油嘴截面面积"
+    ],
+    [
+      "问题一满足的微分方程组"
+    ],
+    [
+      "微分方程求解方法（欧拉法）",
+      "利用欧拉法求解微分方程",
+      "将时间等分，区间长度是h,",
+      "则",
+      "y(t): 向量方程",
+      "精度O(h)"
+    ],
+    [
+      "微分方程求解方法（改进欧拉法）",
+      "利用改进欧拉法求解微分方程",
+      "将时间等分，区间长度是h,",
+      "则",
+      "精度O(h2)"
+    ],
+    [
+      "混合方程求解方法（改进欧拉法）",
+      "利用改进欧拉法求解混合微分方程",
+      "将时间等分，区间长度是h,",
+      "则"
+    ],
+    [
+      "微分方程组求解要点",
+      "因变量个数与方程个数相同",
+      "尽量使用最基础的理论（牛顿第二定理等）",
+      "尽量采用向量方式处理",
+      "如无法理论求解，不做化简（只做计算机数值计算）",
+      "保留混合微分方程的形式",
+      "代码部分",
+      "1.建立混合微分方程的函数代码，（对复杂的微分方程组往往比较困难）",
+      "只采用一阶微分方程组的形式",
+      "2.利用库函数求解（精度满足条件），或用欧拉、改进欧拉自编程求解（时间换精度）",
+      "在无法理论求解的情况下，高阶理论往往只有理论上的优势，对数值求解帮助不大，基础理论形式更简洁明了",
+      "尽量做到可进行数组运算（并行计算， 存贮空间换时间）"
+    ],
+    [
+      "A处的阀开时长T的估计",
+      "假设长时行为下，油管的压强稳定在100附近， 在1秒内，A处进油的质量大约为",
+      "D为1秒内阀开总时长",
+      "B处出油的质量大约为",
+      "管内压强稳定在100附近，则",
+      "可得"
+    ],
+    [
+      "问题1.1求解",
+      "将时间等分，区间长度是h,",
+      "初始化",
+      "取定参数a, T",
+      "由           \t     计算     得",
+      "则",
+      "依次循环计算下去，可得所有时间节点的压力及密度值"
+    ],
+    [
+      "问题1.1定性分析",
+      "T越大，在单位时间内从A处泵入的油量越多，长时下，管内的平均油压越高。",
+      "T 固定的情况下，长时下，管内油压会趋于一个稳定的波动状态",
+      "长时下，a对管内油压的稳定的波动状态的影响很小，可取a=0",
+      "长时下，管内的平均油压稳定在100的时长T应该在0.2876附近。",
+      "可由二分法求得最佳的时长T。",
+      "求得T=0.2878.    模拟的时长是20s,   时长越大，结果越精确",
+      "从模拟图看，时间取大于20s,结果会比较好",
+      "长时下，管内油压的稳定的波动状态与初始压强无关只与T有关",
+      "注：平均压强取模拟时长最后1s的平均压强"
+    ],
+    [
+      "问题1.1求解方法",
+      "2. 由于T越大，在单位时间内从A处泵入的油量越多，长时下，管内的平均油压越高。",
+      "可由二分法求得最佳的时长T，控制条件为",
+      "由二分法，求得T=0.2878.    模拟的时长是20s,   时长越大，结果越精确",
+      "从模拟图看，时间取大于20s,结果会比较好",
+      "1. 记    为模拟最后1s内的平均油压，则可对如下非线性最优问题求解，得到最后的T值",
+      "或"
+    ],
+    [
+      "长时的稳定状态和初始压强无关"
+    ],
+    [
+      "问题1.2",
+      "假设长期行为下，油管的压强稳定在150附近， 则",
+      "取\t\t\t           ，由二分法，可得，令油管压强稳定在150的最佳开阀时长为",
+      "由计算结果，在1.8-2秒的平均压强为",
+      "在4.8-5秒的平均压强为",
+      "在9.8-10秒的平均压强为",
+      "在19.8-20秒的平均压强为",
+      "见下图"
+    ],
+    [
+      "问题1.2的分析与策略",
+      "要使压强在2s或5s内稳定在150附近，需要稍微提升一下开阀时长。可行策略：",
+      "在0-1s内，设开阀时长为T, 在1s后调整为0.7524",
+      "在0-4s内，设开阀时长为T, 在4s后调整为0.7524，",
+      "可由二分法求T（在上述策略下，1.5-2s内的平均压强是T的单增函数）",
+      "取",
+      "由上述方法在1.5--2s内的平均压强为149.6916",
+      "取",
+      "由上述方法在1.5--2s内的平均压强为150.8856",
+      "由二分法，可得最优的",
+      "此时，在1.5--2s内的平均压强为150.0004",
+      "2s时的策略",
+      "5s时的策略",
+      "在上述策略下，T越大，2s(或4s)后的平均油压应该越大"
+    ],
+    [
+      "注： 10s"
+    ],
+    [
+      "5s内稳定在150的求解结果",
+      "前4秒",
+      "前4s",
+      "由二分法，可得最优的",
+      "此时，在4.5--5s内的平均压强为150.0014",
+      "由上述方法在4.5--5s内的平均压强为149.9507",
+      "由上述方法在4.5--5s内的平均压强为150.3228"
+    ],
+    [
+      "问题1.2求解结果",
+      "阀开状态调整"
+    ],
+    [
+      "第二问:B处的情况分析",
+      "B处出油面积函数A(h), h为针阀升程",
+      "B处出油口面积",
+      "升程为h时的环形部分面积",
+      "升程为h时 环形面积在扇壁垂面上的投影面积（有效出油面积）",
+      "则B处的出油面积函数A(h)为"
+    ],
+    [
+      "第二问:A处的情况分析",
+      "高压管内的压强、密度，体积记为",
+      "活塞腔体：压强、密度、体积，质量记为",
+      "其中     视为已知",
+      "活塞体内的微分方程"
+    ],
+    [
+      "第二问:高压油管内密度、压强分析",
+      "高压管内的压强、密度，体积记为",
+      "活塞腔体：压强、密度、体积，质量记为",
+      "其中     视为已知",
+      "高压油管内的微分方程",
+      "注：标准大气压=0.101325mpa, B喷嘴口的可以认为就是p(t)"
+    ],
+    [
+      "第二问：活塞腔的体积变化",
+      "设极角为θ，则凸轮的极径函数为",
+      "圆截面面积",
+      "x",
+      "上止点",
+      "下止点",
+      "支撑点",
+      "θ为极半径与x轴正向夹角",
+      "以θ为极角的极半径逆时针旋转θ后，极半径和x轴正向重合",
+      "以θ为极角的极半径逆时针旋转θ后，支撑点到活塞底平面的距离记为H(θ),",
+      "活塞腔体体积记为V(θ),则",
+      "以θ为极角的极半径逆时针旋转θ后，凸轮的上曲线方程 （x方向的方程）",
+      "则"
+    ],
+    [
+      "第二问：活塞腔的体积变化",
+      "设角速度为ω，则凸轮的极径函数为",
+      "截面面积",
+      "注1：t=0时在下止点位置",
+      "注2：上止点位置的压强与密度是未知的，不能作为初值",
+      "注3：上止点位置的压强与密度是未知的，不能作为初值",
+      "注4：由于考虑的是长时行为，初始相位对结果几乎无影响，无需考虑其它初始相位",
+      "注5：要注意在ωt=2nπ时，活塞腔中燃油压力，密度及质量的复位情况"
+    ],
+    [
+      "第二问满足的微分方程组",
+      "其中A表示A处的喷油嘴面积"
+    ],
+    [
+      "第二问求解方法",
+      "求解方法：欧拉法求解常微分方程组(同第一问，略）",
+      "模拟时长，10s",
+      "方法1:",
+      "方法2，角速度越大，单位时间泵入的燃油越多，长时稳定压强越大，可由二分法求最优角速度  （稳定压强=最后1s平均压强）",
+      "非线性优化方法",
+      "或"
+    ],
+    [
+      "角速度越大，长时稳定压强越大"
+    ],
+    [
+      "由二分法 得最佳的角速度为27.4532rad/s"
+    ],
+    [
+      "第三问第一小问",
+      "高压管内的压强、密度，体积记为",
+      "活塞腔体：压强、密度、体积，质量记为",
+      "视为已知",
+      "a: 开阀时间差，0<a<100ms"
+    ],
+    [
+      "问题3.1分析",
+      "由于B喷嘴的周期是100ms,  取0<a<100ms.  可以看出 a的大小对油管油压的长稳状态影响不大。 故可取a=0",
+      "在10s内，ω=20rad/s",
+      "a=87ms及a=13ms时的压强图"
+    ],
+    [
+      "问题3.1分析",
+      "在有两个喷嘴的情况下，单位时间出油量加倍，油压稳定在100附近的角速度应该是单喷嘴情况下的两倍左右。",
+      "长时的稳态油压是角速度的单增函数，问题可由二分法求解。",
+      "经计算，使油压稳定在100的最佳角速度为54.9985rad/s, 大致为单阀的两倍。"
+    ],
+    [
+      "a对振幅的影响：角速度为54.9985rad/s,  a=0,a=50时压强与时间关系的比较",
+      "a=50时相当于一个喷嘴以50ms的周期喷油，更具规律性，油压的波动相对更小"
+    ],
+    [
+      "单喷嘴与双喷嘴情况的比较",
+      "单喷嘴：ω=27.4532rad/s, 模拟时长10s，9-10s内的平均压强及振幅分别为",
+      "双喷嘴：ω=54.9612rad/s, a=50, 模拟时长10s，9-10s内的平均压强及振幅分别为"
+    ],
+    [
+      "第三题第二问",
+      "高压管内的压强、密度，体积记为",
+      "活塞腔体：压强、密度、体积，质量记为",
+      "视为已知",
+      "q: 单向阀的控制压强",
+      "其中"
+    ],
+    [
+      "模拟数据",
+      "单向阀的控制压强确实可以很好起到控制作用，包括压强上限与振幅",
+      "当q>100且与100很接近时，需要很大的角速度使压强稳定在100附近"
+    ],
+    [
+      "一般发动机的最高转速不超过6500转/分，即不超过700rad/s，因此将q设为101，不具实用性。"
+    ],
+    [
+      "最佳单向阀控制压强及相应的角速度",
+      "取定101<q<103, 由二分法找到54到700之间找到使压强稳定在100附近的最优的角速度，记下此时最后一秒内的振幅",
+      "在101<q<103中，找到q，使得上述振幅最小",
+      "此时的q及相应的角速度便是需要的控制压强和角速度。",
+      "程序模拟，所有模拟时间为30s,   a=50ms,  压强均值及振幅采用29-30s内的数据，角速度最大值设为700rad/s，控制压强间隔0.1"
+    ],
+    [
+      "3.2结论",
+      "控制压强在102.8--103之间，相应的结果都是比较好的"
+    ],
+    [
+      "谢谢！"
+    ]
+  ],
+  "pptx_同心鼓颠球分析(2019b).pptx": [
+    [
+      "同心鼓颠球分析",
+      "徐浩渊"
+    ],
+    [
+      "基本假设",
+      "每次开始发力时，鼓处于水平静止状态（可人为快速实现）",
+      "绳受力绷直时，将其认为是不可拉伸的弹性杆",
+      "拉力总是沿着绳的方向",
+      "每次发力时，绳子的末端（手部位）在同一高度",
+      "鼓和球发生的碰撞瞬时完成，且不考虑鼓与球的形变",
+      "玩家以鼓心为圆心，等角分布在同一圆周上",
+      "注：可考虑鼓和球发生非弹性碰撞，及鼓与球受到空气阻力的情况",
+      "绳与水平面夹角很小",
+      "忽略鼓面的质量"
+    ],
+    [
+      "同心鼓玩法分析",
+      "小球的机械能（动能+势能）受空气阻力而减少，受鼓的撞击而增加。",
+      "鼓的动能受拉力影响而增加。",
+      "在碰撞瞬间，鼓的向上的动量传递给小球，鼓的动量越大，传递给小球的动量越大。",
+      "鼓的动量（速度）最大时，即为碰撞时刻。（最佳的碰撞时刻）",
+      "同心鼓系统的运行状态可分为三个独立的部分",
+      "1.小球上弹到下落到碰撞位置（需计算，为垂直方向受力为0时）",
+      "2.鼓从平衡位置运动碰撞位置",
+      "3.小球和鼓在碰撞位置的瞬时碰撞过程"
+    ],
+    [
+      "同心鼓状态图",
+      "x",
+      "同心鼓平衡位置（原点位置）",
+      "绳长  L",
+      "鼓半径  r",
+      "绳与水平方向的夹角 θ",
+      "θ",
+      "L",
+      "r",
+      "鼓半高  h",
+      "h",
+      "H0",
+      "碰撞高度小于H0+h"
+    ],
+    [
+      "同心鼓平衡位置变量间的关系",
+      "鼓的质量M，玩家人数n，玩家以等角分布在半径为R圆周上",
+      "绳子上的拉力大小为F0， 这样同心鼓在水平方向受力平衡",
+      "在平衡位置绳子与水平面夹角为θ0",
+      "注：M，n，L给定，R可变"
+    ],
+    [
+      "加力状态下同心鼓运动状态分析",
+      "绳端沿绳方向加力为F",
+      "θ",
+      "L",
+      "r",
+      "h",
+      "H0",
+      "x",
+      "设在t时刻，同心鼓上升到x(t)位置",
+      "此时水平夹角为θ(t)",
+      "其中",
+      "t=0时刻",
+      "x(t)",
+      "C: 空气阻力系数:平面体C=1；球体C=0.5",
+      "ρ: 空气密度，取1.2258kg/m3",
+      "S：鼓迎风面面积",
+      "V：鼓在垂直方向速度"
+    ],
+    [
+      "同心鼓从平衡态至碰撞点过程",
+      "由此可求得当        时，所需要的时间，所达到的速度及所在高度",
+      "问题可由欧拉法求解"
+    ],
+    [
+      "微分方程求解方法（改进欧拉法）",
+      "利用改进欧拉法求解微分方程（精度高）",
+      "将时间等分，区间长度是h,",
+      "则"
+    ],
+    [
+      "同心鼓的速度与高度图像",
+      "n=8",
+      "L=1.7",
+      "F=90",
+      "R=1.8"
+    ],
+    [
+      "碰撞过程",
+      "鼓：质量M, 垂直方向速度V，（向上为正）",
+      "球：质量m, 垂直方向速度v，（向上为正）",
+      "碰撞恢复系数：e （弹性碰撞：e=1）",
+      "动量守恒",
+      "球在垂直方向上的离开速度"
+    ],
+    [
+      "球从静止开始自由下落过程",
+      "球：质量m, 静止时高度为 A （A>0.4+h), 排球半径在20.69-21.327cm, 故取球半径为0.21",
+      "C: 空气阻力系数:球体C=0.5",
+      "ρ: 空气密度，取1.2258kg/m3",
+      "s：球迎风面面积",
+      "v：球在垂直方向速度",
+      "h：鼓半高",
+      "上升：-； 下降：+"
+    ],
+    [
+      "球在高度B处以速度v0上升的过程",
+      "由此可解得球在最高点的高度（需要大于0.4+h），及所用的时间",
+      "对每一个起始高度B，v0需要大于一个阈值v(B)"
+    ],
+    [
+      "计算同心鼓和排球的运行轨迹",
+      "1. 对给出的n，L及F，取R满足",
+      "且",
+      "2. 由欧拉法求解关于鼓的微分方程，计算鼓的最大速度v0 及所用时间t0和此时鼓面的高度A（碰撞位置）",
+      "3. 计算排球从0.4+h米高度下落到A处所需的时间t1,所达到的下落速度v1",
+      "5. 由碰撞公式求得排球弹开时的上升速度v2",
+      "6. 由欧拉法求解排球从A以v2 上升回落到A所用的时间t2 及达到的下落速度v1",
+      "7. 更新t1为t1+t2，",
+      "4. 得到鼓加力时刻为t1-t0",
+      "8. 重复步骤4-7，依次可求得同心鼓和排球的运行轨迹",
+      "注：上述过程排球每次的弹跳高度不一定大于0.4米"
+    ],
+    [
+      "分析",
+      "R越大，绳子越趋于水平状态，在垂直方向上产生的拉力越小，排球弹起的高度也越小",
+      "拉力F越大，在垂直方向上产生的拉力越大，排球弹起的高度也越大",
+      "固定R, 可由二分法求得满足条件的最小拉力F",
+      "排球弹起的最终稳定高度只由R，F决定，而与排球的初始高度无关",
+      "排球弹起的最终稳定高度是F的单增函数，是R的单减函数",
+      "排球弹起的最终稳定高度对R值非常敏感",
+      "排球弹起高度稳定的条件：能量守恒，即",
+      "排球上升及回落（因空气阻力）损失的动能=排球由碰撞而增加的动能"
+    ],
+    [
+      "问题1.1求解原理",
+      "原点，平衡态鼓心位置",
+      "碰撞时，鼓面的高度 b",
+      "排球弹起的稳定高度 a+h",
+      "a=0.4米， h鼓的半高，给定人数n、绳长L及R， 对给定的拉力F",
+      "1. 计算在拉力F下，鼓的速度最大的位置b及最大速度V",
+      "2. 计算排球从b恰好上升到a+h 所需的初始速度v1",
+      "3. 计算排球从a+h 自由下落到b 所达到的速度v2",
+      "4. 计算排球下落到b后与鼓在b处碰撞后的起跳速度v3",
+      "v3>v1, 排球弹起的高度>a+h, 需减小F",
+      "v3=v1, 排球弹起的高度=a+h，此即是所需的最小拉力（R固定）",
+      "v3<v1, 排球弹起的高度<a+h, 需增加F",
+      "5. 由二分法，可求得所需拉力F， 判断条件为：v3和v1的比较"
+    ],
+    [
+      "问题1.1结果图1",
+      "弹性碰撞，排球至鼓面高度稳定在0.4046"
+    ],
+    [
+      "问题1结果图2",
+      "非弹性碰撞，排球至鼓面高度稳定在0.4012"
+    ],
+    [
+      "第二问：鼓的倾斜角",
+      "这一问中鼓的运动较为复杂：三维空间中的平动及三维空间中的转动",
+      "三维中的平动方程",
+      "以鼓心在平衡时的位置为原心建立直角坐标系， 记    为各分力（矢量），   为鼓心",
+      "到绳与鼓连接点的向量。v 表示速度矢量，r表示鼓心到原点的矢量",
+      "由此可解得鼓心的运动轨迹",
+      "注：由于翻转角度小，空气阻力仍按第一问计算；忽略鼓的空气阻力对结果影响不大"
+    ],
+    [
+      "第二问：鼓的倾斜角",
+      "刚体的欧拉动力学方程",
+      "记鼓的三个互相垂直的定轴单位方向为：e1(t), e2(t),e3(t).  初始时刻，定轴与x,y,z 轴重合",
+      "令",
+      "ω1(t)为鼓绕e1(t)角速率；ω2(t)为鼓绕e2(t)角速率; ω3(t)为鼓绕e3(t)角速率。角速度方向由右手定则确定。",
+      "转动惯量为常量"
+    ],
+    [
+      "第二问：鼓的倾斜角",
+      "I惯性张量",
+      "角动量为",
+      "角动量对t求导为力矩，此即为欧拉动力学方程"
+    ],
+    [
+      "第二问：鼓的倾斜角",
+      "由此",
+      "e单位向量，ω为角速度",
+      "记ω=v+w,  其中v是绕e旋转的角速度，与e平行，w与e垂直"
+    ],
+    [
+      "第二问：鼓的倾斜角",
+      "e(t1)和e(t2)的夹角θ≈",
+      "注：e w 相互垂直"
+    ],
+    [
+      "第二问：鼓的倾斜角",
+      "若e1(t), e2(t),e3(t)为刚体主轴，则I是对角的，计算可简化"
+    ],
+    [
+      "第二问：鼓的倾角问题",
+      "由",
+      "得",
+      "设",
+      "角方程",
+      "轴方程",
+      "力矩的分解"
+    ],
+    [
+      "第二问：九个状态方程",
+      "角方程",
+      "轴方程",
+      "平动方程",
+      "翻转角度"
+    ],
+    [
+      "第二问:主轴转动惯量的计算",
+      "假设转轴过鼓心且平行于鼓面",
+      "将鼓记作是均匀的空心圆柱体，面密度ρ",
+      "鼓半径  r",
+      "鼓半高  h",
+      "质量",
+      "鼓边转动惯量",
+      "忽略鼓面质量"
+    ],
+    [
+      "第二问:主轴转动惯量的计算",
+      "转轴过鼓心且垂直于鼓面",
+      "将鼓记作是均匀的空心圆柱体，面密度ρ",
+      "鼓半径  r",
+      "鼓半高  h",
+      "质量",
+      "鼓边转动惯量",
+      "忽略鼓面质量"
+    ],
+    [
+      "第二问：绳端点坐标的确定",
+      "确定绳的端点，即可决定绳上力的方向",
+      "由e1、e2向量及鼓心坐标，可确定鼓与绳相连点的坐标，如以8人为例，与鼓相连的点的坐标始终为：",
+      "r0为鼓半径",
+      "人的手端坐标只能为",
+      "由               ，可求得ri,  即可得手端坐标",
+      "c(t)为鼓心坐标"
+    ],
+    [
+      "第二问：算法步骤",
+      "给出时间步长dt, 绳（手端）坐标，绳（鼓端）坐标",
+      "初始化v,r,e,ω",
+      "v: 鼓平动速度向量",
+      "r: 鼓心坐标向量",
+      "ω: 鼓绕主轴的角速度",
+      "e: 三个主轴单位向量",
+      "计算绳端坐标",
+      "由绳两端坐标计算Fi",
+      "由微分方程及步长，计算新的v,r,e,ω",
+      "由新的鼓心坐标与鼓面法向，求新的绳（鼓端）坐标",
+      "重复步骤3-6，依次计算下去",
+      "由鼓心坐标与绳端坐标计算鼓心到绳端向量",
+      "计算和力矩"
+    ],
+    [
+      "第二问结论表"
+    ],
+    [
+      "第二问结论表"
+    ],
+    [
+      "各组发力情况下鼓的倾角变化",
+      "第6，8，9组发力状况下，在-0.1到0秒内，倾角的大小变化是一样的，其后由于发力位置，大小的不同，倾角变化产生不同。"
+    ],
+    [
+      "第三问：鼓面倾斜下的策略调整",
+      "游戏开始后，人数、绳长确定，可能变化的量是鼓面下降的高度及队员的发力大小和时间，",
+      "需做鼓面倾角关于上述可变参数的敏感性分析。我们以第九组数据为例做分析。",
+      "鼓面下降高度的影响",
+      "提前发力时间的影响"
+    ],
+    [
+      "第三问：鼓面倾斜下的策略调整",
+      "发力大小的影响",
+      "注：第九组数据中第一个力的大小从80变到100",
+      "结论：1. 发力差异小时，鼓面倾角小；",
+      "2. 发力时间差小时，鼓面倾角小；",
+      "3. 鼓面下降高度小时，鼓面倾角小。",
+      "队友协调度好时，不需要调整；可以通过减小鼓面下降高度来减小鼓面的倾角。"
+    ],
+    [
+      "第四问：倾斜后的策略调整",
+      "球、鼓运动中，忽略空气阻力",
+      "可变参数为： 发力的大小、时机及鼓下降高度",
+      "取定绳长并固定",
+      "假设：",
+      "发力大小范围为第一问中的力加减10牛，发力时机范围为-0.1至0.1秒",
+      "碰撞为弹性碰撞",
+      "第一个人在x轴正向，球与鼓碰撞时，排球倾斜方向水平投影在第1、2人之间，且距第一人更近"
+    ],
+    [
+      "第四问：倾斜后的策略调整",
+      "假设：球下落高度为h, 则球下落到碰撞高度的速度为        ，所需上升的速度为       。 碰撞时，鼓的速度为：",
+      "鼓的运动方程为：",
+      "鼓平衡时，绳上拉力为：",
+      "理想情况下，鼓、球的运动",
+      "（不计空气阻力）",
+      "计算最佳的碰撞时刻及发力大小",
+      "弹性碰撞e=1"
+    ],
+    [
+      "第四问：倾斜后的策略调整",
+      "解得：",
+      "鼓平衡时，绳上拉力为：",
+      "H0 给定",
+      "可求出最小F",
+      "取",
+      "得",
+      "解得：",
+      "碰撞时刻                  （鼓开始运动时刻为0时刻）"
+    ],
+    [
+      "第四问：倾斜后的策略调整",
+      "碰撞时刻，球速度vb, 鼓速度vg, 对速度做分解",
+      "n",
+      "vb",
+      "则",
+      "球起跳速度为"
+    ],
+    [
+      "第四问：倾斜后的策略调整",
+      "给定发力大小及时机，计算在t0时刻（碰撞时刻）鼓的速度V(t0)及主轴方向e1(t0)、e2(t0)、e3(t0)",
+      "n",
+      "vb",
+      "球的起跳速度为"
+    ],
+    [
+      "第四问：倾斜后的策略调整",
+      "搜索法求 发力的大小与时机，使得",
+      "n",
+      "vb",
+      "可由粒子群算法求解发力的大小和时机，满足条件的解有很多",
+      "球的反弹速度为：",
+      "速度与垂直方向的夹角为：",
+      "10人都调整"
+    ],
+    [
+      "第四问：倾斜后的策略调整",
+      "只调节第1-2人的发力大小和时机",
+      "球的反弹速度为：",
+      "速度与垂直方向的夹角为：",
+      "注：优化参数的范围为："
+    ],
+    [
+      "谢谢！"
+    ]
+  ],
+  "pptx_炉温曲线(2020a).pptx": [
+    [
+      "炉温曲线的控制机理",
+      "徐浩渊"
+    ],
+    [
+      "问题要点",
+      "用机理模型来分析炉温曲线：采用参考书给出的炉温曲线模型都不会是好模型，模型越符合实际越好",
+      "本身模型并不复杂：一维热传导模型是一个很成熟的模型",
+      "问题的重点在：如何通过非线性优化，较为迅速地得到最优参数",
+      "可用非线性优化方法:粒子群，遗传算法等等",
+      "应多做实验，以确保结果尽量精确"
+    ],
+    [
+      "基本假设",
+      "回焊炉内，在垂直于传送带的截面上温度相同，回焊炉内形成一个稳定的一维温度场",
+      "不考虑热辐射的影响",
+      "电子元件及焊锡在水平方向没有热量传递",
+      "热量在焊锡内部（在垂直方向：焊锡厚度）的传导可视为一维热传导问题",
+      "每个小温区内的温度视为常数",
+      "上加热板",
+      "下加热板",
+      "水平放置的电子元件（板）",
+      "元件厚度",
+      "元件移动方向x",
+      "热传导方向z"
+    ],
+    [
+      "一维稳定温度场",
+      "小温区稳定恒定，间隔区满足一维热传导方程",
+      "稳定与时间无关，                 故",
+      "故回焊炉内的温度为连续的折线",
+      "注：可对温度曲线的边角处做光滑处理",
+      "可对小温区的边缘做一些缩进",
+      "上述处理对问题结果影响不大",
+      "横轴是长度"
+    ],
+    [
+      "一些记号",
+      "传送带速度",
+      "回焊炉内的稳定温度场，也可记为",
+      "锡焊厚度方向变量",
+      "锡焊内部z处在t时刻的温度",
+      "c             锡膏热容",
+      "ρ             锡膏密度",
+      "k             锡膏热传导率",
+      "h             锡膏与空气的热交换系数",
+      "z=0, 电子面板下侧",
+      "z=0.15mm, 电子面板上侧",
+      "z=0.075mm, 测温处"
+    ],
+    [
+      "简单模型（基本不可能获国奖）",
+      "视锡膏为质点（即不考虑厚度因素）即",
+      "速度方向",
+      "锡膏吸收的热量======================= 锡膏热量的变化",
+      "与环境温度与锡膏温差成正比================= 锡膏时间段温差成正比"
+    ],
+    [
+      "简单模型（基本不可能获国奖）",
+      "令                ，取极限可得",
+      "注：锡膏的参数与其温度是相关的，故k不是常数，故由数据拟合参数时，可分段做拟合，即根据不同温区（预热区、恒温区、回流区、冷却区）做参数拟合，以保证拟合效果"
+    ],
+    [
+      "一维热方程",
+      "热方程的第三类边界条件",
+      "初值条件",
+      "注：锡膏的参数与其温度是相关的，故a, h1不是常数，为保证拟合效果，可分段拟合，多做实验以确定分几段。",
+      "注：一维热方程的解法非常成熟，故应该用此模型"
+    ],
+    [
+      "一维热方程",
+      "热方程的第三类边界条件",
+      "初值条件",
+      "注：锡膏的参数与其温度是相关的，故a, h1不是常数，为保证拟合效果，可分段拟合，多做实验以确定分几段。",
+      "注：一维热方程的解法非常成熟，故应该用此模型",
+      "或",
+      "由对称性"
+    ],
+    [
+      "方程的数值求解方法（差分法）",
+      "将区域等分成小区间，区间长度分别为Δz、Δt，区间端点记为         ，函数值记为",
+      "关于z的左导数",
+      "关于z的右导数",
+      "一阶差分代替导数",
+      "二阶中心差分代替二阶导数"
+    ],
+    [
+      "Crank-Nicolson 隐格式",
+      "由第三类边界条件求端点温度",
+      "j+1层",
+      "左端点",
+      "右端点",
+      "区间等分成m份"
+    ],
+    [
+      "Crank-Nicolson 隐格式",
+      "可转化为线性方程组求解",
+      "由时间第一层的初值，依次求时间第j层的节点的值"
+    ],
+    [
+      "最小二乘法做参数拟合",
+      "由模型求得的温度记为",
+      "实验数据温度",
+      "优化问题为"
+    ],
+    [
+      "实验情况",
+      "采用粒子群优化方法，需多次实验确定a,h范围",
+      "不分区，可以发现降温曲线部分拟合非常差",
+      "分成升温与降温区，可以高温区拟合不是很好，最大温度误差10度左右",
+      "分成5个区：（1-5）、6、7、（8-9）与降温区（10-11），拟合效果好，最大温差2度左右",
+      "各温区相应的a、h的值,     min F=260"
+    ],
+    [
+      "实验情况",
+      "三分区误差图",
+      "五分区误差图",
+      "横轴是时间"
+    ],
+    [
+      "问题一结果",
+      "参考答案 130、168、189、224"
+    ],
+    [
+      "问题2：可用二分法求解",
+      "模型：  max v",
+      "满足：温度斜率的绝对值不大于3",
+      "温度上升过程中在150ºC~190ºC的时间T1",
+      "温度大于217ºC的时间T2",
+      "最大温度在240-250之间",
+      "可考察斜率绝对值、T1、T2及max u与过炉速度之间的关系",
+      "斜率绝对值关于过炉速度单增、T1、T2及max u关于过炉速度单减，",
+      "可由二分法求max v"
+    ],
+    [
+      "问题2：可用二分法求解",
+      "模型：  max v1",
+      "满足：温度斜率的绝对值不大于3",
+      "模型：  max v2",
+      "满足：",
+      "模型：  max v3",
+      "满足：",
+      "模型：  max v4",
+      "满足：",
+      "则"
+    ],
+    [
+      "问题2结果",
+      "由图2",
+      "由图3",
+      "由图4",
+      "可取v1=70， v2=85,由二分法求v",
+      "求得  max =80.4425cm/min",
+      "参考答案79"
+    ],
+    [
+      "问题3优化模型",
+      "dt=0.5,设升温段温度大于等于217℃的温度数据为",
+      "则阴影部分的面积为 （梯形面积求和）",
+      "记F=(f1,f2,f3,f4)为恒温区温度",
+      "则优化问题模型为：",
+      "模型：",
+      "满足：",
+      "其中优化范围为："
+    ],
+    [
+      "问题3结果",
+      "最小阴影面积为395.8，此时各参数值为",
+      "参考答案： 180/190/226/263",
+      "速度：80；面积467"
+    ],
+    [
+      "问题4优化模型",
+      "设升温段温度大于等于217℃的温度数据为",
+      "升温段阴影部分面积",
+      "设降温段温度大于等于217℃的温度数据为",
+      "降温段相应部分面积",
+      "升温段大于等于217℃区间时长",
+      "降温段大于等于217℃区间时长"
+    ],
+    [
+      "问题4优化模型",
+      "定义相似度",
+      "表明左右两部分越相似"
+    ],
+    [
+      "问题4：多步优化模型",
+      "则问题四优化问题模型为：",
+      "模型：",
+      "满足：",
+      "其中优化范围为："
+    ],
+    [
+      "问题4：多步优化模型",
+      "模型：",
+      "满足：",
+      "其中优化范围为：",
+      "其中ε为给定的小量，如取5%"
+    ],
+    [
+      "问题4结果",
+      "阴影面积为416.4，此时各参数值为"
+    ],
+    [
+      "谢谢！"
+    ]
+  ],
+  "pptx_2021A.pptx": [
+    [
+      "“FAST”主动反射面的形状调节"
+    ],
+    [
+      "理想抛物面",
+      "基本球面半径R，抛物面观察面半径r=150",
+      "焦距F=0.466R",
+      "理想条件下，高度为h的半径为R的球面完美地形变为高度为H焦距为F的抛物面",
+      "球面面积=抛物面面积",
+      "下拉索长度li，促动器原始长度Li 促动器下端坐标Pi,  方向ei(单位向量）",
+      "主索节点坐标Qi , 促动器伸长量si"
+    ],
+    [
+      "高h的球面面积",
+      "高h的球面面积公式"
+    ],
+    [
+      "高h的抛物面面积",
+      "高h的抛物面面积公式",
+      "焦距为F的抛物面方程"
+    ],
+    [
+      "第一问：理想抛物面的确定",
+      "由对称性，最下端的主索节点只能做上下移动。（注：可简化为二维的情形）",
+      "球面方程为",
+      "设对下端主索节点移动量为s（上移为正）, 对应理想抛物面方程为(焦距变为F-s)",
+      "由r, 计算出抛物面高度",
+      "计算出相应的球面高度",
+      "形变区域内的节点索引条件"
+    ],
+    [
+      "第一问：理想抛物面的确定",
+      "由等面积公式，求出形变区域中相应节点的新的z坐标",
+      "节点z坐标",
+      "形变后的节点z坐标",
+      "由对称性， 变形前后，节点应该在同一个垂直平面上，由此可求出形变后节点的x,y坐标",
+      "计算变形区域中相应的促动器伸长量si，取|s|较小的值|s|",
+      "变形区域中节点的新坐标"
+    ],
+    [
+      "第一问：理想抛物面的确定",
+      "形变区域的促动器伸缩量的最大值越小越好，",
+      "解得：",
+      "促动器的最大伸缩量发生在最低点",
+      "形变区域有706个主索节点",
+      "方法一",
+      "促动器最大伸长量最小"
+    ],
+    [
+      "第一问：理想抛物面的确定",
+      "形变区域的索点移动距离越小越好，",
+      "解得：",
+      "促动器的最大伸缩量发生在最低点，即移动距离最大的点是最低点",
+      "形变区域有706个主索节点",
+      "方法二",
+      "主索点移动的最大距离最小"
+    ],
+    [
+      "第一问：理想抛物面的确定",
+      "抛物线方程",
+      "圆方程：",
+      "抛物线上的点",
+      "方法三",
+      "形变区域点的移动距离最小"
+    ],
+    [
+      "第一问：理想抛物面的确定",
+      "解得：",
+      "形变区域有706个主索节点"
+    ],
+    [
+      "第一问：三种方法的结果图"
+    ],
+    [
+      "第二问:促动器伸长量的优化",
+      "入射光线方向",
+      "抛物面轴方向",
+      "抛物面方程的确定",
+      "抛物面轴方向为                   时，抛物面方程为",
+      "抛物面轴方向为     时，"
+    ],
+    [
+      "第二问:促动器伸长量的优化",
+      "抛物面方程的确定",
+      "抛物面轴方向为     时，",
+      "抛物面轴方向为     时，理想抛物面方程",
+      "高度为h0的口径平面，法向为",
+      "口径平面方程为："
+    ],
+    [
+      "第二问:促动器伸长量的优化",
+      "理想抛物面方程"
+    ],
+    [
+      "第二问:促动器伸长量的优化",
+      "理想抛物面顶点"
+    ],
+    [
+      "第二问:促动器伸长量的优化",
+      "形变区域拉索节点索引",
+      "形变区域拉索节点满足条件",
+      "形变区域大约709个主索节点"
+    ],
+    [
+      "第二问:促动器伸长量的优化",
+      "优化问题（多变量， 多约束）",
+      "变量个数2226*3  +2226",
+      "等式约束2226个",
+      "不等式约束2226+6525*2个"
+    ],
+    [
+      "第二问:促动器伸长量的优化",
+      "优化问题（多变量， 多约束）",
+      "理想抛物面方程f(Q)，变形区域节点索引k",
+      "优化函数                              可以有不同的优化函数   Q到抛物面的距离平方和。。。",
+      "不等式约束",
+      "边界不重复计算，边长约束有6525*2个",
+      "促动器长度限制 2226个",
+      "等式约束 2226个"
+    ],
+    [
+      "第二问:促动器伸长量的优化",
+      "多变量、多约束优化问题求解 （罚函数法）",
+      "转化为新无约束优化问题"
+    ],
+    [
+      "第二问:促动器伸长量的优化",
+      "多变量、多约束优化问题算法",
+      "esp: 误差精度",
+      "1. 令x1=x0 计算                                       ， 跳到3，否则2",
+      "初始取k=1",
+      "2. 找                 设最小点为     ，令k=k+1,",
+      "多变量、无约束优化问题有很多算法，选合适的",
+      "变量太多，粒子群、遗传、蚁群等算法应该不适应",
+      "要注意用向量并行计算，避免循环语句",
+      "初始点取形变区域内拉索节点的原始坐标",
+      "3. 计算等式、不等式平方和及|x0-x1|, 若最大值<esp, 结束，否则 1",
+      "第二问看大家的编程能力"
+    ],
+    [
+      "第二问:促动器伸长量的优化",
+      "结论（中间结果）",
+      "变量及约束条件太多，后期收敛速度非常慢，很难找到满足约束条件的解",
+      "从基准球面上的初始点出发，很快就能找到近似的最优解",
+      "促动器伸缩量大于10-2的有515个；大于10-4的有584个",
+      "不管迭代多久，所以结果都在一个小范围内波动",
+      "促动器最大伸缩量0.3761"
+    ],
+    [
+      "第三问:馈源舱的接收比",
+      "一些假设",
+      "镜面是球面",
+      "镜面面积用三角形面积做近似计算",
+      "馈源仓圆盘平面与入射方向垂直（接收到的反射光线最多）"
+    ],
+    [
+      "第三问:馈源舱的接收比",
+      "光线关于球面上点的反射",
+      "所有向量皆单位向量",
+      "1.      三向量共面",
+      "2.   是在Q点的切平面的法向"
+    ],
+    [
+      "第三问:馈源舱的接收比",
+      "基准球面的反射比",
+      "1. 只有300米口径球面都在基准球面上，反射比与入射光线方向无关",
+      "2. 工作面球面面积即为300米口径球面",
+      "3.有效反射面面积S3",
+      "如图，反射光线与馈源仓圆盘边界相交的球面上的点Q所在的球面的口径2r",
+      "有效的反射区可由反射光线与馈源仓圆盘边界相交的球面确定"
+    ],
+    [
+      "第三问:馈源舱的接收比",
+      "求r",
+      "由N在oQ上可求得N的坐标",
+      "由        可求得r",
+      "反射光线与馈源仓圆盘右端相交",
+      "反射光线与馈源仓圆盘左端相交"
+    ],
+    [
+      "第三问:馈源舱的接收比",
+      "两个函数图像",
+      "f(r)=0有两个解r1<r2",
+      "g(r)=0有两个解r3,满足r2<r3",
+      "解得：",
+      "反射光线被馈源仓圆盘接收的半口径范围为：",
+      "（反馈源仓圆盘会挡住口径为1的球面的入射光）",
+      "注：f(r)>0, 表示反射光进入馈源仓",
+      "g(r)<0, 表示反射光进入馈源仓"
+    ],
+    [
+      "第三问:馈源舱的接收比",
+      "基准球面的反射比：",
+      "结论：1.馈源仓圆盘的投影挡住的面积可忽略不计",
+      "2.调整镜面的作用是使得每个镜面中心的半径方向和入射光线方向尽可能的平",
+      "行，使得镜面上大多数点的反射光线可以进入馈源仓平面。"
+    ],
+    [
+      "第三问:馈源舱的接收比",
+      "调整后馈源仓反射比",
+      "球面镜面",
+      "镜面的有效面积及有效反射面积的计算",
+      "标准球面反射率的计算方法对一般位置的镜面不适用",
+      "镜面可能只有一部分在工作区",
+      "镜面关于中心轴oP没有对称性",
+      "坐标原点(0,0,0)",
+      "1.镜面的有效面积的计算（在口径平面以下的部分）",
+      "口径300的理想抛物面高度",
+      "2.镜面的有效反射面积的计算（反射光线经过馈源仓圆盘）",
+      "3. 1.2.的计算都是局部的，所以要对镜面做三角剖分",
+      "方法一"
+    ],
+    [
+      "第三问:馈源舱的接收比",
+      "镜面有效的面积及有效反射面积的计算",
+      "球面镜面",
+      "取剖分小三角形，其中心为D，",
+      "坐标原点(0,0,0)",
+      "若E在口径平面以下，则判定剖分三角形面积为有效面积",
+      "若关于E的反射光线进入馈源仓圆盘，则判定剖分三角形面积为有效反射面积",
+      "由ABC坐标计算镜面的新圆心"
+    ],
+    [
+      "第三问:馈源舱的接收比",
+      "球面镜面",
+      "坐标原点(0,0,0)",
+      "馈源仓平面方程",
+      "反射光线与馈源仓平面相交条件",
+      "关于E的反射光线方向",
+      "反射光线进入馈源仓圆盘"
+    ],
+    [
+      "第三问:馈源舱的接收比",
+      "镜面三角形剖分方法（各边平行等分）",
+      "n=4的三角形剖分",
+      "小三角形面积=大三角形面积/n2",
+      "注意使用并行计算，尽量不用循环语句，否则计算速度很慢"
+    ],
+    [
+      "第三问:馈源舱的接收比",
+      "由镜面顶点(A,B,C)确定圆心o",
+      "解方程可得， o有两个值，取o(3)大的那个",
+      "可自编程，也可用 symbolic solve 求解"
+    ],
+    [
+      "第三问:馈源舱的接收比",
+      "由剖分法计算的300米口径的基准球面反射比（取n=50,)",
+      "剖分法计算很精确"
+    ],
+    [
+      "第三问:馈源舱的接收比",
+      "调整后的第一块镜面图",
+      "镜面中心的半径方向和入射光线方向夹角很小",
+      "得到剖分中心点集及球面上的点集后，用scatter3做图"
+    ],
+    [
+      "第三问:馈源舱的接收比",
+      "由剖分法计算的调整后的馈源仓接收比(n=50)"
+    ],
+    [
+      "第三问:馈源舱的接收比",
+      "蒙特卡洛模拟步骤",
+      "方法二",
+      "口径圆盘上均匀采点",
+      "入射光线方向(方向角)",
+      "口径圆盘上的两个垂直方向",
+      "方向角",
+      "口径圆盘上均匀采样",
+      "θ=rand(1,1000)*2*pi;",
+      "r=sqrt(rand(1,1000));",
+      "随机均匀采样，  需多次运行取平均值"
+    ],
+    [
+      "第三问:馈源舱的接收比",
+      "蒙特卡洛模拟步骤",
+      "方法二",
+      "求出从Q发出的入射光到达的镜面 (ABC镜面顶点)",
+      "判断入射光线               与平面ABC的交点在三角形ABC内",
+      "如果上述判断成立，求反射光线是否进入馈源仓",
+      "如果反射光线进入馈源仓，则计数加1",
+      "速度快，但不一定准确，",
+      "多次运行取平均值。"
+    ],
+    [
+      "第三问:馈源舱的接收比",
+      "口径圆盘上均匀确定采样",
+      "rate4=0.6365",
+      "x=-150:3:150;   y=x;    [x,y]=meshgrid(x,y);",
+      "r=sqrt(x.^2+y.^2);  k=find(r<=150); r=r(k); x=x(k); y=y(k);",
+      "theta=(x>=0).*asin(y./(r+(r==0)))+(x<0).*(pi-asin(y./(r+(r==0))));",
+      "n1=[cos(alpha)*sin(beta),sin(beta)*sin(alpha),-cos(beta)];",
+      "n2=cross(p,n1);",
+      "Qx=r.*cos(theta)*n1(1)+r.*sin(theta)*n2(1);",
+      "Qy=r.*cos(theta)*n1(2)+r.*sin(theta)*n2(2);",
+      "Qz=r.*cos(theta)*n1(3)+r.*sin(theta)*n2(3);        %均匀采样点",
+      "Q=[Qx(:)';Qy(:)';Qz(:)']';",
+      "本题特点：理论性强，变量、约束极多，考验算法与编程能力。"
+    ],
+    [
+      "第三问:馈源舱的接收比",
+      "判读点在三角形内的方法",
+      "A",
+      "B",
+      "C",
+      "D",
+      "解出s,t，若",
+      "则D在三角形ABC内"
+    ]
+  ],
+  "pptx_数模竞赛题选讲.pptx": [
+    [
+      "数模竞赛题选讲",
+      "华中科技大学数学建模培训"
+    ],
+    [
+      "2.选择各类论文----各院校一等奖，二等奖论文----对比论文优劣",
+      "1.选择各类题目----从简单的趣味题目到复杂竞赛题----分析建模思路.",
+      "本讲摘要：",
+      "3.介绍标准解答----专家组提供的建模思路----体会专家见解"
+    ],
+    [
+      "数学建模：实际问题与数学理论之间的桥梁",
+      "实际问题",
+      "数学理论",
+      "模型",
+      "数学建模过程：",
+      "实际问题信息",
+      "数学模型",
+      "模型解答",
+      "归纳",
+      "求解",
+      "验证",
+      "实际现象"
+    ],
+    [
+      "你",
+      "▀数学原理：建立模型",
+      "▀数据的分析与处理",
+      "▀实际问题的简化",
+      "我们的目的：通过具体实例说明建模的过程和要注意的细节",
+      "1.需要一定数学基础和素养。(培训)",
+      "基本的假设，提炼",
+      "▀求解及算法实现",
+      "2.需要创造力，想象力，甚至艺术性。(李正道)",
+      "▀结果检验与推广"
+    ],
+    [
+      "下列题目来源于中学课本和趣味数学",
+      "题一：九张扑克牌，全部正面。每次翻两张牌，能否全部变为反面。",
+      "题二：一个瓶子装满豆子，你能否估计有多少颗？",
+      "题三：8斤（满），5斤（空），3斤（空）三个酒瓶？分成两个4斤",
+      "题四：人，狗，鸡，米渡河",
+      "题五： 七桥问题"
+    ],
+    [
+      "题一分析：",
+      "第一次翻牌：",
+      "正 正",
+      "反 反",
+      "第二次翻牌：",
+      "分三种情况",
+      "正 正",
+      "反 反",
+      "反 反",
+      "正 正",
+      "正 反",
+      "反 正",
+      "无论那一种情况总有：",
+      "奇数张正面，偶数张反面",
+      "数学理论：",
+      "有理数乘法"
+    ],
+    [
+      "证明过程：",
+      "步骤1：在每张扑克牌的正面标上+1，反面标上-1",
+      "步骤2：分析每次翻牌后+1，-1个数变化情况",
+      "思考：多于9张？",
+      "突出数学思想！"
+    ],
+    [
+      "题二分析：",
+      "基本假设：豆子大小均匀",
+      "基本方法：",
+      "方法1：穷举法",
+      "方法2：抽样统计法",
+      "优缺点分析。",
+      "推广到其它问题：",
+      "备注：题1，题2来源于湖北初中数学课本。"
+    ],
+    [
+      "题3分析：",
+      "算法：深度搜索，广度搜索。",
+      "模型：建立搜索树。",
+      "要求：",
+      "1. 搜索出所有分法",
+      "2. 找出最优分法",
+      "思考：",
+      "8 3 1；8 3 2；8 3 3；8 3 4；8 3 5；8 3 6；8 3 7"
+    ],
+    [
+      "搜索模型"
+    ],
+    [
+      "人、狗、鸡、米过河",
+      "人、狗、鸡、米均要过河，船需要人划，每次只能运载其中的一物和人本身，而当人不在时，狗要吃鸡，鸡要吃米。问人、狗、鸡、米怎样过河？",
+      "分析：问题的初始状态是人、狗、鸡、米均在本岸，要求经过一系列的过河运载(每次运载只能一人一物，而且不能把狗和鸡留在一起，也不能把鸡和米留在一起)，最后达到目标状态，即人、狗、鸡、米均在对岸。为了将问题数学化，我们用四元数组(即由4个数所组成的数组来表示初始状态，目标状态以及中间的各种可取状态。当一物在本岸时，用数字“1”表示；在对岸时，用数字“0”表示。于是，人、狗、鸡、米的状态可以用每个数取0或1的四元数组来表示。例如，(1，0，1，0)表示人在本岸，狗在对岸，鸡在本岸，米在对岸，每个数取0或1的四元数组共有16个：",
+      "(1，1，1，1) (0，0，0，0) (1，1，1，0) (0，0，0，1)",
+      "(1，1，0，1) (0，0，1，0) (1，0，1，1) (0，1，0，0)",
+      "(1，1，0，0) (0，0，1，1) (1，0，1，0) (0，1，0，1)",
+      "(1，0，0，1) (0，1，1，0) (1，0，0，0) (0，1，1，1)"
+    ],
+    [
+      "安全过河问题可以看着是一个多部决策的过程。每作出一步决策，都必须保证船、人、猫、鸡、米能满足题设条件。否则，不仅难以实现过河的最优化，而且还容易出现事物的不安全性。因此，在保证安全的前提下，即猫、鸡在一起时，人要在场，鸡、米在一起时，人也要在场，用状态变量s表示某一岸的状况，决策变量d表示是乘车方案，我们容易得到s和d的关系，其中问题的转化要在允许变化范围内，确定每一步的决策关系，从而达到渡河的最优目标。"
+    ],
+    [
+      "由于鸡和米或者狗和鸡不能留在一起，所以(1，1，0，0)，(0，0，1，1)，(1，0，0，1)，(0，1，1，0)(1，0，0，0)，(0，1，1，1)所表示的状态都是不允许的，而其他10个状态都是允许存在的，也就是说，是可取状态，它们分别是",
+      "(1，1，1，1) (0，0，0，0)",
+      "(1，1，1，0) (0，0，0，1)",
+      "(1，1，0，1) (0，0，1，0)",
+      "(1，0，1，1) (0，1，0，0)",
+      "(1，0，1，0) (0，1，0，1)",
+      "乘船方案：",
+      "d={(1,1,0,0),(1,0,1,0),(1,0,0,1),(1,0,0,0)}",
+      "状态转移：",
+      "推广到其它类似问题！",
+      "注：题3，题4来源于趣味数学"
+    ],
+    [
+      "七桥问题：",
+      "图论模型",
+      "能否一笔画出",
+      "C",
+      "A",
+      "防空洞问题"
+    ],
+    [
+      "基本模型：图论模型",
+      "基本结论：",
+      "1. 奇点仅有一个或超过两个以上，不能实现一笔画。",
+      "2.  奇点仅有两个时，可以从其一出发而停在另一个点能实现一笔画。",
+      "3.仅有偶点时，能从任一点出发一笔画回到该点。",
+      "A",
+      "C"
+    ],
+    [
+      "污染源的确定",
+      "2020年华科大选拔题"
+    ],
+    [
+      "为了确定在一个平面区域",
+      "中某污染源的位置（在平面内），常常通过多",
+      "个仪器在不同的位置进行测定，对测得的数据加以数学的方法进行计算",
+      "可以得到污染",
+      "源的",
+      "大致位置，并且还可以计算出污染物在初始位置的浓度值。",
+      "问题1 根据实验室得到的数据，模拟得到该污染物的扩散情况。",
+      "问题2 根据附件中给出的某时刻在观测点所测得的污染物浓度，试确定污染源的大致",
+      "位置及初始浓度，并讨论结果的精确度做分析。",
+      "问题3 如果存在两个污染源，  试由附件中给出的数据给出污染源位置及初始浓度，",
+      "结果精度如何？"
+    ],
+    [
+      "基本的假设",
+      "1.假定是点污染源，中心向外扩散，每个方向的扩散没有差异性",
+      "2. 在平面 扩散的过程中，浓度会随着扩散距离进行衰减",
+      "3.衰减函数大致是指数函数关系(关于距离)???",
+      "关于假设3的讨论！",
+      "数据的分析与处理:存储与绘图"
+    ],
+    [
+      "建立模型",
+      "如何求K?",
+      "思路：由数据拟合求出比例系数",
+      "步骤1  问题线性化：",
+      "步骤2  最小二乘法，求比例系数k",
+      "验证：数据符合很好"
+    ],
+    [
+      "两式相减：",
+      "步骤2  最小二乘法，求A,(x0,y0)"
+    ],
+    [
+      "结果检验与精度分析"
+    ],
+    [
+      "难点：问题无法线性化，直接求最优解将非常困难",
+      "思路：",
+      "思考：直接用非线性优化方法可以吗？如遗传算法等"
+    ],
+    [
+      "由此",
+      "求解方法：非线性的优化方法，如退火法，遗传优化，粒子群，格点细分等等，"
+    ],
+    [
+      "2. 少有求解结果的验证分析！",
+      "1.给出模型，Matlab求解---没有模型的特点分析，没有算法的思想！",
+      "大家论文中普遍问题：",
+      "一定要有数学思想，包括模型和算法的"
+    ],
+    [
+      "古塔变形分析",
+      "2013年数模竞赛C题"
+    ],
+    [
+      "古塔示意图",
+      "比萨斜塔",
+      "倾斜，弯曲，扭曲"
+    ],
+    [
+      "千年古塔会产生各种变形：倾斜，弯曲，扭曲等。文物部门对",
+      "古塔进行了四次观测，试根据这些观测数据完成下列任务：",
+      "任务一：确定古塔各层中心位置，并给出坐标。",
+      "任务二：分析古塔倾斜，弯曲，扭曲等变形情况。",
+      "任务三：分析古塔变形趋势。"
+    ],
+    [
+      "1986",
+      "1996"
+    ],
+    [
+      "▀观察不同层对应点数据的变化。",
+      "1.塔共13层，每层测量8个点。",
+      "▀观察同一点在不同年份数据的变化",
+      "2.第13层有数据缺失。",
+      "数据分析与处理：共四年的测量数据",
+      "数据分析与处理：1. 存储，  2. 分析特点"
+    ],
+    [
+      "缺失数据的补全：",
+      "缺失点为直线与平面交点",
+      "方法一：直线外推法",
+      "缺失点为样条曲线与平面交点",
+      "n",
+      "方法二：三次样条外推法。"
+    ],
+    [
+      "任务一：确定每层古塔中心。",
+      "步骤1：基本假设。",
+      "■各层变形前平行水平面，呈现正八边形。",
+      "■连续体的小变形，中心变为中心。",
+      "步骤2：数学思想与模型",
+      "(2)     求每层平面的中心",
+      "(1)  每层古塔平面的确定"
+    ],
+    [
+      "(1) 拟合古塔平面",
+      "同层8点不在同一平面，需要拟合。",
+      "设拟合平面方程为：",
+      "则应的拟合模型可归结为优化问题：",
+      "(n=8)",
+      "利用Largerange乘子法求系数：",
+      "求已知8点在拟合平面上投影坐标。"
+    ],
+    [
+      "求八边形的中心(形心):",
+      "平面方程可变为：",
+      "其它方法：",
+      "2. 8个顶点平均值作为中心。",
+      "1. 8个顶点拟合成圆，圆心即中心"
+    ],
+    [
+      "算法分析：",
+      "1.拟合平面的计算",
+      "2.投影点坐标的计算。",
+      "3.二重积分的计算",
+      "算法，编程或利用现有软件"
+    ],
+    [
+      "变形分析---------------倾斜",
+      "1.倾斜程度的描述：塔的中轴线与水平面法向(Z轴)的夹角",
+      "你",
+      "▀空间直线的拟合：两个特殊平面交线",
+      "▀平面直线如何拟合？思考",
+      "2.中轴线的方程：",
+      "(Why)",
+      "所以，中轴线的方向为：",
+      "过Y轴和中轴线的平面：",
+      "过X轴和中轴线的平面：",
+      "中轴线",
+      "Z轴",
+      "θ"
+    ],
+    [
+      "你",
+      "你",
+      "你",
+      "3.倾斜度：夹角余弦"
+    ],
+    [
+      "变形分析-----弯曲",
+      "曲线参数方程：",
+      "2.塔的弯曲程度：平均曲率。",
+      "曲率",
+      "1.弯曲程度的数学描述：",
+      "3.中心点拟合而成的曲线：",
+      "那一条曲线平均曲率？",
+      "多项式或三次样条拟合    平均曲率",
+      "曲率公式：",
+      "平均曲率"
+    ],
+    [
+      "变形分析----扭曲"
+    ],
+    [
+      "碎纸片的复原",
+      "2013年数模竞赛B题"
+    ],
+    [
+      "破碎文件的拼接在司法物证复原、历史文献修复以及军事情报获取等领域都有着重要的应用。传统上，拼接复原工作需由人工完成，准确率较高，但效率很低。特别是当碎片数量巨大，人工拼接很难在短时间内完成任务。随着计算机技术的发展，人们试图开发碎纸片的自动拼接技术，以提高拼接复原效率。请讨论以下问题：",
+      "1. 对于给定的来自同一页印刷文字文件的碎纸机破碎纸片（仅纵切），建立碎纸片拼接复原模型和算法，并针对附件1、附件2给出的中、英文各一页文件的碎片数据进行拼接复原。如果复原过程需要人工干预，请写出干预方式及干预的时间节点。复原结果以图片形式及表格形式表达（见【结果表达格式说明】）。",
+      "2. 对于碎纸机既纵切又横切的情形，请设计碎纸片拼接复原模型和算法，并针对附件3、附件4给出的中、英文各一页文件的碎片数据进行拼接复原。如果复原过程需要人工干预，请写出干预方式及干预的时间节点。复原结果表达要求同上。",
+      "3. 上述所给碎片数据均为单面打印文件，从现实情形出发，还可能有双面打印文件的碎纸片拼接复原问题需要解决。附件5给出的是一页英文印刷文字双面打印文件的碎片数据。请尝试设计相应的碎纸片拼接复原模型与算法，并就附件5的碎片数据给出拼接复原结果，结果表达要求同上。"
+    ],
+    [
+      "一.问题:切碎的纸片如何复原。",
+      "问题1：中英文纸片，纵切为19条碎片。",
+      "问题2：既有横切又有纵切，11*19个碎片。",
+      "问题3：中英文纸片正反面都有字体"
+    ],
+    [
+      "二，背景及意义",
+      "1. 文物复原：图画，瓷器等",
+      "2. 案件侦破，司法证据恢复：被破坏的文件等。",
+      "人工不能很好地完成这些工作！"
+    ],
+    [
+      "1. 正多边形无缝隙铺设地板问题",
+      "▀只用一种正多边形",
+      "▀可用两种正多边形",
+      "▀可用两种以上正多边形",
+      "三。几个简单的类似实例"
+    ],
+    [
+      "结论1：正三角形，正方形，正六边形",
+      "n"
+    ],
+    [
+      "结论2："
+    ],
+    [
+      "2，二维拼图游戏：如何完成一个拼图？",
+      "▀ 人工处理模式：拼图的颜色，大小；边界的长度，形状，纹理；图形的空间位置等",
+      "大脑综合处理这些信息。",
+      "▀ 计算机处理模式：图像特征的提取，匹配；适当的人工干预。"
+    ],
+    [
+      "四. 碎片复原的数学原理。",
+      "▀  图像特征的提取：",
+      "1)图像基本特征：颜色特征，纹理特征，形状特征，空间特征等",
+      "2)颜色特征的提取：颜色直方图，颜色矩，颜色集等",
+      "3)纹理特征的提取：粗细，疏密等",
+      "4)形状特征的提取：边界特征法，傅里叶变换法，几何特征法(周长，面积等).",
+      "▀图像特征的匹配："
+    ],
+    [
+      "基本假设：",
+      "1.纸片大小相同，都是矩形。",
+      "2.字符长宽一致。",
+      "3.纸片只有黑白两色。"
+    ],
+    [
+      "碎片复原步骤",
+      "1.选取特征：",
+      "▀提取碎纸轮廓，通过外形特征拼接？？",
+      "▀提取文字特征，基于文字特征拼接",
+      "由于碎纸片都是大小相同的矩形，方式1显然不可取！",
+      "2. 提取文字特征：字符宽度，字距，行距，顶部和底部的空白等",
+      "数据的分析与处理！"
+    ],
+    [
+      "论文一：",
+      "问题一的数学模型的建立",
+      "一：图片的灰度处理。",
+      "每个像素点的灰度值的计算：red,blue,green成分有关",
+      "Gray=r*0.30+g*0.59+b*0.11",
+      "每张图片对应1980*72的灰度矩阵",
+      "二：图片的二值化处理：只需区分黑白两色",
+      "由此得到19张图片的数值矩阵：",
+      "空白像素点",
+      "字符像素点"
+    ],
+    [
+      "三，图片的拼接(匹配)",
+      "1.图片拼接的数学原理：最小二乘法",
+      "设A,B为左右放置的两张图片对应的数字矩阵，",
+      "定义两个矩阵偏差函数为：",
+      "即A矩阵的最后一列与B矩阵的第一列的偏差。",
+      "匹配条件：对于给定矩阵A,若f(A,B)最小，则称A,B匹配。",
+      "2.图片拼接算法：",
+      "▀图片数字化。",
+      "▀找出左起第一张碎片A1：",
+      "左边数字全是1的图片。",
+      "▀计算A1与其余18张图片距离f(A1,B),距离最小的图片记为A2.",
+      "▀重复上述步骤"
+    ],
+    [
+      "你",
+      "疑问：灰度值偏差能否很好描述纸片相似性？",
+      "优点：思路简明，算法简明"
+    ],
+    [
+      "论文二",
+      "问题一的数学模型",
+      "一,图片的数字化处理。",
+      "非彩色图片只需区分空白与非空白，故有如下定义：",
+      "空白像素点",
+      "字符像素点"
+    ],
+    [
+      "二,图片的特征提取",
+      "1.选取特征：",
+      "▀提取碎纸轮廓，通过外形特征拼接？？",
+      "▀提取文字特征，基于文字特征拼接",
+      "由于碎纸片都是大小相同的矩形，方式1显然不可取！",
+      "2. 提取文字特征：字符宽度，字距，行距，顶部和底部的空白等",
+      "家",
+      "字符宽度：C",
+      "C",
+      "C-R",
+      "R"
+    ],
+    [
+      "由此得到基于文字特征的识别序列",
+      "家",
+      "C-R",
+      "R",
+      "左识别序列",
+      "右识别序列"
+    ],
+    [
+      "三,图片拼接(匹配)的数学原理",
+      "定义碎纸片A,B之间的距离为",
+      "C为字符宽度，n为序列长度。",
+      "显然，距离越小，纸片吻合程度越大；理想状况下，距离为0"
+    ],
+    [
+      "四,算法",
+      "1.TSP(旅行商)问题"
+    ],
+    [
+      "2.碎纸片复原可抽象成TSP问题",
+      "其中D是TSP路径为总距离。"
+    ],
+    [
+      "旅行商问题及应用",
+      "------巡游者线路及碎纸片复原"
+    ],
+    [
+      "旅行商问题（Travelling Salesman Problem，即TSP问题）是数学领域中著名问题之一。假设有一个旅行商人要拜访n个城市，他必须选择所要走的路径，路经的限制是每个城市只能拜访一次，而且最后要回到原来出发的城市。路径的选择目标是要求得的路径路程为所有路径之中的最小值。",
+      "一，问题描述",
+      "图论模型：",
+      "构造一个图G=(V,e),顶点(V)表示城市，边(e)表示路径，边上的权W(e)表示城市间的距离，于是旅行商问题可以表述为求图G中最小Hamiton圈的问题。",
+      "应用：运输物流，工件加工排序，电路板钻孔等"
+    ],
+    [
+      "二，算法简介。",
+      "1. 枚举法：具有n个顶点的图G",
+      "旅行商问题要从图G的所有周游路线中求取最小成本的周游路线，而从初始点出发的周游路线一共有(n-1)!条，即等于除初始结点外的n-1个结点的排列数，通过枚举(n-1)!条周游路线，从中找出一条具有最小成本的周游路线的算法，其计算时间显然为O(n!)。",
+      "NP问题，规模大时，显然无法穷举！",
+      "趣闻：小蜜蜂解决大问题",
+      "在一片花丛中采花的蜜蜂，总能找到最短路径"
+    ],
+    [
+      "2.启发式算法：减少枚举次数。",
+      "▀贪心法，分支界定法。",
+      "▀模拟退火算法。",
+      "▀数学规划算法。"
+    ],
+    [
+      "问题二的数学模型",
+      "在问题二中，纸片数增加为209片，而且匹配不唯一。",
+      "因此，直接利用问题一得思路会产生计算量大的问题。",
+      "由此，一般先用聚类分析思想，对纸片分类，然后再",
+      "用问题一思路。",
+      "聚类分析处理过程：",
+      "1.提取图片特征，定义聚类指标。",
+      "2.利用聚类软件分类。",
+      "3. 适当的人工干预。",
+      "聚类结果：最终分成11组，每组19片！！"
+    ],
+    [
+      "图片特征提取方法：",
+      "（1,26,57,97,124,165）",
+      "提取步骤：",
+      "1.将图片标准化：即将字符层和空白层分离",
+      "2.记录每个字符层的起始位置和结束位置。",
+      "1",
+      "26",
+      "124",
+      "165",
+      "层次特征",
+      "分类步骤：",
+      "1.对比每张图片特征值，若有3--4个相同，归为一类。",
+      "2.无法归类的可以人工干预，或者再次聚类。",
+      "拼接：通过分类将二维问题变为一维问题。然后用问题一结论"
+    ],
+    [
+      "优缺点分析：",
+      "思路简明，算法简明。",
+      "偶然性较大，不容易推广到一般的碎纸片复原!"
+    ],
+    [
+      "D题 研究生录取问题"
+    ],
+    [
+      "题目",
+      "1.专家组由8位专家组成进行面试",
+      "某学校录取10名研究生",
+      "2.共有15名学生参加面试。",
+      "3.共有10名导师拟招收研究生。",
+      "1. 15名学生的笔试成绩，复试成绩",
+      "给出的数据有：",
+      "2. 10名导师的基本情况：研究方向，学术水平等",
+      "3. 学生志愿方向。"
+    ],
+    [
+      "复试    笔试     专家对学生专长的面试评分",
+      "学生    成绩     灵活性 创造性 知识面 表达力 外语",
+      "学生1   416         A         B           A         B         A",
+      "学生2   410         A         C           A         B         B",
+      "学生3   405         B         A           C         D        C",
+      "学生4   397         B         A           B         B         A",
+      "学生5   392         B         A           B         C         A",
+      "学生6   389         B         B           A         B         D",
+      "学生7   385         A         B           C         B         B",
+      "学生8   382         B        A            A         C          A",
+      "学生9   380         B        B           A          B          B",
+      "学生10  378        D        B           A         C          C",
+      "学生11  377        D        B           C         A          B",
+      "学生12  372        A        B           A         C          A",
+      "学生13  360        B        C          B         A          D",
+      "学生14  358        D        B          A         B          C",
+      "学生15  356        A        B          C         B          B",
+      "DATA1"
+    ],
+    [
+      "数据2（DATA2）",
+      "复试      笔试     专家对学生专长的面试评分",
+      "学生      成绩     灵活性 创造性 知识面 表达力 外语",
+      "学生1     416       B          A          A         B         A",
+      "学生2     410       A          B          A        C          B",
+      "学生3     405       B         A           A        C          B",
+      "学生4     397       A         B          D        B          C",
+      "学生5     392       B         A          B       C           B",
+      "学生6     389       B        D          A        B            C",
+      "学生7     385       A        B          C        B            D",
+      "学生8     382       B        A          A        C            B",
+      "学生9     380       B       B          A        B            B",
+      "学生10    378       D      B          A        C           C",
+      "学生11    377       B      C          B        A           B",
+      "学生12    372       A      B          A        A            D",
+      "学生13    360       B      A         B        C           B",
+      "学生14    358       B      B         A        A            A",
+      "学生15    356       A      B         C        B           B"
+    ],
+    [
+      "数据（3—8）",
+      "DATA3—DATA8 类似于DATA1—DATA2",
+      "这里省略。"
+    ],
+    [
+      "数据9（DATA9） 导师的基本情况及对学生专长的要求",
+      "导师   专业         导师的学术水平指标                  对学生专长的期望求",
+      "序号   方向  论文数 检索数   著作数 科研项  灵活性 创造性 知识面 表达力 语",
+      "导师1  (1)      15       8            2             2         A         B         B         B       B",
+      "导师2  (1)      32       4            1             1         B         A         A         B       B",
+      "导师3  (1)      36       9            3             3         A         B         A         C        A",
+      "导师4  (2)      12       2            3             3         B         B        A         B        A",
+      "导师5  (2)      17       1            1             1         B         B        B        B        A",
+      "导师6  (3)      21       3            0             6         A          A        A        C        B",
+      "导师7  (3)      18       2            1             1         B         B        B        A        C",
+      "导师8  (3)      10       2            0             1         B         A         B       A        B",
+      "导师9  (4)      32       6            2             4         B         A         A      C        B",
+      "导师10 (4)      17        5           2             2         A         A        B      B         B"
+    ],
+    [
+      "数据10学生申报的专业发展志愿",
+      "学生    1 2 3 4 5  6  7  8  9  10  11  12 13 14 15",
+      "志愿 1 2 3 1 4  3  3  4  2   1   3   4    3   2  1   1",
+      "志愿 2  3 1 2 3 2  4  1  4   3  1   1     4  1   3    2"
+    ],
+    [
+      "问题（一）",
+      "(1)首先,请你综合考虑学生的初试成绩、复试成绩等因素,帮助主管部门确定10名研究生的录取名单.",
+      "（2）然后,要求被录取的10名研究生与10名导师之间做双向选择,即学生可根据自己的专业发展意愿(依次申报2个专业志愿,如表(10)所示)、导师的基本情况和导师对学生的期望要求来选择导师;导师根据学生所报专业志愿、专家组对学生专长的评价和自己对学生的期望要求等来选择学生.请你给出一种10名研究生和导师之间的最佳双向选",
+      "择方案(并不要求一名导师只带一名研究生),使师生双方的满意度最大."
+    ],
+    [
+      "问题（二）",
+      "根据上面已录取的10名研究生的专业志愿(见表(10)),如果每一位导师只能带一名研究生,请你给出一种10名导师与10名研究生双向选择的最佳方案,使得师生双方尽量都满意."
+    ],
+    [
+      "学生    成绩     灵活性 创造性 知识面 表达力 外语",
+      "学生1   416         A         B           A         B         A",
+      "学生2   410         A         C           A         B         B",
+      "学生1     416       B          A          A         B         A",
+      "学生2     410       A          B          A        C          B",
+      "问题：",
+      "综合成绩=初试成绩+复试成绩？"
+    ],
+    [
+      "讲评及分析",
+      "关键问题：统一的评价标准",
+      "1。模糊评价如何量化？",
+      "2。不同量纲的分数如何统一？",
+      "我们采用的方法是把一切数据都量化到",
+      "[0 1]区间。然后求加权和。得出一个唯一的分数。作为录取标准。"
+    ],
+    [
+      "模糊数学基础知识：",
+      "从数学上来看，世界上的现象可分为三类：",
+      "1.确定性现象：运动的速率",
+      "2.随机性现象：故障发生的概率",
+      "经典数学",
+      "概率与统计",
+      "3. 模糊现象：热，冷，大，小",
+      "如何量化？",
+      "模糊数学-----模糊现象的定量处理方法",
+      "实例：张三是秃子？----取决于头发数量",
+      "一根，二根，.......,100根，......",
+      "解决方法：秃的程度----隶属度函数f(x)",
+      "其值域为[0,1]"
+    ],
+    [
+      "隶属度函数的确定方法：",
+      "1.模糊统计法。",
+      "2.例证法",
+      "3.专家经验法。"
+    ],
+    [
+      "问题（一）第一部分解答",
+      "根据初复试成绩录取学生"
+    ],
+    [
+      "(1)学生复试成绩的量化",
+      "首先,由于各专家对每一个学生的五项条件都有一个主观评判结果,据此可以确定各专家对每一个学生的五项条件的量化分值.再综合8名专家的评分就可以得到每个学生的量化得分.",
+      "我们注意到,学生的五项条件都具有一定的模糊性,评价分为A,B,C,D四个等级,即构成模糊集U={u1,u2,u3,u4},不妨设相应的评语集为{很好,好,较好,差},对应的数值为{5,4,3,2}.根据实际情况取偏大型柯西分布隶属函数"
+    ],
+    [
+      "学生    成绩     灵活性 创造性 知识面 表达力 外语",
+      "学生1   416         A         B           A         B         A",
+      "学生1   416         B         A           A         B         A",
+      "导师1的评价",
+      "导师2的评价",
+      "量化步骤：",
+      "1. 评价集U={A,B,C,D}",
+      "{很好，好，较好，差}",
+      "{5,4,3,2}",
+      "2.隶属函数的选择：柯西分布隶属函数",
+      "α,β,a,b如何确定？"
+    ],
+    [
+      "▀当评价为“很好”时,则隶属度为1,即f(5)=1",
+      "▀当评价很差时，则认为隶属度为0.01,即f(1)=0.01.",
+      "▀当评价为“较好”时,则隶属度为0.8,即f(3)=0.8;",
+      "α=1.1086,β=0.8942,a=",
+      "0.3915,b=0.3699.",
+      "由此得：",
+      "五项条件的评价指标值：(A,B,A,B,A)",
+      "其指标量化值为:",
+      "(1,0.9126,1,0.9126,1).",
+      "(f(1),f(2),f(1),f(2),f(1))"
+    ],
+    [
+      "8位专家对学生都有相应的评价,于是综合8名专家评价结果可以得到15个学生的五项条件的复试得分为:"
+    ],
+    [
+      "综合复试得分",
+      "同样学生的五项条件在综合评价中的地位也应该是同等的,则15个学生的综合复试得",
+      "分可表示为"
+    ],
+    [
+      "(2)初试成绩与复试成绩的规范化",
+      "为了便于将初试成绩与复试成绩做统一的比较处理,用极差规范化方法作相应的规范",
+      "化处理.初试得分的规范化:"
+    ],
+    [
+      "(3)由综合成绩确定录取方案",
+      "对于不同的学校对待初试和复试成绩的重视程度可能会不同,在这里用参数α(0<A≤",
+      "1)表示学校对初试成绩的重视程度的差异,即取初试成绩和复试成绩的加权和作为学生的综合成绩,则学生j的综合分数",
+      "按照分数高低录取即可。"
+    ],
+    [
+      "问题（一）第二部分解答",
+      "老师和学生的双向选择"
+    ],
+    [
+      "双向选择的基本假定",
+      "(1)一个导师在选择学生时,主要依据该导师对学生的满意度,同时还要考虑学生的选择和其他导师的选择情况.一个学生在选择导师时,主要依据该学生对导师的满意度,同时还要考虑导师的选择和其他学生的选择情况.",
+      "(2)导师和学生之间有一个是否相互选择的问题,导师和导师之间、学生和学生之间都有一个利益冲突问题,即是否在选择中发生两个(或两个以上的)人同时选择同一个对象,为此可以假设师生双方的选择行为都应该是理智的.",
+      "(3)要解决这个问题,具体方法可能很多,无论用什么方法都不能给任一个导师或学生赋有优先权,所有的导师和学生在做双向选择时的地位都是平等的,任何有优先权的选择方案都是不可取的.将学生和导师分别排序,然后一一对应的方案,或按排列顺序依次选择的方案也是不合理的."
+    ],
+    [
+      "导师对学生的满意度：",
+      "当学生的某项指标等级与导师相应的要求一致时,则认为导师基本满意,即满意程度为v4;",
+      "1.五个指标元素：灵活性、创造性、专业面、表达力、外语",
+      "模糊集合：U={                               }",
+      "很不满意、不满意、不太满意、基本满意、比较满意、满意、很满意”",
+      "评语集合：",
+      "2.导师对学生某项指标的满意程度可以分为：",
+      "V={v1,v2,v3,v4,v5,v6,v7}",
+      "并赋相应的数值{1,2,3,4,5,6,7}"
+    ],
+    [
+      "满意度的计算",
+      "▀人们对不满意程度的敏感远远大于对满意程度的敏感",
+      "你",
+      "▀导师对学生的满意程度降低一级可能导致导师极大的抱怨",
+      "1.隶属函数的选择：",
+      "▀但满意程度增加一级只能引起满意程度的少量的增长",
+      "当“很满意”时,则满意度的量化值为1,即f(7)=1;",
+      "偏大型柯西分布隶属函数",
+      "4",
+      "4",
+      "7",
+      "当“很不满意”时,则满意度量化值为0.01,即f(1)=0.01.",
+      "你",
+      "基本满意”时,则满意度量化值为0.8,即f(4)=0.8"
+    ],
+    [
+      "满意度的量化结果：",
+      "(0.01,0.3499,0.6514,0.8,0.9399,0.9725,1).",
+      "f(1),f(2,f(3),f(4),f(5),f(6),f(7)",
+      "你",
+      "你",
+      "{v1,v2,v3,v4,v5,v6,v7}的量化值为："
+    ],
+    [
+      "满意度的量化结果",
+      "将已录取的10名研究生重新编号,依次从1到10,根据题目中关于这10名研究生的评价数据,可以分别计算得到每一个导师对每一个研究生的各单项指标的满意程度的量化值,分别记为"
+    ],
+    [
+      "满意度的量化结果",
+      "类似地,第i个导师对第j个研究生的第l项指标的综合满意度为",
+      "为此可取第i个导师对第j个研究生的五项条件的综合评价满意度为",
+      "于是可得10名导师对10名研究生的满意度矩阵S=(Sij)10×10."
+    ],
+    [
+      "学生对导师的满意度",
+      "学生对导师的满意度主要与导师的学术水平有关,同时考虑到学生所喜好的专业方向,在评价导师时一定会偏向于自己喜好的导师,即专业方向也是决定学生选择导师的一个因素.因此,影响学生对导师满意度的有五项指标:专业方向、发表论文数、被检索数、著作数和科研项目数.",
+      "对专业方向来说,主要是看是否符合自己发展的专业方向,符合第一、二志愿的分别为“满意、基本满意”,不符合志愿的为“不满意”,于是评语集为三个等级,即{满意,基本满意,不满意}."
+    ],
+    [
+      "满意度的量化结果",
+      "实际中根据人们对待专业志愿的敏感程度的心理变化,在这里取隶属函数为",
+      "并要求f(1)=1,f(3)=0,即符合第一志愿时,满意度为1,不符合任一个志愿时满意度为0,简单计算解得a=4,b=0.9102,即f(x)=0.9102ln(4-x).于是当导师的专业方向符合研究生的第二志愿时的满意度分别为f(2)=0.6309,即得到评语集{满意,基本满意,不满意}的量化值为(1,0.6309,0).这样每一个研究生对每一个导师都有一个满意度权值wji(i,j=1,2,…,10),即满足第一志愿取权为1,满足第二志愿取权值为0.6309,不满足志愿取权值为0.对于反映导师学术水平的四项指标t(k)i(i=1,2,…,10;k=1,2,34)的评语集为五个等级,即{很不满意,不满意,基本满意,满意,很满意},类似于上面确定导师对学生的满意度的方法.首先确定导师学术水平指标的客观量化值:"
+    ],
+    [
+      "记10名导师的四项学术指标的平均值为t-",
+      "=(21,4.2,1.5,2.4);最大值为tmax=(36,9,3,6);最小值为tmin=(10,1,0,1),等级差",
+      "为类似地,可以取近似的偏大型柯西分布隶属函数",
+      "实际上,当x=t-时,学生为对导师“基本满意”,则满意度量化值为0.9,即fk(t-)=0.9;",
+      "当某项指标处于最高值时,学生对导师“很满意”,则满意度的量化值为1,即fk(tmax)=1;当",
+      "某项指标处于最低值时,学生对导师“很不满意”,则满意度量化值为0.01,即fk(tmin)=",
+      "简单推导得",
+      "满意度的量化结果"
+    ],
+    [
+      "满意度的量化结果",
+      "于是,每一个学生对每一个导师的四个单项指标的满意度应为导师的客观水平评价值与学生对导师的满意度权值wji(i,j=1,2,…,10)的乘积,即",
+      "注意到,假设导师的四项水平指标在学生对导师的综合评价中有同等的地位,为此可取第j个学生对第i个导师的综合评价满意度为",
+      "于是可得学生对导师的满意度矩阵T=(Tji)10×10."
+    ],
+    [
+      "双向满意度",
+      "根据上面的讨论,每一个导师与任一个学生之间都有相应的单方面的满意度,双方的相",
+      "互满意度应有各自的满意度来确定,在此,取双方各自满意度的几何平均值为双方相互综合满意度,即"
+    ],
+    [
+      "双向选择模型",
+      "最优的双向选择方案应该是使得所有导师和学生的相互综合满意度之和最大,首先考虑学生的选择方案.设决策变量",
+      "xij=1, 当考生j选择导师i时0, 当考生j不选择导师i时 Xij=0(i,j=1,2,…,10)",
+      "于是问题可以归结为下面的规划问题"
+    ],
+    [
+      "存在的问题",
+      "(1)在数据的量化与处理上,有不少的参赛队都犯了较初等的错误,对初试分和复试分",
+      "没有作正规化处理,即将两个量纲不相同的量作了求和运算,初试分为500分制,复试分为",
+      "100分制,甚至是10分制也都作了加权和.值得一提的是:在数据的比较或运算时,一定要",
+      "注意量纲的一致性,任何指标数据的加权和都应该是在正规化处理或归一化处理后,对同级别的数据进行.",
+      "(2)在部分答卷中,在确定双向选择方案的过程中,没有充分体现出“双向选择”的实",
+      "质,没有建立起实质的数学模型,主观地给出一种原则,比如给导师规定先后选择的原则,或给学生规定优先权等.这是不符合“择优录取,双向选择”的要求的,这也反映了这些同学对题意的理解和把握不够准确.",
+      "(3)部分答卷在解决问题(2)的选择方案中,一个较多的问题是将导师和学生按某种评",
+      "价指标分别排序,然后按顺序作一对一的分配,即1对1,2对2,依次类推.这显然是不合适",
+      "的,也不符合实际.还有一类问题是让排在第一的导师优先选择最满意的学生,排在第二的",
+      "导师次选,依次类推,排在最后的导师最后选,即所谓的“优选优,次选次,差选差”,这也是不",
+      "合实际的."
+    ],
+    [
+      "乘公汽，看奥运",
+      "2007年B题"
+    ],
+    [
+      "我国人民翘首企盼的第29届奥运会明年8月将在北京举行，届时有大量观众到现场观看奥运比赛，其中大部分人将会乘坐公共交通工具（简称公交，包括公汽、地铁等）出行。这些年来，城市的公交系统有了很大发展，北京市的公交线路已达800条以上，使得公众的出行更加通畅、便利，但同时也面临多条线路的选择问题。针对市场需求，某公司准备研制开发一个解决公交线路选择问题的自主查询计算机系统。",
+      "为了设计这样一个系统，其核心是线路选择的模型与算法，应该从实际情况出发考虑，满足查询者的各种不同需求。请你们解决如下问题： 1、仅考虑公汽线路，给出任意两公汽站点之间线路选择问题的一般数学模型与算法。并根据附录数据，利用你们的模型与算法，求出以下6对起始站→终到站之间的最佳路线（要有清晰的评价说明）。 \r     (1)、S3359→S1828    (2)、S1557→S0481  (3)、S0971→S0485 (4)、S0008→S0073    (5)、S0148→S0485  (6)、S0087→S3676 2、同时考虑公汽与地铁线路，解决以上问题。",
+      "3、假设又知道所有站点之间的步行时间，请你给出任意两站点之间线路选择问题的数学模型。"
+    ],
+    [
+      "L001",
+      "分段计价。",
+      "S0619-S1914-S0388-S0348-S0392-S0429-S0436-S3885-S3612-S0819-S3524-S0820-S3914-S0128-S0710",
+      "L002",
+      "分段计价。",
+      "上行：S3748-S2160-S1223-S1404-S2377-S1477-S2017-S2019-S1321-S1381-S1383-S1691-S3766-S1729-S2654-S3231-S3917-S2303-S1327-S3068-S2833-S1733-S2113-S2636-S0012-S1968-S0004",
+      "下行：S0004-S1968-S0012-S2636-S2113-S2112-S2833-S0618-S1327-S2303-S3917-S3231-S2654-S1729-S3766-S1691-S1383-S1381-S1321-S2019-S2017-S1477-S1404-S1223-S2160-S3748",
+      "L003",
+      "单一票制1元。",
+      "S0417-S0272-S1973-S3425-S1433-S3476-S2337-S1027-S1065-S2974-S0234-S0521-S3737-S3806-S1682-S1684-S3925-S3897-S2489-S2488",
+      "L004",
+      "单一票制1元。",
+      "上行：S3010-S0582-S0579-S1994-S1041-S0105-S1429-S2118-S1430-S3600-S2582-S1782-S0657-S3820-S3042-S0658-S2323-S2324-S0992-S2182-S2184-S0531-S0679",
+      "下行：S0679-S2184-S2182-S0992-S2324-S2323-S1957-S0658-S3042-S3820-S0657-S1782-S2582-S3600-S1430-S2118-S1429-S0106-S1041-S1994-S0579-S0582-S3010",
+      "L005",
+      "分段计价。",
+      "上行：S2817-S1961-S3171-S0925-S2119-S1789-S1791-S0457-S1771-S1793-S1829-S2191-S2190-S3335-S0983-S3443-S3139-S2416-S3878-S0750-S3453-S0403-S0684-S0130-S0477-S3264-S2038-S2086-S1236",
+      "共800条公汽线路"
+    ],
+    [
+      "问题简化：",
+      "选择“合适”路径“，从始发站S→终点站T.",
+      "问题1：仅仅搭乘公共汽车。",
+      "问题2：可搭乘公共汽车和地铁。",
+      "问题3：可搭乘公共汽车，地铁或步行。"
+    ],
+    [
+      "3.数据导入Excel,以便读取",
+      "2. 车票计价方式：分段计价，单一票价。",
+      "循环式，上下行，来回式",
+      "数据的分析与处理：",
+      "1.公汽的运行方式：",
+      "编程处理",
+      "............."
+    ],
+    [
+      "题意分析与模型建立",
+      "■背景：公共线路的查询模型与算法",
+      "1.查询相关的参考文献。",
+      "2.了解相应的数学知识。",
+      "地图型，简化型",
+      "算法",
+      "■目标：建立大多数人满意的查询系统",
+      "1.换乘次数，乘车费用，乘车时间",
+      "2. 始发站，总站数等等",
+      "■目标优化：",
+      "1. 对每个目标最优",
+      "2. 综合最优"
+    ],
+    [
+      "多目标优化：换乘次数最少(N)，费用最省(M)，时间最短(T)。",
+      "不同目标组合模型：",
+      "1.按优先级顺序，组合成六个模型",
+      "2.也可以将某些目标作为约束。",
+      "目标加权组合最优："
+    ],
+    [
+      "数学理论：模型和算法",
+      "1.搜索算法。",
+      "2.图论模型。",
+      "3.规划模型",
+      "4. ﹍"
+    ],
+    [
+      "基于双向广度优先搜索的公交线路优化模型",
+      "华科大二等奖"
+    ],
+    [
+      "问题1：",
+      "紧考虑公汽的模型及算法"
+    ],
+    [
+      "选择“合适”路径“，从始发站S→终点站T.",
+      "第三，费用最少",
+      "目标选择：",
+      "其次，时间最短，",
+      "模型的建立：",
+      "问题：",
+      "换乘次数最少"
+    ],
+    [
+      "一次换乘",
+      "二次换乘",
+      "S",
+      "T",
+      "S",
+      "T",
+      "S",
+      "T",
+      "通过具体例子体会优缺点",
+      "●直达",
+      "●求出所有线路；计算代价(目标)；选优。",
+      "建模思路示意图："
+    ],
+    [
+      "意义同上",
+      "定义集合：",
+      "始发站S→终点站T",
+      "模型的数学形式：",
+      "所有经过S的公交线路所经过站点集合",
+      "所有经过S的公交线路集合"
+    ],
+    [
+      "S",
+      "T",
+      "L1",
+      "L2",
+      "Lp",
+      "L4",
+      "L5",
+      "L6",
+      "Lq"
+    ],
+    [
+      "结论1:",
+      "结论2："
+    ],
+    [
+      "结论3：设换车次数不超过三次？！",
+      "1 求出所有直达线路，换乘一次线路，换乘二次线路",
+      "2. 在这些线路中挑出时间最短或费用最少的线路。",
+      "3   根据偏好选择合适路线。",
+      "主要数学理论：图论，多目标优化",
+      "主要算法：双向广度优先搜索。",
+      "基于点的遍历公交线路算法。",
+      "基于线的遍历公交线路算法。"
+    ],
+    [
+      "模型评价：",
+      "简单，易理解。算法亦不复杂。",
+      "。"
+    ],
+    [
+      "问题2",
+      "考虑公汽，地铁的模型及算法"
+    ],
+    [
+      "地铁加入后，线路中有地铁站或关联的公交站",
+      "可分为四种情况:",
+      "1.直接经地铁可达",
+      "2.由起点站乘公交再转地铁",
+      "3.由起点站乘地铁再转公交",
+      "4.由起点站乘公交再转地铁再转公交",
+      "●",
+      "●",
+      "●",
+      "●",
+      "●",
+      "●",
+      "●",
+      "●",
+      "●",
+      "●",
+      "●",
+      "●",
+      "●",
+      "●",
+      "●",
+      "●",
+      "●",
+      "●",
+      "●",
+      "●",
+      "●",
+      "●",
+      "S",
+      "T",
+      "S",
+      "S",
+      "A",
+      "T",
+      "T",
+      "B",
+      "●",
+      "●",
+      "●",
+      "S",
+      "T",
+      "A",
+      "B"
+    ],
+    [
+      "处理方式：",
+      "只需修改",
+      "定义即可",
+      "●",
+      "L1",
+      "L2",
+      "Lp",
+      "L1",
+      "L2",
+      "Lp",
+      "S",
+      "D1",
+      "●",
+      "●",
+      "S",
+      "Li",
+      "Lj",
+      "步行"
+    ],
+    [
+      "结论1:",
+      "结论2："
+    ],
+    [
+      "问题3：考虑步行"
+    ],
+    [
+      "仅用下面两种特殊情况来说明",
+      "S。",
+      "●",
+      "●",
+      "●",
+      "●",
+      "●",
+      "T",
+      "●",
+      "●",
+      "●",
+      "●",
+      "●",
+      "●",
+      "●",
+      "S",
+      "A",
+      "T",
+      "处理方式：",
+      "只需修改",
+      "定义即可",
+      "其中S周围为步行所达站点",
+      "步行",
+      "步行到某站点，然后换乘",
+      "复杂度大大增加！！！"
+    ],
+    [
+      "模型优缺点分析：",
+      "●总体来看，技术含量较低(相当于枚举）",
+      "---只有算法实现，几乎没有建模。",
+      "●换乘作为第一目标。",
+      "●而且一般不超过二次换乘。",
+      "---题目难度大大降低。",
+      "●任意次换乘时算法复杂度提高，难以处理。"
+    ],
+    [
+      "标准解答"
+    ],
+    [
+      "命题思路：",
+      "1.本题根据公交线路查询系统研制的实际需求简化改变",
+      "而成。但涉及到公汽，地铁，步行之间的联系，以及换乘",
+      "时间等细节处理，数据量也大。所以，问题较复杂。",
+      "2. 这是一个多目标优化问题，换乘次数最少，费用最",
+      "省，时间最短应该是乘客最关心的目标。",
+      "3.对每个目标寻求最佳路线，不要将三个目标加权合成单",
+      "目标。",
+      "4.本题1,2问考基本建模及编程能力。第3问加上步行因素",
+      "难度更大。"
+    ],
+    [
+      "主要解法：",
+      "1.  图论模型：建立有向赋权图，然后求两点间最",
+      "短路径。主要算法有：Dijkstra 算法和 Floyd算法。",
+      "2.  规划模型：包括0-1规划和动态规划。",
+      "3。 数据库模型：利用数据库技术直接对站点进行",
+      "搜索。"
+    ],
+    [
+      "详细解答"
+    ],
+    [
+      "一。数据处理：直达矩阵的建立。",
+      "L(I,j)表示由i站点到j站点付出的代价。可以为时间",
+      "或费用。因此有直达时间矩阵或直达费用矩阵。",
+      "经过适当转换，地铁和公汽可以建立统一直达矩阵。",
+      "二。优化目标：",
+      "按照第一目标最优，第二，第三目标在第一目标最优",
+      "前提下，最优或次优来求解。"
+    ],
+    [
+      "数据处理",
+      "建立数据结构"
+    ],
+    [
+      "不考虑地铁：",
+      "建立直达矩阵",
+      "n为公汽站点个数,n=3975",
+      "可以为时间或费用",
+      "A可称为直达时间或费用矩阵"
+    ],
+    [
+      "考虑地铁：可建立类似直达矩阵",
+      "n=公汽站点个数+地铁站点个数=3957+39=3996",
+      "当i站点与j站点同为公汽站点或同为地铁站点时",
+      "的定义与前面相同",
+      "当i与j站点一为公汽，一为地铁时，可分为如下情形",
+      "1：i是公汽站点，j是地铁站点",
+      "1.1  若j不是i站点所在公汽线路L与地铁线的换乘站点",
+      "则令",
+      "2.2  若j是i站点所在公汽线路L与地铁线的换乘站点",
+      "则令"
+    ],
+    [
+      "或",
+      "2. j是公汽站点，i是地铁站点。类似1",
+      "经如此处理后，就不必区分站点类型了",
+      "图论描述：",
+      "以上步骤相当于建立了一个带权有向图",
+      "1） 图中点表示站点",
+      "2） 图中的弧或边表示前一站点能直达后一站点",
+      "3）弧上的权表示所需付出的代价（时间或费用）"
+    ],
+    [
+      "算法设计",
+      "目标优化及算法"
+    ],
+    [
+      "优化目标：换乘次数，费用，时间",
+      "按照第一目标最优，第二，第三目标在第一目标最优前提下，最优或次优来求解。",
+      "1. 换乘次数最少算法。",
+      "2. 费用最省算法。",
+      "3.  时间最短算法"
+    ],
+    [
+      "问题1,2解答",
+      "公汽，地铁一并考虑"
+    ],
+    [
+      "矩阵算子",
+      "⊙",
+      "的定义：",
+      "设A,B为n阶方阵",
+      "其中",
+      "当考虑费用矩阵之间运算时",
+      "当考虑时间矩阵之间运算时",
+      "表示换乘时间"
+    ],
+    [
+      "考虑直达矩阵",
+      "令",
+      "记：",
+      "表示从i站点到j站点至多换乘k次到达所需的最短时间（费用）"
+    ],
+    [
+      "换乘次数最少算法：",
+      "换乘次数为第一目标",
+      "1.对直达费用矩阵",
+      "重复进行",
+      "运算得到",
+      "2.当",
+      "表示从i站点到j站点最少换乘k次能够到达",
+      "表示从i站点到j站点所需最少费用（或时间）",
+      "3.",
+      "4.运算过程中记录下相关线路信息",
+      "5.若有若干条最小换乘线路，则再比较其他两个目标"
+    ],
+    [
+      "费用最省算法:",
+      "1.对直达费用矩阵",
+      "重复进行",
+      "运算得到",
+      "2.运算若干次数后若",
+      "则表示已得到站点间最少费用",
+      "表示从i站点到j站点所需最少费用",
+      "3.",
+      "4.运算过程中记录下相关线路信息",
+      "5.若有若干条最小费用线路，则再比较其他两个目标",
+      "费用为第一目标",
+      "时间最短算法同样"
+    ],
+    [
+      "示例图：",
+      "A,B,C,D四个站点（记为1,2,3,4）构成网络图",
+      "3",
+      "5",
+      "7",
+      "5",
+      "4",
+      "2",
+      "8",
+      "求从B到D的“合适”路径",
+      "直达时间矩阵：",
+      "1.直达？",
+      "2.换乘次数最少？",
+      "3.时间最短？",
+      "4.路径信息",
+      "相当于有向图中求两点间最短路径"
+    ],
+    [
+      "你",
+      "你",
+      "你",
+      "你",
+      "算法实现："
+    ],
+    [
+      "■图论模型和算法",
+      "---图论知识简介",
+      "1. 图：一些点及连接这些点的一些边的总体。",
+      "2. 图论：研究点之间的连接方式的特征。",
+      "3.  起源及实例：七桥问题",
+      "4. 应用：交通运输，城市规划，工作调配等。"
+    ],
+    [
+      "为源点，求源点",
+      "A",
+      "到其他各顶点的最短路径。",
+      "迪杰斯特拉(Dijkstra)算法：",
+      "构造邻接矩阵："
+    ],
+    [
+      "Floyd算法：求任意两点间的最短距离。"
+    ],
+    [
+      "问题3",
+      "已知所有站点间步行",
+      "时间的优化模型"
+    ],
+    [
+      "数据图的构造：",
+      "1.同一公交线的往返线路视为两条单行线，记有m条",
+      "2.构造一个m+2个点的完全图，其中",
+      "2.1) a为起点(出发点)，b为终点(目的地)",
+      "2.2) 每条公交线也视为一个点(m个)",
+      "2.3) 边表示两点间有步行关系，步行时间为边权。",
+      "由此构造步行时间矩阵",
+      "2.4) 每个公交线点还有三个信息为点权",
+      "于是，原问题转化为在这个图上求a到b最短路径"
+    ],
+    [
+      "其他思路：",
+      "1.  一条线路表示一路公交车。类似地图。",
+      "2.  每张纸代表一条公交线。类似帧。",
+      "其他算法：",
+      "集合求交法，分支界定法，启发式方法等。"
+    ],
+    [
+      "思考题：",
+      "1.其他查询系统，例如百度，谷歌的",
+      "查询系统。",
+      "2.三个目标加权平均处理？"
+    ]
+  ],
+  "pptx_A题解答.pptx": [
+    [
+      "正确看待数学模型",
+      "从简单的数学应用题",
+      "到复杂的大型实际应用",
+      "复杂化",
+      "系统化",
+      "专业化",
+      "1. 所有的大型模型，都可以分解成小的基础模型",
+      "2.学会将子模型统合成所需要的大模型",
+      "3.要根据自己的专业所长，选择合适的数模赛题（A，B或C）",
+      "4.要熟悉一些常用的基础模型"
+    ],
+    [
+      "正确看待数学模型",
+      "基础模型（自学）",
+      "建筑材料",
+      "模型的框架",
+      "设计图纸",
+      "模型的实现",
+      "建筑的建设过程",
+      "类比",
+      "数模培训或训练的重点：学会搭建数模的框架"
+    ],
+    [
+      "正确看待数学模型",
+      "数据类赛题： 没有定型的理论、重点是掌握数据的各种处理方法",
+      "自然科学类赛题： 重点在专业理论的应用",
+      "尽量采用最基本的理论，赛题一般不会牵扯到过于复杂的知识"
+    ],
+    [
+      "数模论文的构成",
+      "一篇数模论文的正文一般控制在20-30页",
+      "数模论文的三大块",
+      "1. 建模的理论部分",
+      "建模理论：实际问题           数学公式",
+      "求解理论：算法原理、算法流程等",
+      "2. 模型求解",
+      "3. 结果分析、比较： 图、表 （直观、易懂）",
+      "求解理论、求解步骤、流程图、程序等",
+      "注：1.要善于对论文内容做展开",
+      "2.要合理分配好三部分内容的搭配",
+      "3.内容过多时，要做合理的取舍"
+    ],
+    [
+      "如何准备数模竞赛",
+      "熟悉数模基本模型",
+      "备好一些优化程序（粒子群、退火等），在所有模型中，优化模型占70%",
+      "多读优秀的数模论文，并适当做一些数模练习",
+      "对数模竞赛题，要能够尽快地给出解决问题的简要思路、提纲",
+      "学会文献检索技巧，准确定位所需的专业知识",
+      "备好数模论文模板"
+    ],
+    [
+      "铁锅的翻转问题",
+      "一个质量为5千克的均质半球形薄铁锅，铁锅直径为0.6米。在锅边沿等距的安装3个吊环(A,B,C)，吊环直径可忽略不计。在吊环上安装相同的轻质等长硬弹簧，3根弹簧的末端相连并挂在一个固定的支点上。弹簧不受力时，长度均为0.8米，弹簧的倔强系数为500牛/米。假设弹簧只能伸缩，不能弯曲。试回答如下问题：",
+      "1.如果在A处施加一个向下50牛的拉力，求铁锅平衡时，锅平面与水平面的夹角。",
+      "2.如果去掉在A处施加的拉力，以0.1秒为间隔，给出10秒内锅平面与水平面的夹角的变化。",
+      "3.如果在A至B的锅沿三分之一处的D点施加一个向下50牛的拉力，待铁锅平衡后，去掉拉力。以0.1秒为间隔，给出10秒内锅平面与水平面的夹角的变化。",
+      "铁锅的翻转问题"
+    ],
+    [
+      "题解简要提纲",
+      "列出力、力矩平衡方程组",
+      "建模理论： 第一问：  需要专业知识",
+      "方程组求解思路",
+      "求解算法理论",
+      "平动，转动微分方程",
+      "建模理论：第二问：   需要专业知识",
+      "微分方程求解理论",
+      "算法理论：第二问：  微分方程求解知识",
+      "第三问与1-2问类似，更复杂"
+    ],
+    [
+      "模型假设与变量设置",
+      "不计空气阻力，不计弹簧重量，不计铁锅厚度",
+      "坐标原点o设为悬挂点",
+      "铁锅重心为p, 球心为O，及锅沿上点A、B、C",
+      "铁锅质量m, 半径r, 弹簧倔强系数k，弹簧长度为l，重量加速度g，外力大小F",
+      "弹簧拉力方向(单位向量)",
+      "初始时的OA方向为x轴方向                                                                         (初始x,y,z方向)",
+      "表示铁锅的三个垂直的主轴的方向向量"
+    ],
+    [
+      "铁锅重心",
+      "锅重心p=(0,0,z0)   （对称性）",
+      "p",
+      "O",
+      "铁锅面密度："
+    ],
+    [
+      "铁锅的转动惯量的计算",
+      "由对称性，铁锅主轴方向即是x,y,z 方向，铁锅绕重心p的转动惯量为Hi",
+      "L=r/2"
+    ],
+    [
+      "第一问:受力平衡",
+      "三个方程，9个变量: A,B,C的坐标",
+      "弹簧拉力Fi",
+      "受力平衡"
+    ],
+    [
+      "第一问:力矩平衡",
+      "六个方程，12个变量: A,B,C,p的坐标",
+      "关于重心的力臂",
+      "关于重心的力矩平衡"
+    ],
+    [
+      "第一问:几何关系",
+      "pO的方向：垂直于锅面, 记 n3 为锅面的单位法向 （向上, 相当于z轴方向）",
+      "A,B,C,O之间的关系, OA方向，单位向量n1 (相当于x轴方向)",
+      "(相当于y轴方向)",
+      "（两个向量垂直）",
+      "六个变量：O的坐标",
+      "两个垂直的单位向量",
+      "n3,n1 用角度表示",
+      "六个方程：力及力矩平衡"
+    ],
+    [
+      "第一问求解",
+      "symbolic solve，vpasolve，fsolve"
+    ],
+    [
+      "第二问：物体在三维空间平动与转动",
+      "记铁锅绕主轴(ni)的角速度为wi, ni随时间变动。铁锅的运动分为球心的平动与铁锅绕重心关于三个主轴的转动。铁锅的平动速度为v",
+      "铁锅球心满足的平动方程"
+    ],
+    [
+      "第二问：物体在三维空间平动与转动",
+      "绕重心的合力矩为",
+      "各主轴方向的转动方程",
+      "表示绕ni逆时针旋转，",
+      "表示绕ni顺时针旋转。",
+      "则铁锅绕各主轴的角速度满足如下方程"
+    ],
+    [
+      "第二问：物体在三维空间平动与转动",
+      "轴动方程： 即主轴 ni(t) 满足的微分方程， 只考虑n1满足的方程，",
+      "考虑绕n2转动对n1的影响",
+      "n1(t1)和n1(t2)的夹角θ≈",
+      "n1,n2,n3 右手安培系",
+      "逆时针旋转",
+      "类似地：绕n3转动对n1的影响",
+      "n1,n3 平面"
+    ],
+    [
+      "第二问：物体在三维空间平动与转动",
+      "三个主轴动方程",
+      "三个转动方程",
+      "平动方程",
+      "初值由第一问求得。"
+    ],
+    [
+      "第二问求解：欧拉法或改进欧拉法",
+      "常微方程组可由欧拉法或改进欧拉法求解，",
+      "将时间等分，区间长度是h,",
+      "则",
+      "欧拉法精度O(h)",
+      "改进欧拉法精度O(h2)",
+      "或"
+    ],
+    [
+      "第二问求解",
+      "求解步骤如下：",
+      "1. 初始化 球心O，速度v, 角速度w, n1,n3,n2  设步长dt",
+      "2. 计算A,B,C,p坐标",
+      "3. 计算Fi及力臂li",
+      "5. 重复2-4步，依次迭代求解",
+      "4. 由微分方程组更新O，V，W，n1,n3,n2",
+      "锅面倾角"
+    ],
+    [
+      "第二问题： 系统机械能量守恒",
+      "系统总机械能公式",
+      "弹簧势能",
+      "半圆盘",
+      "平动动能",
+      "半圆盘转动动能",
+      "半圆盘势能",
+      "整个系统的机械能约为"
+    ],
+    [
+      "第二问结果图"
+    ],
+    [
+      "第三问:受力平衡",
+      "三个方程，9个变量: A,B,C的坐标",
+      "弹簧拉力Fi",
+      "受力平衡"
+    ],
+    [
+      "第三问:力矩平衡",
+      "六个方程，15个变量: A,B,C,p,D的坐标",
+      "关于重心的力臂",
+      "关于重心的力矩平衡"
+    ],
+    [
+      "第三问:几何关系",
+      "pO的方向：垂直于锅面, 记 n3 为锅面的单位法向 （向上, 相当于z轴方向）",
+      "A,B,C,D,O之间的关系, OA方向，单位向量n1 (相当于x轴方向)",
+      "(相当于y轴方向)",
+      "（两个向量垂直）",
+      "六个方程：力及力矩平衡"
+    ],
+    [
+      "第三问:几何关系",
+      "OD与OA之间的夹角是",
+      "六个方程：力及力矩平衡",
+      "六个变量：O的坐标",
+      "两个垂直的单位向量",
+      "n3,n1",
+      "第三位解法与第一、二问类似"
+    ],
+    [
+      "第三问静态方程解答"
+    ],
+    [
+      "第三问动态问题解答",
+      "系统周期性被破坏"
+    ]
+  ]
+}
