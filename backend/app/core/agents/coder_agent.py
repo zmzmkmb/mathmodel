@@ -81,6 +81,7 @@ class CoderAgent(Agent):
 
         retry_count = 0
         last_error_message = ""
+        executed_code = False
 
         while True:
             if self.max_retries is not None and retry_count >= self.max_retries:
@@ -92,7 +93,14 @@ class CoderAgent(Agent):
                 logger.warning(f"任务失败，超过最大尝试次数{self.max_retries}, 最后错误信息: {last_error_message}")
                 return CoderToWriter(
                     code_response=f"任务失败，超过最大尝试次数{self.max_retries}, 最后错误信息: {last_error_message}",
-                    created_images=[])
+                    created_images=[],
+                    success=False,
+                    error_message=last_error_message,
+                    attempts=retry_count,
+                    executed_code=executed_code,
+                    validation_passed=False,
+                    validation_summary=last_error_message or "coder retry limit reached",
+                )
 
 
             if self.max_chat_turns is not None and self.current_chat_turns >= self.max_chat_turns:
@@ -132,6 +140,7 @@ class CoderAgent(Agent):
                         )
 
                         code = json.loads(tool_call.arguments)["code"]
+                        executed_code = True
 
                         await redis_manager.publish_message(
                             self.task_id,
@@ -205,11 +214,29 @@ class CoderAgent(Agent):
                 else:
                     # 没有工具调用，表示任务完成
                     logger.info("没有工具调用，任务完成")
+                    if not executed_code:
+                        error_message = "Coder 未执行任何代码，无法通过验证"
+                        logger.warning(error_message)
+                        return CoderToWriter(
+                            code_response=response.content,
+                            created_images=[],
+                            success=False,
+                            error_message=error_message,
+                            attempts=retry_count,
+                            executed_code=False,
+                            validation_passed=False,
+                            validation_summary=error_message,
+                        )
                     return CoderToWriter(
                         code_response=response.content,
                         created_images=await self.code_interpreter.get_created_images(
                             subtask_title
                         ),
+                        success=True,
+                        attempts=retry_count,
+                        executed_code=True,
+                        validation_passed=bool((response.content or "").strip()),
+                        validation_summary="code executed and report returned",
                     )
                     
             except Exception as e:

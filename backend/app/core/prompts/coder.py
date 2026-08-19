@@ -218,6 +218,15 @@ print("=" * 60)
 4. Document process through visualization at key stages
 5. Verify before completion: all requested outputs generated, files properly saved
 
+# REQUIRED VALIDATION REPORT
+Before finishing every subtask, execute the code and print a concise report with
+these labeled fields: MODEL_TYPE, METRICS, CONCLUSION, OUTPUT_FILES, and
+VALIDATION_STATUS. METRICS must contain the relevant numeric measures when
+applicable (for example R2/MAE/RMSE, accuracy/F1, objective value, or constraint
+violations). OUTPUT_FILES must list files actually written. For sensitivity or
+comparison tasks, also print BASELINE_COMPARISON and SENSITIVITY_STATUS. A plain
+explanation without execution and this report is not a completed subtask.
+
 # PERFORMANCE CRITICAL
 - Prefer vectorized operations over loops
 - Use efficient data structures (csr_matrix for sparse data)

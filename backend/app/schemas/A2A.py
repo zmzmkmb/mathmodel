@@ -1,6 +1,6 @@
 """Agent 间通信数据模型定义。"""
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import Any
 
 
@@ -12,7 +12,7 @@ class CoordinatorToModeler(BaseModel):
 
 class ModelerToCoder(BaseModel):
     """建模手传递给代码手的数据结构。"""
-    questions_solution: dict[str, str]
+    questions_solution: dict[str, Any]
 
 
 class CoderToWriter(BaseModel):
@@ -20,6 +20,14 @@ class CoderToWriter(BaseModel):
     code_response: str | None = None
     code_output: str | None = None
     created_images: list[str] | None = None
+    success: bool = True
+    error_message: str | None = None
+    attempts: int = 0
+    executed_code: bool = False
+    validation_passed: bool = False
+    validation_summary: str | None = None
+    output_files: list[str] = Field(default_factory=list)
+    metrics: dict[str, float | int | str] = Field(default_factory=dict)
 
 
 class WriterResponse(BaseModel):

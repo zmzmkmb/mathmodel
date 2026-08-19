@@ -10,11 +10,16 @@ from app.schemas.response import SystemMessage
 from app.utils.common_utils import (
     create_task_id,
     create_work_dir,
+    get_work_dir,
     get_current_files,
     md_2_docx,
 )
 import os
+import json
+import shutil
 import asyncio
+import uuid
+from pathlib import Path
 from typing import Dict, Tuple
 from fastapi import HTTPException
 from icecream import ic  # type: ignore[import-unresolved]
@@ -25,6 +30,17 @@ from app.core.llm.providers.openai_chat import OpenAIChatProvider
 from app.core.llm.providers.openai_responses import OpenAIResponsesProvider
 from app.core.llm.providers.anthropic import AnthropicProvider
 from app.core.llm.providers.base import BaseProvider
+from app.core.workflow_state import (
+    append_state_event,
+    acquire_run_lock,
+    get_resume_action,
+    is_run_lock_active,
+    load_task_registry,
+    load_workflow_state,
+    request_task_cancel,
+    release_run_lock,
+    update_task_registry,
+)
 import requests
 
 router = APIRouter()
@@ -206,6 +222,7 @@ async def exampleModeling(
             dst.write(src.read())
     # 存储任务ID
     await redis_manager.set(f"task_id:{task_id}", task_id)
+    update_task_registry(work_dir, task_id=task_id, status="queued", cancel_requested=False)
 
     logger.info(f"Adding background task for task_id: {task_id}")
     # 将任务添加到后台执行
@@ -235,14 +252,18 @@ async def modeling(
         logger.info(f"开始处理上传的文件，工作目录: {work_dir}")
         for file in files:
             try:
-                assert file.filename is not None
-                data_file_path = os.path.join(work_dir, file.filename)
-                logger.info(f"保存文件: {file.filename} -> {data_file_path}")
-
-                # 确保文件名不为空
                 if not file.filename:
                     logger.warning("跳过空文件名")
                     continue
+                safe_filename = Path(file.filename).name
+                if safe_filename in {"", ".", ".."}:
+                    logger.warning("跳过非法文件名")
+                    continue
+                data_file_path = os.path.abspath(os.path.join(work_dir, safe_filename))
+                work_root = os.path.abspath(work_dir)
+                if os.path.commonpath([data_file_path, work_root]) != work_root:
+                    raise HTTPException(status_code=400, detail="非法文件路径")
+                logger.info(f"保存文件: {file.filename} -> {data_file_path}")
 
                 content = await file.read()
                 if not content:
@@ -266,6 +287,7 @@ async def modeling(
 
     logger.info(f"Adding background task for task_id: {task_id}")
     # 将任务添加到后台执行
+    update_task_registry(work_dir, task_id=task_id, status="queued", cancel_requested=False)
     background_tasks.add_task(
         run_modeling_task_async, task_id, ques_all, comp_template, format_output
     )
@@ -277,6 +299,7 @@ async def run_modeling_task_async(
     ques_all: str,
     comp_template: CompTemplate,
     format_output: FormatOutPut,
+    run_id: str | None = None,
 ):
     """异步执行建模任务。
 
@@ -287,6 +310,20 @@ async def run_modeling_task_async(
         format_output: 输出格式。
     """
     logger.info(f"run modeling task for task_id: {task_id}")
+    root_work_dir = get_work_dir(task_id)
+    effective_run_id = run_id or "initial"
+    if not acquire_run_lock(root_work_dir, effective_run_id):
+        logger.warning("Task %s already has an active run", task_id)
+        return
+
+    update_task_registry(
+        root_work_dir,
+        task_id=task_id,
+        run_id=effective_run_id,
+        status="running",
+        pid=os.getpid(),
+        cancel_requested=False,
+    )
 
     problem = Problem(
         task_id=task_id,
@@ -312,14 +349,16 @@ async def run_modeling_task_async(
     workflow.cancel_event = cancel_event
 
     # 创建任务并注册到全局表
-    task = asyncio.create_task(workflow.execute(problem))
+    task = asyncio.create_task(workflow.execute(problem, run_id=run_id))
     _active_tasks[task_id] = (task, cancel_event)
 
     task_completed = False
+    task_status = "failed"
     try:
         # 设置超时时间（5 小时）
         await asyncio.wait_for(task, timeout=3600 * 5)
         task_completed = True
+        task_status = "completed"
 
         # 发送任务完成状态
         await redis_manager.publish_message(
@@ -341,8 +380,20 @@ async def run_modeling_task_async(
     finally:
         # 从注册表中清理
         _active_tasks.pop(task_id, None)
+        final_registry = load_task_registry(root_work_dir) or {}
+        if final_registry.get("cancel_requested"):
+            task_status = "cancelled"
+        update_task_registry(root_work_dir, status=task_status, cancel_requested=False)
+        release_run_lock(root_work_dir, effective_run_id)
         # 仅在正常完成时转换 md 为 docx
         if task_completed:
+            run_work_dir = getattr(workflow, "work_dir", None)
+            root_work_dir = get_work_dir(task_id)
+            if run_work_dir and os.path.abspath(run_work_dir) != os.path.abspath(root_work_dir):
+                for filename in ("res.json", "res.md"):
+                    source = os.path.join(run_work_dir, filename)
+                    if os.path.exists(source):
+                        shutil.copy2(source, os.path.join(root_work_dir, filename))
             md_2_docx(task_id)
 
 
@@ -354,17 +405,118 @@ class CancelTaskResponse(BaseModel):
 @router.post("/modeling/{task_id}/cancel", response_model=CancelTaskResponse)
 async def cancel_task(task_id: str):
     """取消正在运行的任务。"""
-    if task_id not in _active_tasks:
+    try:
+        work_dir = get_work_dir(task_id)
+    except FileNotFoundError:
+        return CancelTaskResponse(success=False, message="task not found")
+    registry = load_task_registry(work_dir)
+    active_status = (
+        registry
+        and registry.get("status") in {"queued", "running", "retrying"}
+        and is_run_lock_active(work_dir)
+    )
+    if task_id not in _active_tasks and not active_status:
         return CancelTaskResponse(
             success=False,
             message="任务不存在或已完成",
         )
 
-    _, cancel_event = _active_tasks[task_id]
-    cancel_event.set()
+    if task_id in _active_tasks:
+        _, cancel_event = _active_tasks[task_id]
+        cancel_event.set()
+    request_task_cancel(work_dir)
     logger.info(f"已发送取消信号给任务 {task_id}")
 
     return CancelTaskResponse(
         success=True,
         message="停止指令已发送",
     )
+
+
+@router.get("/modeling/{task_id}/status")
+async def modeling_status(task_id: str):
+    """Return the persisted workflow snapshot and the conservative resume action."""
+    try:
+        work_dir = get_work_dir(task_id)
+    except FileNotFoundError as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+
+    current_run_path = os.path.join(work_dir, "current_run.json")
+    state_dir = work_dir
+    current_run = None
+    if os.path.exists(current_run_path):
+        try:
+            with open(current_run_path, "r", encoding="utf-8") as f:
+                current_run = json.load(f)
+            candidate_dir = current_run.get("work_dir") if isinstance(current_run, dict) else None
+            if candidate_dir and os.path.isdir(candidate_dir):
+                state_dir = candidate_dir
+        except (OSError, json.JSONDecodeError):
+            current_run = None
+
+    state = load_workflow_state(state_dir)
+    registry = load_task_registry(work_dir)
+    events_path = os.path.join(state_dir, "workflow_events.json")
+    events = []
+    if os.path.exists(events_path):
+        try:
+            with open(events_path, "r", encoding="utf-8") as f:
+                payload = json.load(f)
+            events = payload if isinstance(payload, list) else []
+        except (OSError, json.JSONDecodeError):
+            events = []
+
+    return {
+        "task_id": task_id,
+        "state": state,
+        "run_id": current_run.get("run_id") if isinstance(current_run, dict) else "initial",
+        "resume_action": get_resume_action(state_dir),
+        "active": task_id in _active_tasks or bool(
+            registry
+            and registry.get("status") in {"queued", "running", "retrying"}
+            and is_run_lock_active(work_dir)
+        ),
+        "task_registry": registry,
+        "events": events,
+    }
+
+
+@router.post("/modeling/{task_id}/resume")
+async def resume_modeling(task_id: str, background_tasks: BackgroundTasks):
+    """Retry a persisted failed/cancelled workflow from its saved problem input."""
+    if task_id in _active_tasks:
+        raise HTTPException(status_code=409, detail="任务仍在运行")
+    try:
+        work_dir = get_work_dir(task_id)
+    except FileNotFoundError as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+
+    registry = load_task_registry(work_dir)
+    if task_id in _active_tasks or (
+        registry
+        and registry.get("status") in {"queued", "running", "retrying"}
+        and is_run_lock_active(work_dir)
+    ):
+        raise HTTPException(status_code=409, detail="task is already running")
+    state = load_workflow_state(work_dir)
+    if state is None or state.get("status") not in {"failed", "cancelled"}:
+        raise HTTPException(status_code=409, detail="当前任务不是可恢复的失败或取消状态")
+    problem_path = os.path.join(work_dir, "problem.json")
+    try:
+        with open(problem_path, "r", encoding="utf-8") as f:
+            problem = Problem.model_validate(json.load(f))
+    except (OSError, json.JSONDecodeError, ValueError) as exc:
+        raise HTTPException(status_code=422, detail="任务缺少有效的 problem.json") from exc
+
+    run_id = uuid.uuid4().hex
+    append_state_event(work_dir, task_id, "workflow", "retrying", next_run_id=run_id)
+    update_task_registry(work_dir, task_id=task_id, run_id=run_id, status="retrying", cancel_requested=False)
+    background_tasks.add_task(
+        run_modeling_task_async,
+        task_id,
+        problem.ques_all,
+        problem.comp_template,
+        problem.format_output,
+        run_id,
+    )
+    return {"task_id": task_id, "status": "retrying", "resume_action": "retry_workflow"}

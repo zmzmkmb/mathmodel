@@ -35,9 +35,12 @@ class RedisManager:
 
     async def set(self, key: str, value: str):
         """设置Redis键值对"""
-        client = await self.get_client()
-        await client.set(key, value)
-        await client.expire(key, 36000)
+        try:
+            client = await self.get_client()
+            await client.set(key, value)
+            await client.expire(key, 36000)
+        except Exception as exc:
+            logger.warning("Redis set unavailable; continuing without cache: %s", exc)
 
     async def _save_message_to_file(self, task_id: str, message: Message):
         """将消息保存到文件中，同一任务的消息保存在同一个文件中"""
@@ -69,9 +72,9 @@ class RedisManager:
 
     async def publish_message(self, task_id: str, message: Message):
         """发布消息到特定任务的频道并保存到文件"""
-        client = await self.get_client()
-        channel = f"task:{task_id}:messages"
         try:
+            client = await self.get_client()
+            channel = f"task:{task_id}:messages"
             message_json = message.model_dump_json()
             await client.publish(channel, message_json)
             logger.debug(
@@ -79,9 +82,9 @@ class RedisManager:
             )
             # 保存消息到文件
             await self._save_message_to_file(task_id, message)
-        except Exception as e:
-            logger.error(f"发布消息失败: {str(e)}")
-            raise
+        except Exception as exc:
+            logger.warning("Redis publish unavailable; saving local message only: %s", exc)
+            await self._save_message_to_file(task_id, message)
 
     async def subscribe_to_task(self, task_id: str):
         """订阅特定任务的消息"""
