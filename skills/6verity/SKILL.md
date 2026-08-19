@@ -8,9 +8,16 @@ allowed-tools: Bash(*), Read, Write, Edit, Grep, Glob, Agent, WebSearch, WebFetc
 
 本 skill 是完整工作流的最后一关。它不重新建模、不生成新结果、不代替写作阶段重写论文；它负责发现硬错误、修复可直接修复的问题，并输出 `reports/VERIFY_REPORT.md`。
 
+开始前必须读取 `../_references/workflow_state_protocol.md` 和 `../_references/literature_protocol.md`，恢复状态并登记：
+
+```bash
+python "<项目根>/backend/scripts/workflow_state.py" show
+python "<项目根>/backend/scripts/workflow_state.py" stage --name verify --status in_progress
+```
+
 ## 数学建模规范参考
 
-如需领域判断，读取 `../_references/math_modeling_norms.md` 中的"论文验收与一致性"小节。该文件只是规范知识库，不是固定执行流程；具体目录、入口文件、结果文件和图表目录由当前项目结构决定。
+如需领域判断，读取 `../_references/math_modeling_norms.md` 中的"论文验收与一致性"小节。同时读取 `../_references/workflow_gate_protocol.md`，核验逐题路由、推导、六项检查、红队测试、模型深度和数据溯源。参考文件不是新的并行流程；具体目录和入口仍由当前项目结构决定。
 
 ## 阶段边界
 
@@ -29,6 +36,7 @@ allowed-tools: Bash(*), Read, Write, Edit, Grep, Glob, Agent, WebSearch, WebFetc
 5. 图表目录
 6. 可复现代码目录。
 7. 编译后的 PDF，或可由入口文件编译得到的输出 PDF。
+8. `analysis/derivations.md` 与 `data/SOURCES.md`。
 
 不要假设论文目录一定叫 `paper/`，也不要假设结果文件一定在项目根。若项目使用不同命名，按实际结构传参并在 `reports/VERIFY_REPORT.md` 中说明。
 
@@ -122,18 +130,40 @@ bash "$SCRIPT_PATH" \
 
 发现数值冲突时，不要自行发明新结果；应回到结果记录或代码输出修正论文。
 
-### Step 6: 引用和模板规范
+### Step 6: 推导、鲁棒性、深度与数据溯源
+
+逐题核验：
+
+- `ANALYSIS_MODELING_REPORT.md` 是否记录逐题机理/数据/优化软画像、判断证据、置信度、待确认项及必要的修订原因；不得把画像分类本身当成通过条件。
+- `analysis/derivations.md` 是否有对应子问题的定义、推导、可求解形式和六项检查。
+- 代码实现的目标函数、约束、输入输出和停止条件是否与可求解形式一致。
+- `RESULTS_REPORT.md` 是否记录至少 3 类相关红队测试的输入、输出、判定和失败解释。
+- 每个核心模型是否标注 L1/L2/L3，并有足够证据支撑；全部为 L1 时是否说明客观限制和深化尝试。
+- `data/SOURCES.md` 是否覆盖官方附件、外部数据和关键参数，并能追溯到核心结论。
+
+对声称“稳健”“鲁棒”“泛化良好”“具有普适性”的结论，必须有对应扰动、边界、外部验证或不确定性证据，不能只凭单次运行结果。
+
+### Step 7: 引用和模板规范
 
 检查：
 
 - 参考文献文件是否存在，或模板是否采用了其他真实参考文献机制。
 - 正文引用标记（Typst 的 `@label`/`#super`，LaTeX 的 `\cite{}`）是否能对应到真实参考文献。
+- 每个正文引用键是否对应 `data/literature.json` 中唯一且 `verified` 的条目；同一引用键可以在正文重复使用。
 - 中文论文 caption、表题、摘要语言保持中文；英文论文保持英文。
 - 选定的模板入口是否保留所选比赛模板的必要封面、摘要、编号、页眉页脚或提交格式。
 - 不要把模板结构误删成普通空白文档。
 
+必须运行本地文献硬校验：
 
-### Step 7: 编译
+```bash
+python "<项目根>/backend/scripts/literature_registry.py" validate
+```
+
+命令非零退出、重复 ID/DOI、缺少作者或年份、缺少 DOI/URL、缺少核验来源、存在 `unverified` 条目，均判定为硬错误。参考文献文件中的引用键还必须与 `data/literature.json` 一致。
+
+
+### Step 8: 编译
 
 **Typst 编译**：
 
@@ -151,7 +181,7 @@ xelatex 需跑两遍解决目录和交叉引用。
 
 编译失败必须修复语法、路径、图片引用或模板问题后重跑。编译通过后确认输出 PDF 非空。
 
-### Step 8: PDF 视觉检查
+### Step 9: PDF 视觉检查
 
 如果模型有视觉能力，必须把编译后的 PDF 每页导出为 PNG 并逐页查看。这个步骤用于发现纯文本扫描和编译器无法发现的版式错误。
 
@@ -185,7 +215,7 @@ fi
 
 如果模型没有视觉能力，必须在 `reports/VERIFY_REPORT.md` 中明确写出“未执行视觉检查”的原因，并至少完成 PDF 非空、页数、页面尺寸等可程序化检查。
 
-### Step 9: 写验收报告
+### Step 10: 写验收报告
 
 创建 `reports/VERIFY_REPORT.md`：
 
@@ -205,6 +235,14 @@ PASS / FAIL
 
 ## 数值一致性
 
+## 数据与参数溯源
+
+## 推导与六项检查
+
+## 红队测试证据
+
+## 模型深度
+
 ## 文本质量门禁
 
 ## 编译
@@ -214,7 +252,18 @@ PASS / FAIL
 ## 仍需处理的问题
 ```
 
-只有当硬错误都修复、文本门禁通过、核心图表都引用、数值一致、编译通过或明确说明不可编译原因、视觉检查通过或明确说明无法执行原因时，才写 `PASS`。
+只有当硬错误都修复、数据与参数可追溯、推导门通过、红队证据足够、文本门禁通过、核心图表都引用、数值一致、编译通过或明确说明不可编译原因、视觉检查通过或明确说明无法执行原因时，才写 `PASS`。
+
+写完报告并确认结论为 `PASS` 后，先登记实际产物，再执行机器状态总校验，最后才完成验证阶段：
+
+```bash
+python "<项目根>/backend/scripts/workflow_state.py" artifact --name verify_report --file reports/VERIFY_REPORT.md --required
+python "<项目根>/backend/scripts/workflow_state.py" artifact --name final_pdf --file paper/main.pdf --required
+python "<项目根>/backend/scripts/workflow_state.py" validate --root .
+python "<项目根>/backend/scripts/workflow_state.py" stage --name verify --status completed --note "全部硬门禁与最终产物校验通过"
+```
+
+PDF 路径按实际输出调整。文献校验或状态校验失败时，不得把 `verify` 标为 `completed`。
 
 ## 硬错误标准
 
@@ -227,8 +276,13 @@ PASS / FAIL
 - 章节顺序明显错误或重复。
 - 正文仍有占位符。
 - 正文泄露内部工作流文件名。
+- 文献登记校验失败、正文引用键无法对应登记表，或最终参考文献中含未核验条目。
 - 引用的图片不存在。
 - 关键数值与结果记录冲突。
+- 核心结果使用的数据或关键参数没有可追溯来源。
+- 任一核心子问题缺少必要推导、可求解形式，或六项检查存在未解释的 `FAIL`。
+- 代码实现与批准的可求解形式存在实质冲突且未回写说明。
+- 声称模型稳健、鲁棒或泛化良好，但没有相应红队、扰动、边界或外部验证证据。
 - 编译器可用但论文编译失败。
 - 编译后的 PDF 为空、缺页、页数异常或页面尺寸异常且无法解释。
 - 视觉检查发现正文、表格、图片、公式、页眉页脚、页码等关键元素重叠、裁切、越界或乱码。
@@ -244,3 +298,4 @@ PASS / FAIL
 - 图表后解释文字不足。
 - 视觉检查工具不可用，但已经记录原因并完成基础 PDF 元数据检查。
 - 代码完整复现耗时过长，只做了轻量检查。
+- 所有核心模型均停留在 L1，且虽有客观原因但深化证据偏弱。

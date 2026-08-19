@@ -8,6 +8,22 @@ allowed-tools: Bash(*), Read, Write, Edit, Grep, Glob, Agent, WebSearch, WebFetc
 
 本 skill 承接 `3coding-visual`。它只负责论文中的**非数据型图示**，例如技术路线图、求解流程图、模型结构图、数据处理流程图、变量关系图、指标体系图等。
 
+开始前读取 `../_references/workflow_state_protocol.md`，并执行：
+
+```bash
+python "<项目根>/backend/scripts/workflow_state.py" stage --name drawio --status in_progress
+```
+
+完成后逐项登记报告和实际生成的图示产物，再将阶段标为 `completed`：
+
+```bash
+python "<项目根>/backend/scripts/workflow_state.py" artifact --name drawio_report --file reports/DRAWIO_REPORT.md --required
+python "<项目根>/backend/scripts/workflow_state.py" artifact --name fig_roadmap --file figures/fig_roadmap.pdf
+python "<项目根>/backend/scripts/workflow_state.py" stage --name drawio --status completed --note "非数据图示已生成并自检"
+```
+
+如果某个 PDF 未能导出，不要把它登记成已存在产物；保留 `.drawio` 源文件并登记对应源文件和未解决问题。
+
 ## 数学建模规范参考
 
 如需领域判断，读取 `../_references/math_modeling_norms.md` 中的“图表与可视化”和“非数据图工具选择”小节。该文件只作为规范知识库，不要求为了凑数量生成额外图示。
