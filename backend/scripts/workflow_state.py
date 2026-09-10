@@ -11,9 +11,11 @@ from pathlib import Path
 from typing import Any
 
 
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
+SUPPORTED_SCHEMA_VERSIONS = {1, 2}
 STAGE_STATUSES = {"pending", "in_progress", "completed", "blocked"}
 GATE_STATUSES = {"PASS", "WARN", "FAIL"}
+SESSION_MODES = {"interactive", "full_execution", "review"}
 
 
 def _now() -> str:
@@ -27,7 +29,16 @@ def new_state() -> dict[str, Any]:
     return {
         "schema_version": SCHEMA_VERSION,
         "status": "active",
+        "session_mode": "interactive",
         "current_stage": "initialized",
+        "active_focus": {
+            "problem": None,
+            "task": None,
+            "request": "",
+            "updated_at": now,
+        },
+        "threads": {},
+        "decisions": [],
         "stages": {"initialized": {"status": "completed", "updated_at": now}},
         "questions": {},
         "gates": {},
@@ -65,8 +76,12 @@ def save_state(path: Path, state: dict[str, Any]) -> None:
 def validate_state(state: dict[str, Any], root: Path | None = None) -> list[str]:
     """返回状态结构和硬门禁错误。"""
     errors: list[str] = []
-    if state.get("schema_version") != SCHEMA_VERSION:
+    if state.get("schema_version") not in SUPPORTED_SCHEMA_VERSIONS:
         errors.append("schema_version 不受支持")
+    if state.get("session_mode") is not None and state.get("session_mode") not in SESSION_MODES:
+        errors.append("session_mode 无效")
+    if state.get("active_focus") is not None and not isinstance(state.get("active_focus"), dict):
+        errors.append("active_focus 必须是对象")
     if not isinstance(state.get("stages"), dict):
         errors.append("stages 必须是对象")
     else:
@@ -105,6 +120,16 @@ def main() -> int:
     stage_parser.add_argument("--status", choices=sorted(STAGE_STATUSES), required=True)
     stage_parser.add_argument("--note", default="")
 
+    mode_parser = subparsers.add_parser("mode")
+    mode_parser.add_argument("--name", choices=sorted(SESSION_MODES), required=True)
+
+    focus_parser = subparsers.add_parser("focus")
+    focus_parser.add_argument("--problem", default="")
+    focus_parser.add_argument("--task", required=True)
+    focus_parser.add_argument("--request", default="")
+
+    subparsers.add_parser("clear-focus")
+
     question_parser = subparsers.add_parser("question")
     question_parser.add_argument("--id", required=True)
     question_parser.add_argument("--status", choices=sorted(STAGE_STATUSES), required=True)
@@ -142,7 +167,37 @@ def main() -> int:
 
     state = load_state(path)
     now = _now()
-    if args.command == "stage":
+    state.setdefault("session_mode", "interactive")
+    state.setdefault("active_focus", {
+        "problem": None,
+        "task": None,
+        "request": "",
+        "updated_at": now,
+    })
+    state.setdefault("threads", {})
+    state.setdefault("decisions", [])
+    if args.command == "mode":
+        state["session_mode"] = args.name
+    elif args.command == "focus":
+        problem = args.problem.strip() or None
+        state["active_focus"] = {
+            "problem": problem,
+            "task": args.task,
+            "request": args.request,
+            "updated_at": now,
+        }
+        if problem:
+            state["threads"].setdefault(problem, {})
+            state["threads"][problem]["last_task"] = args.task
+            state["threads"][problem]["updated_at"] = now
+    elif args.command == "clear-focus":
+        state["active_focus"] = {
+            "problem": None,
+            "task": None,
+            "request": "",
+            "updated_at": now,
+        }
+    elif args.command == "stage":
         state["current_stage"] = args.name
         state.setdefault("stages", {})[args.name] = {
             "status": args.status,

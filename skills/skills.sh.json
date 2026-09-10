@@ -1,27 +1,39 @@
 {
   "title": "MathModelAgent Skills",
-  "description": "数学建模竞赛全流程自动化 Skills：从赛题分析、建模、编码、绘图到论文撰写与验证。",
+  "description": "MathModelAgent workflow skills with semantic routing and full review.",
   "sections": [
     {
-      "title": "工作流 Skills（按顺序使用）",
+      "title": "Workflow Skills",
       "skills": [
+        "00-mathmodel-router",
         "1start-mathmodel",
         "2analysis-modeling",
         "3coding-visual",
         "4drawio",
         "5writing",
-        "6verity"
+        "6verity",
+        "full-review-officer"
       ]
     },
     {
-      "title": "工具 Skills",
+      "title": "Focused Expert Skills",
+      "skills": [
+        "data-auditor",
+        "knowledge-match",
+        "model-workbench",
+        "solve-and-validate",
+        "result-auditor"
+      ]
+    },
+    {
+      "title": "Tool Skills",
       "skills": [
         "doctor",
         "typst-author"
       ]
     },
     {
-      "title": "内部依赖",
+      "title": "Internal References",
       "skills": [
         "_references"
       ]

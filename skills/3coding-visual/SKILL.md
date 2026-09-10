@@ -6,7 +6,7 @@ allowed-tools: Bash(*), Read, Write, Edit, Grep, Glob, Agent, WebSearch, WebFetc
 
 # 编程实现与数据图表生成
 
-本 skill 与 `2analysis-modeling` **交替执行**，不再是一次性编码所有问题。
+本 skill 与 `2analysis-modeling` **交替执行**，也支持由 `solve-and-validate` 语义路由到单个问题。局部调用只处理当前 `qN`，不自动推进后续问题；完整执行模式才按旧流程交替执行。
 
 每次被调用时，建模手已完成**一个子问题**的详细建模方案。你的任务是：把这个子问题的方案跑出来，返回真实结果，供下一题建模参考。
 

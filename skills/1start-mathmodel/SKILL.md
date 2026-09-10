@@ -6,7 +6,9 @@ allowed-tools: Bash(*), Read, Write, Edit, Grep, Glob, Agent, WebSearch, WebFetc
 
 # 数学建模工作流
 
-本 skill 是数学建模竞赛项目的总控入口。它不替代后续阶段 skill，而是负责启动流程、询问偏好、记录决策、生成计划，并按顺序调用各阶段 skill。
+本 skill 只在用户明确要求“完整执行/从头跑一遍/按全流程完成”时作为完整执行入口。普通请求应由 `00-mathmodel-router` 语义匹配到局部 Skill；完整执行前先读取已有状态并恢复，不得覆盖已有进度。
+
+默认模式不是本 skill：项目日常使用由 `00-mathmodel-router` 和 `full-review-officer` 处理。`full-review-officer` 默认只审查现有进度，不强制重跑。
 
 ## 数学建模规范参考
 

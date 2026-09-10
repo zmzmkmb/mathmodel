@@ -2,6 +2,45 @@
 
 `todo.md` 面向用户阅读，`workflow_state.json` 面向恢复、门禁和自动验收。两者必须同步，但状态文件是机器可读事实来源。
 
+## 交互模式与当前焦点
+
+工作流支持三种会话模式：
+
+- `interactive`：默认模式。只处理用户当前请求，不强制推进后续阶段。
+- `full_execution`：仅在用户明确要求“完整执行/从头跑一遍”时使用。
+- `review`：由 `full-review-officer` 使用，只审查已有进度，不强制重跑。
+
+状态文件新增以下字段；旧版状态缺少这些字段时按 `interactive` 和空焦点兼容读取：
+
+```json
+{
+  "schema_version": 2,
+  "session_mode": "interactive",
+  "active_focus": {
+    "problem": "q2",
+    "task": "model_select",
+    "request": "比较问题二候选模型",
+    "updated_at": "2026-09-10T00:00:00+00:00"
+  },
+  "threads": {
+    "q2": {
+      "last_task": "model_select",
+      "updated_at": "2026-09-10T00:00:00+00:00"
+    }
+  }
+}
+```
+
+设置模式和焦点：
+
+```bash
+python "<项目根>/backend/scripts/workflow_state.py" mode --name interactive
+python "<项目根>/backend/scripts/workflow_state.py" focus --problem q2 --task model_select --request "比较问题二候选模型"
+python "<项目根>/backend/scripts/workflow_state.py" clear-focus
+```
+
+`current_stage` 仍保留用于兼容旧流程，但不再是交互路由的唯一依据。局部 Skill 可以在缺少前置材料时继续探索，但必须将状态标为 `DRAFT` 或 `WARN`，不能伪造最终 `PASS`。
+
 ## 工具
 
 定位项目根目录下的脚本：
